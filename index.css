@@ -23,7 +23,7 @@ header{
 	background: rgb(230,229,227);
 	background: linear-gradient(0deg, rgba(230,229,227,1) 30%, rgba(44,214,249,1) 89%);
 	width: 100%;
-	height: 50px;
+	height: 200px;
 	font-size: 20px;
 }
 th{
