@@ -19,6 +19,12 @@ header{
 	margin: 0px;
 	background: linear-gradient(to bottom, #999999 29%, #e6e5e3 87%);
 }
+.header_index{
+	background-color: lightblue;
+	width: 100%;
+	height: 50px;
+	font-size: 20px;
+}
 th{
 	font-size: 25px;
 	padding: 10px;
