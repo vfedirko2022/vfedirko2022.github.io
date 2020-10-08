@@ -20,7 +20,8 @@ header{
 	background: linear-gradient(to bottom, #999999 29%, #e6e5e3 87%);
 }
 .header_index{
-	background-color: lightblue;
+	background: rgb(230,229,227);
+	background: linear-gradient(0deg, rgba(230,229,227,1) 30%, rgba(44,214,249,1) 89%);
 	width: 100%;
 	height: 50px;
 	font-size: 20px;
