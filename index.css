@@ -9,9 +9,11 @@ a{
 body{
 	background-color: #e6e5e3;
 }
+th{
+	font-size: 25px;
+	padding: 10px;
+}
 header{
-	padding: 0px;
-	margin: 0px;
 	width: 100%;
 	height: 100px;
 	background-color: darkgrey;
@@ -33,12 +35,72 @@ header{
 	font-family: 'Sansita Swashed', cursive;
 	text-shadow: -1px 0 white, 1px 0 white, 0 1px white, 0 -1px white;
 }
+a.podorozi:hover{
+	text-shadow: 1px 1px 3px white;
+	font-style: italic;
+}
+.tr_programmer:hover{
+	background-color: #ddd;
+	font-weight: bolder;
+}
+.tr_programmer2:hover{
+	background-color: #ddd;
+	font-weight: bolder;
+}
 p.url:hover{
 	text-shadow: 2px 2px 4px grey;
 }
-th{
-	font-size: 25px;
-	padding: 10px;
+.vid{
+	height: 640px;
+	width: 75%;
+	margin: auto;
+	border-radius: 6px;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.picture{
+	height: 200px;
+	width: 70%;
+	margin: auto;
+	margin-top: 30px;
+}
+.img_vid{
+	width: 100%;
+	height: 100%;
+}
+.name_vid{	
+	width: 70%;
+	margin: auto;
+	margin-top: 20px;
+}
+.name_vid_text{
+	font-size: 30px;
+	text-align: center;
+}
+.content{
+	border: 2px solid black;
+	height: 260px;
+	width: 70%;
+	margin: auto;
+	overflow-y: auto;
+}
+.content_text {
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	font-size: 20px;
+}
+.way_to_official{
+	float: right;
+	height: 40px;
+	width: 80px;
+	margin-right: 20px;
+	margin-top: 10px;
+	background-color: grey;
+	text-align: center;
+}
+.css_way_to_official{
+	font-size: 20px;
 }
 .dd_in_rezume{
 	background-color: #f5f5f5;
@@ -81,10 +143,6 @@ th{
 	font-weight: bolder;
 	font-size: 20px;
 }
-a.podorozi:hover{
-	text-shadow: 1px 1px 3px white;
-	font-style: italic;
-}
 .full{
 	width: 70%;
 	height: 100%;
@@ -121,14 +179,6 @@ a.podorozi:hover{
 .tr_programmer2{
 	background-color: #f9f9f9;
 	margin: 0px;
-}
-.tr_programmer:hover{
-	background-color: #ddd;
-	font-weight: bolder;
-}
-.tr_programmer2:hover{
-	background-color: #ddd;
-	font-weight: bolder;
 }
 .tr_programmer{
 	margin: 0px;
