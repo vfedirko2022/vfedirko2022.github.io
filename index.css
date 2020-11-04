@@ -39,14 +39,32 @@ a.podorozi:hover{
 	text-shadow: 1px 1px 3px white;
 	font-style: italic;
 }
+.tr_programmer{
+	margin: 0px;
+	display: table-row;
+    vertical-align: inherit;
+    border-bottom: 2px solid black;
+}
+.tr_programmer:nth-child(even){
+	background-color: #f9f9f9;
+	margin: 0px;
+}
 .tr_programmer:hover{
 	background-color: #ddd;
 	font-weight: bolder;
 }
-.tr_programmer2:hover{
-	background-color: #ddd;
-	font-weight: bolder;
+.td_programmer{
+	font-size: 17px;
+	padding: 5px;
+	border-bottom: 1px solid #ddd;
 }
+.td_programmerc{
+	font-size: 17px;
+	padding: 5px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+.td_programmer>last-children
 p.url:hover{
 	text-shadow: 2px 2px 4px grey;
 }
@@ -175,27 +193,6 @@ p.url:hover{
 	display: table-row;
     vertical-align: inherit;
     border-bottom: 2px solid black;
-}
-.tr_programmer2{
-	background-color: #f9f9f9;
-	margin: 0px;
-}
-.tr_programmer{
-	margin: 0px;
-	display: table-row;
-    vertical-align: inherit;
-    border-bottom: 2px solid black;
-}
-.td_programmer{
-	font-size: 17px;
-	padding: 5px;
-	border-bottom: 1px solid #ddd;
-}
-.td_programmerc{
-	font-size: 17px;
-	padding: 5px;
-	text-align: center;
-	border-bottom: 1px solid #ddd;
 }
 .moreplavci{
 	border-collapse: collapse;
