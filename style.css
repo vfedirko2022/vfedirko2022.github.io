@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Numans&family=Patrick+Hand&display=swap');
+*{
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+}
+body {
+	width: 80%;
+	margin: auto;
+	/*background: rgb(210,244,252);
+	background: linear-gradient(90deg, rgba(210,244,252,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(210,244,252,1) 100%);*/
+	background-color: #d2f4fc;
+}	
+.block_firstname{
+	/*Блок, в котором храняться название сайта, эмблема и авторизация*/
+	height: 150px;
+	width: 100%;
+	background-color: white;
+}
+.block_text_firstname{
+	/*Блок с названием сайта "Политест"*/
+	float: left;
+	margin: 25px 0 0 10%;
+}
+.text_firstname {
+	/*Визуальная часть самого названия сайта*/
+	font-family: 'Numans', sans-serif;
+	font-size: 80px;
+	letter-spacing: 1px;
+ 	background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	color: #0B2349;
+  	display: table;
+}
+.block_img_firstname{
+	/*Блок с эмблемой лицея*/
+	margin: 0px 0px 0px 46%;  	
+	padding: 20px 0px 20px 0px;
+}
+.img_firstname {
+	/*Эмблема лицея*/
+	width: 110px;
+	height: 110px;
+	display: block;
+}
+.block_button_firstname{
+	/*Блок с учительськой и ученической кнопками*/
+	width: 200px;
+	height: 30px;
+	margin: -120px 0 0 65%; 
+	float: left;
+}
+a.button_teacher_firstname, a.button_child_firstname{
+	/*Изначальный вид кнопки*/
+ 	/*outline: none; */ //Надо разобраться;
+ 	display: inline-block; 
+ 	width: 140px;
+	height: 30px;
+	line-height: 30px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: black;
+    background: #e6edff;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: .3s; //cколько 
+    float: left;
+}
+a.button_teacher_firstname:hover {  
+	/*Изменение кнопки УЧИТЕЛЬ при наведение*/
+    background: #ff6666;
+    box-shadow: 0 15px 20px #ff8585;
+    color: white;
+    transform: translateY(-7px);
+}
+a.button_child_firstname:hover { 
+	/*Изменение кнопки УЧЕНИК при наведение*/
+    background: #faff5c;
+    box-shadow: 0 15px 20px #fafca2;
+    color: black;
+    transform: translateY(-7px);
+}
+.hr{
+	/*Синяя линия над и под навигацией*/
+	width: 100%;
+	height: 2px;
+	background-color: blue;
+}
+.block_nav{
+	/*Блок с навигацией по сайту*/
+	width: 100%;
+	margin-top: 1px;
+	height: 90px;
+	position: sticky;
+	background-color: white;
+}
+.a_nav {
+	
+	margin: auto;
+	font-size: 30px;
+	display: inline;
+	float: left;
+	color: black;
+	text-align: center;
+}
+.list_nav{
+	word-spacing: 2px;
+	margin: auto;
+}
+
+
+
+
+
+.main{
+	height: 1000px;
+	background-color: white;
+}
