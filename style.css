@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Numans&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
 *{
+	list-style: none;
 	margin: 0px;
 	padding: 0px;
 	text-decoration: none;
@@ -31,7 +34,7 @@ body {
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
   	color: #0B2349;
-  	display: table;
+  	
 }
 .block_img_firstname{
 	/*Блок с эмблемой лицея*/
@@ -48,7 +51,7 @@ body {
 	/*Блок с учительськой и ученической кнопками*/
 	width: 200px;
 	height: 30px;
-	margin: -120px 0 0 65%; 
+	margin: -125px 0 0 65%; 
 	float: left;
 }
 a.button_teacher_firstname, a.button_child_firstname{
@@ -56,10 +59,10 @@ a.button_teacher_firstname, a.button_child_firstname{
  	/*outline: none; */ //Надо разобраться;
  	display: inline-block; 
  	width: 140px;
-	height: 30px;
+	height: 35px;
 	line-height: 30px;
     border-radius: 45px;
-    margin: 10px 20px;
+    margin: 7px 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
@@ -128,16 +131,19 @@ a.button_child_firstname:hover {
   text-align: center;
   background: white;
 }
-.menu-main li {display: inline-block;}
+.menu-main li {
+	display: inline-block;
+}
 .menu-main li:after {
   content: "|";
-  color: #606060;
+  color: rgb(26, 80, 135);
   display: inline-block;
   vertical-align:top;
 }
-.menu-main li:last-child:after {content: none;}
+.menu-main li:last-child:after {
+	content: none; /*НАДО ПОНЯТЬ ЗНАЧЕНИЕ СТРОКИ */
+	} 
 .menu-main a {
-  text-decoration: none;
   font-family: 'Ubuntu Condensed', sans-serif;
   letter-spacing: 2px;
   position: relative;
@@ -149,7 +155,7 @@ a.button_child_firstname:hover {
   transition: color .2s;
 }
 .menu-main a, .menu-main a:visited {color: #9d999d;}
-.menu-main a.current, .menu-main a:hover{color: #feb386;}
+.menu-main a.current, .menu-main a:hover{color: rgb(26, 80, 135);}
 .menu-main a:before,
 .menu-main a:after {
   content: "";
