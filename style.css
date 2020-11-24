@@ -30,7 +30,7 @@ body {
 	font-family: 'Numans', sans-serif;
 	font-size: 80px;
 	letter-spacing: 1px;
- 	background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+ 	background: linear-gradient(45deg, c 33%, #0D61BC 66%, #8AA9D6);
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
   	color: #0B2349;

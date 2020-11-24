@@ -4,41 +4,52 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style_one.css">
-	<title>Document</title>
+	<link rel="stylesheet" href="icofont.css">
+	<title>Document</title>	
 </head>
 <body>
 	<div class="full">
 		<div class="header">
-			<div class="header_sticky">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/%D0%93%D0%B5%D1%80%D0%B1_%D0%BB%D1%96%D1%86%D0%B5%D1%8E_%C2%AB%D0%9F%D0%BE%D0%BB%D1%96%D1%82%C2%BB.png/450px-%D0%93%D0%B5%D1%80%D0%B1_%D0%BB%D1%96%D1%86%D0%B5%D1%8E_%C2%AB%D0%9F%D0%BE%D0%BB%D1%96%D1%82%C2%BB.png" alt="" class="gerb">
+				<img src="img/gerb.png" alt="" class="gerb">
 				<p class="politest">Politest</p>
-<!-- 				<div class="div_block_button">
-					<p class="block_button">
-						<a href="" class="button_on_exit">Учень</a>
-					</p>
-					<p class="block_button">
-						<a href="" class="button_on_exit">Вчитель</a>
-					</p> -->
+
 				<ul class="menu-main">
   					<li><a href="index.html">Учень</a></li>
   					<li><a href="index.html">Вчитель</a></li>
   				</ul>
-<!-- 				</div> -->
-				<p href="" class="way_to_polit">
-					<a href="https://www.google.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAolBMVEX///8fDwD+/v4AAAAKAACurKgeDgGyr63///2QiYSLhX8IAAAgDgAXAAAPAAAeDwEaBgATAAAZAAAZBADRz83f3du8ubZhWlfr6eg5LysbDAAdCgDLx8U+NDCZk5BpYlx3cGt+eHVGPDcyKCGinJi4s67W1NKopKGHgYCEfHZybGkwIRorHRIoHBfU09MqGg9MQj7v7uw5LiReVlItIx1DNzMg0B/sAAAR4klEQVR4nO1dCXvjKA92UErTxkfSHM3ZNun0nJnuprP9/3/tAxswtjl9pOl81bM7TQwIXgNCEoIEgYaQ+MeUoS6pCiNDGn+urxR5NgodAWGZQTOE6rKmNyIQIqTOhuSM8vOUlAXzJ4h+KT1H7EMBicRKzlNKKr8dKU/g9mo8yIWVqfdM49fEzdDzLaL7HLICqI4zXUbDqHOuLSiONLmcbh66zD3T3HVpEPugnpCFh8VZYS5oSapd0MxTVcA53Zv1iZCvgHYq9E1/FX3Vsf3lqYvXflpd+Y3wVHgepaK6/LoDfHoIu2uRUY4jrVXFqcIvTyrnqSQV26FI1TGUbatSZhOUGknW1C6oniXwten/BaHBQETKjy5MT4q+EVY+2tj9v1Adl5QixwlbHu0gPGU6KYTGddsxnza1MYo2FFtXhLVa8mkIVTxKDnP+ERVz5RnEv8LrXmJCPxeYlxXFkpJZTUJq/6qcX6Gsita66aWqBwrQ1QY0fvvdmReaavgDdbfayjVS05E2Twuu4dp96MTdsfIOzeHjLLidirqToFNuW3NCRpHUVQ+a/RcOeUw868mGY/oT/u4hRelLItR4zZoV92TSQen2qPNlsSk1lmRdIez47ag0pK7q/pyOPmatn4WwbJWUkuUvGptINrJ0T2RmJaPMUIWhOh0cU8liDlUTpSKm3QKNWSLbmULFQZWkajlFOys81S3JM6k2WKxM9XztCEVawYR1Q2geLApbu/BBY8dIeTSg6lLRSK/Zh/YKXB6Ljj7MpvPz5jSfzg4Dwm6Aiq+tm1fohJD28OLpdTuCtmi0fX1aoI6tU0eEaRsWN3uAcbTGSY8Q7mFO2edeRpj9lz1hz6UMWZEkSXqr1VUMsL9Z2NvjjQapH2vcCQOEyHCa3sIw6jWnFCrOv0dDuJ2mlTC/SQMDykNXKa1RQTC7hhjLDWuTxnA9C/JA3/qkRVjtxVInDy4gJsOqLYQlNmTMxnCJgqYIFSuBJJqNmsTjTyhjw/kk5F96PTH3pGQpQxiG8kMZKsbw6624XLmOVbnf9CgMpiNh9QRXXp3nnlnOGcGPgM53315UI6yOUq12MgguYRXKTcGjcRz3a9BwOMy/xPF4hAtsV/BCF0dfci1RzUefDIiEewWpFXhE5Pvy+u7lsim93F0vAeJRInUk3CLUgryxIZT1JvLxVZ6CEfzezRdt1Y8W891vkFYgPLx1l6gO+ppFV8pquoR8KI3g44HruXYbp/S1YkmhdJVF8w+Y8CpCTAZqV32ohEiFTFZ3gknt9xtj/roVbu4BJ/w1UnFDkXdACoQoeAMh1tdwgYIO6qaK9wWsOUQM0w7sF83QJ1X/ihI2fiLYlPc9jeuVrY/lNRkFmz6fjfjqH13ZNoEza5ROQtaD418LWyFRsA4t7uMwU+h7cFmPjb+FgoIZrBjA6OfCiUNdhIhAjMQ4fazJxbNKQrdjtlatYeY2RmojJBCHozCDGF/X5OJd5xQS/lY3Jl3dyEb3rezLInMRGMIkFTZONpJX7eVEFNzGDCFc1K9EU0rlqbpgKxMmnVhDqljdkiUJhoIDsDE6ulfl1rPSm6GSACXC5eHH0ybXtAmb9wkT3LAwmjs+vhcTj5thihD3xBg1Lw9+3Kf/Zq6aG8lxSsZp9k6HN4HTwtto+UBoz5aoaBuglhFSXWmcvr41/HsQDsVgH2VW9tW+vlB2pwVk5huGh9YRBudCnQ/7HA1RbuZcthHZ7UZN3gTXSEe/3bgg5Ud1zkO8yg0KIsf4TB78HrFnT90o3wV6HbPVaeeW36dFF7yveqn/Agm7dxdnD8evR0C4ZYIN5up03b5S9UupFEn7OcptzgSTGnj+ORs40bIihk3bJFljPCfRYc00NjAopH4mqCiEin4tuBGMFsMsZRU5qcHurVGkzdhAGi19N+vsDTlw7SWj4UW+Jm5H7L26ihrH1ijSpqwV42tDSVVKSbFQZBgMoOCCImKFrX6D4JrNfthUCzalUlv4jIjv1AgVbUfMOD+8bebnZ+fzzeyQPh9U8v4b5Z1I5uGb6MPgLmZajWb2N6FSK/iK1X/Ru1KrT9Dj0+1yku8tLW+fHhUy4EGeiJOfkqv6ss9G6XlzRJYWC4RKe7Taavr18fIeYDxZ45BoX+SfZD0aA9xfpvaerGujj7E0SOeSc+Sin6oZCZzVhaEUG9U9YkQQ9jhCO59Ut3x4h/4oc+DLcqQ3ieH9obRJuIjGmbc/TOAif1kDijDrQwXCJtuMFX3EhrBSfnB2D9xIL3n1SXdO4P6s6HKfbeGKYFzFqW/NDWFDQoW/ngiD6R5GYZJoECY4GcF+KlU2CNDZnkzUeFdwHhwFIacMIbYjpAP0Bexbp1ewS7UzqScXh1LFR0KYDXdnhEQ52EOYGNFlrGA7q0qtwoNP60NzDNImjnAiI8STMd2aSveWJP0zwWMqNguvssS5U4TV1ULMQ7Ma/QTrXKRgPOkDLP/cPT8/3/3ZAgxHSZKjXMtWkYLtySHMjPV8dx9jsjBcbg5Cah02F/eZMc9fARWd6gopnRzCtAexQEjwvU5RqnimG0uDVLBMX2mIA3sDOMl7sQuEPgvmeeppC3tDE8JgAwJeGMGd2iBY3BFRu+YYJWuwQgTh8JgIezaEwazP5yDRs5aPSpFEHz1u833k1VBvGB27D2nHmPtwG4kuhBdt9Fa2YoowoWhr6sM+c3+1Nw91K4HUhxozAgU7bsniNTwYrUVEzInRir+Mnc6l3a2kKZEZYdqaKXfg9tbxXKfUsz8omHP/Gg7pvoSy0pNCSGTlPmI7fqn0qNq5aTaem0olthmZRPsu+tC6b1Gi89RPkyFUsULBGd9ISXKfsYEzHahc8yFLhpJ0CDsJzzQgZK25Z97bMJ1X1iaQxfGFz9vRfycxSi0IhSciWhpdmZxonm3UMwLoHKHcTnkeqnIG72kQA1XE3hyXITR4g16qiyeje2V8lxqhnLHF0WpBGDwCixTWOeOUpe6YAkf36k8d4XPMLCPrbqZcapFJJ6KiP6t2CJshLDubLGTxRHE5g732UFDwGot9ZWeE7tyrnwxk8dM8AhekU2W6rg1TLp+UISWnhJDvLk7uXYcoq3vJt7R+KFIbylKfwYTM8xDRUBvTC9ATg6DeD6mNEEn/upYwS5pAdIXvDsqGby0vFYlHQogCO8LDmlm0cPCLVhwc2ERcRwdFaiOEjgB5tkyn0XkTH5mKOVlWRKJZvRkgtresjF5rS9I4ZTMj5HbC+I9b4IvE3rRDeEII5wwhUWg8RynfIVTGB3Snlyokvnm1EHtvz556FFGG+r3UwiAYKi/npBD2OELfUfo8TBHik0eYbRMq+tAiafz70Clyt0Z0rxmhNA+NrBUbMTt5HpbSvfvQb40vkhmhqyxVICzI0tNF+Javh559iD4iaT1sHSEqf9GfwbXoNKN1dsgOFJqJiYROQ6OeKjVTrz5uJGkUCHVk1UsZwrp66WSpqD1F2MjnrUVY7UmrbZEh7FdDwM0k2xaVSukobYYwa53xOdfS5Xko9Nq8TSL69F6x42nacJTsQwfrqfl9fnLd8h+OEBcR5sRtfKyy8Q3bcTxcztnGr4VQ55OW/giEWI1wgLifhqyIFaYGhHdxZnaNfqoOxJYQmiVFXco176wqnRF/mS3cGENFJkrDtRyIsAB2/0CsVGg9JU099G4Iqb+0p/OXGrpwx3yQWL395LkedolwgIL3q+w0BvV5u1b8xsIa8MTH521taz1SrRaomAGLPV1H5ZjrM71EE1z5afuHopFyBpTvPb24nC0d0OOMR9l7ctyLsyBE2f4hznrkQS9dpMLEIOFLhef+YSckrYfKFqd7wPLpPeN5ABqzt4EsCCzB3ewB+5IdobyP39+YByrd5I7ZqE7C6nFGRieGkMZi8E5ckYFquPCBBirASvR4V7EYKqaaRqGCR1iNkP5P42n4huALO8tezU3jZZ9BXDZki6cxIKyxPOgQ+sdE9WD7GKjPKBAt9iOPiVobDos0i8XweErJjJBrr/P8lF0YwW6hZLrYQRTyAxa2uDZTJLu2sdWsldj8Ksmad7UgQ1gKvozhjsYmZqGJLHwBTe9EbGIauFdYKPLr2dK/GUJs87X5BZ9YEFq2z1DwQyxylGJ4vyjGl75D3MtvFMJVs1D+2oksNSPUbxByL0/aixxAD4dXQ4Dt9e75+Xl3vQXoT3p5AGoWI+yAENeVpQalv/LR8TQCXQeGEcaVOO9hGufNgKcTdYUj1Rys24dK6dABQlpgtoXCLUslYklkod+qpOjpI6R8d9J5C8xEa1hCSEQtUq4m0ueGCM3JXr62CtEzM/S6skxeljoxxHg1gr2D37FFSdMyQtI5Z//BVYiVCIn4gf+eXNxmbSKsnOYoOgt9EdJA53OyMIwUCEdxdq7LYRFritCgGQcVheucadXm8xZFYucPVzjrzJDe7Abw3/PUWLlEAmHJCdA8vlThtuMIY90Z0gqPlMnjj+vllThDGi2vf9AzpK67qM3PkOraqnjOL3BwDz1E/KKsxePm4ezpbL55S7dtBu6O6zR4kfZ/m+eAZbVQJn79johdKpjwhiaXZrenCnk9ZqdkN+JRtTq/IatDKJ3Hr8M24Gy9iqE82oYrB20hrNJhxKOeFrx2t1oQF5tIuprPFemCx/OLOxV8EDoKDP5he5UJe65LFh1NevXSVI21CXOxu+jyPsvovRCi4HWc3UoZ7/wQOjDXk7jb5NaloBGhdtiIx3yHcP1bIWmMCM3rrokGv9eZwpDayVaWlRHsV/MCuL9XHG01ydKmS3JmiIkI4hoXf5iZVx8N0D67Wje5+mj/FiUlB3pPVBaINPkY1LyC0kMIDYIbFhYRKu/6KhdpAaGI0qF3fdXkJw0z+6U8CwizN0rj6svyWrikGrqJCiXpfW1ZhIciEsWRh0fWNN6CzYoLv7I1Sdy5N651515KSPulmlW6N3Gt3WhojVDl3sS2GBtTeQhab903bNa30g4yKWLuPx+3efclb6d68sy4DoWj+zLElhGm95caz0TV5px/VNz+eJnNjATjmEB0XFx1VRmvnli8x/zuBXoHLbJJLKH6OlRsSkK/JtzbGQ034iIoD3JYSCnTTUxvjqIu5UR/j3BNMlt6b+K0Ns7ugvat2wVhgG5gzZyOeEWPMx4PYeE+77B4n7cPe3OLN0vAIbvRO93Y6OLUb96Ksjx5kXZeItjPafogd9UpP7CyKio+p7zme4jE1g29k72b68q1CMm6P5TuJmn7Xv0NvVc/9z5iuG15iBaqK/zhD4m+div2b8mrTtYxDLfXd5cXTeny7nY7hP46kfyr4rcRagFAKn9ABWDpSeo+e4FVwcnL7hBqSvF4UmSb/myAwRJ0BOqHMEidgT+g0Jaq374VGhUuNusAYWV4SNbD2z/QDSpBpAP/Mdzi3crcNPglyFi9hLF84ZPpp2T83wUZFGN4RpqlxcPutuhBBoQo/b2nsbRhr0dRYwyHY/iTX9/TAKGZjAjT3+y6huGVC0JPfJMhXE+ladIIocUet72Rxc1H+rtrSf7rN7WlTpKECV5PxgAfNzVu1PUm1/Nhg9nT6zZq7bfzouXr0wxlumkbwsTd0lDm5MMILWb0jtmmlN5RmzFs2ZgwACt/LMwMEbx0xMaUvlmcZ45MVfzN2pCRnWOCPtNxERakq6Fdjgg1Hs2WEOqjsU0tdOTdrHjH9I3Qmcc3fRnqyqfyTc5UvwO8FNrOWtEl768yOFtDeMK9eNxKPpW+EX5ZyrTZfFkTf9tc6FpztdQp5+MVqU2fj1BrPbVER0NostvcB2WN5tZ+bS4FXS3Tb4RutX42Qmu+NpXNRjys5ZCiwS48vw7CGvz/EoT2B1+HDJ40e7YvQZ4Iv6Azwq/B2vgAySPcBnn7zdU7GjXaY3FSfx5CdREfNrYA7toI1YPCEyH/v8yz2Rv30FgK2whOtbasgddD6teIvxphSUU4HYTejL7cMvK3U8El41FIn/b1VAUTuc21vwvz30Vfs2s6bLUba0/9uatmdEidN6CzCjpzQ/iTVzFU+WDLihyOAWqem2SyhadTBU0zF8yAlrU1v3J1EdrKdYnQ25Ho1fJa1AXTb4Sl3NX9w1bpGAj/B44FvSHCFNl0AAAAAElFTkSuQmCC" alt="" class="emblema_way_to_polit">
-					</a>
-				</p>
-				<p href="" class="way_to_polit">
-					<a href="https://www.google.com"><img src="https://umi.ru/images/blog/icon14-min.jpg" alt="" class="emblema_way_to_polit">
-					</a>
-				</p>
-			</div>
+
+				<div href="" class="way_to_polit">
+					<a href="https://www.google.com" style="color: white;" class="icofont-facebook"></a>
+				</div>
+
+				<div href="" class="way_to_polit" >
+					<a href="https://www.google.com" style="color: white;" class="icofont-instagram"></a>
+				</div>
+
 			<div class="to_subject">
-				<p class="way_to_subject">
-					<a href="#top">
-						<p class="way_to_subject">&#5167;</p>
-					</a>
-				</p>
+				<a href="#nav">
+					<p class="way_to_subject">&#5167;</p>
+				</a>
+			</div>
+		</div>
+		<div class="nav" id="nav">
+			<div class="block_subject">
+					<a href="" style="color: #0B2349" class="name_lesson">История</a>
+			</div>
+			<div class="block_subject">
+					<a href="" class="name_lesson">Физика</a>
+			</div>
+			<div class="block_subject">
+					<a href="" style="color: #0B2349" class="name_lesson">Программирование</a>
+			</div>
+			<div class="block_subject">
+					<a href="" class="name_lesson">Биология</a>
+			</div>
+			<div class="block_subject">
+					<a href="" style="color: #0B2349" class="name_lesson">Укр. мова</a>
+			</div>
+			<div class="block_subject">
+					<a href="" class="name_lesson">Информатика</a>
 			</div>
 		</div>
 
