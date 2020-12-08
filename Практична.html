@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+		*{
+			margin: 0px;
+			padding:0px;
+			text-decoration: none;
+			list-style: none;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+		}
+		header{
+			width: 100%;
+			height: 10vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		header p{
+			font-weight: 600;
+			font-size: 50px;
+			text-shadow: 2px 2px 2px lightgrey;
+			letter-spacing: 2px;
+			font-family: 'Montserrat', sans-serif;
+		}
+		header p a{
+			color: green;
+		}
+		.main-menu{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+
+		}
+		.main-menu li{
+			display: inline-block;
+			width: 200px;
+			height: 50px;
+			margin: 20px;
+			align-content: center;
+		}
+		.block_menu{
+			display: block;
+			text-align: center;
+			width: 200px;
+			padding-top: 15px;
+			height: 50px;
+			margin: auto;
+			color: white;
+			background-color: green;
+			border-radius: 5px;
+		}
+		.block_menu:hover{
+			color: white;
+			background-color: darkgreen;
+			box-shadow: 1px 1px 10px grey;
+			transition: 0.5s;
+		}
+		.content{
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+		.card{
+			width: 350px;
+			height: 450px;
+			margin: 10px;
+			border-radius: 5px;
+			border: 1px solid lightgrey;
+			box-shadow: 1px 1px 5px grey;
+			overflow: auto;
+		}
+		.card::-webkit-scrollbar {
+		  width: 10px;
+		  background-color: white;
+		}
+		.card::-webkit-scrollbar-thumb {
+		  border-radius: 10px;
+		  background: #084200;
+		}
+		.header_card{
+			text-align: center;
+			padding-top: 15px;
+			font-weight: 600;
+			font-size: 25px;
+			letter-spacing: 1px;
+		}
+		.img_card{
+			width: 300px;
+			margin: 25px;
+			height: 150px;
+		}
+		.content_card{
+			margin: 20px;
+			font-size: 18px;
+		}
+		footer{
+			width: 100%;
+			height: 10vh;
+			background-color: #084200;
+			padding: 2.5vh;
+		}
+		.text_footer{
+			color: white;
+			font-size: 15px;
+/*			margin: 10px;*/
+		}
+	</style>	
+</head>
+<body>
+	<header>
+		<p class="text_header"><a href="">Мої наукові інтереси</a></p>
+	</header>
+	<lu class="main-menu">
+		<li><a href="#Web-programming" class="block_menu">Web-programming</a></li>
+		<li><a href="#Biology" class="block_menu">Biology</a></li>
+		<li><a href="#ICT" class="block_menu">ICT</a></li>
+		<li><a href="#Films" class="block_menu">Films</a></li>
+	</lu>
+	<div class="content">
+		<div id="Web-programming" class="card">
+			<p class="header_card">Web-programming</p>
+			<div class="img_card" style="background-image: url(http://lorempixel.com/400/200/technics/1); background-size: cover;"></div>
+			<p class="content_card">Вебдизайн (англ. web design) — галузь веброзробки, що охоплює цілий ряд напрямів і дисциплін із створення та супроводу сайтів або вебзастосунків, таких як графічний вебдизайн, проектування інтерфейсів, авторинг (у тому числі стандартизований код і власницьке програмне забезпечення), використовність та оптимізація для пошукових систем. Найчастіше виконання різних етапів процесу вебдизайну забезпечують відповідні спеціалісти (менеджер проекту, дизайнер, вебпрограміст, вебмайстер тощо), хоча деякі вебдизайнери можуть виконувати усе самостійно. Термін вебдизайн зазвичай використовують для опису проектування й реалізації клієнтської частини вебсайту, включаючи верстку.</p>
+		</div>
+		<div id="Biology" class="card">
+			<p class="header_card">Biology</p>
+			<div class="img_card" style="background-image: url(http://lorempixel.com/400/200/nature/1); background-size: cover;"></div>
+			<p class="content_card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio officiis similique autem, quas, accusantium maxime mollitia perferendis ut dolor, magni, hic cum. Voluptatibus totam, quidem nam neque quis quia expedita voluptatum. Esse dolore autem necessitatibus in at molestias tenetur pariatur repellendus. Nisi dolore a illum velit inventore iusto doloremque non nesciunt quibusdam expedita recusandae quis dolorem magnam dolor impedit, nemo, aperiam nostrum. Sit cum, libero odit nam enim assumenda perspiciatis modi nobis, atque, sunt, dolorum! Numquam incidunt rem recusandae est debitis optio dolor dicta harum quod tenetur eligendi nostrum voluptates quia, iure quaerat perferendis consequuntur rerum distinctio eum quibusdam in.</p>
+		</div>
+		<div id="ICT" class="card">
+			<p class="header_card">ICT</p>
+			<div class="img_card" style="background-image: url(http://lorempixel.com/400/200/technics/3); background-size: cover;"></div>
+			<p class="content_card">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Recusandae, natus. Inventore, quod provident, delectus doloremque dicta dolores minus sed. Expedita nam dicta temporibus quae consequatur similique officia, maiores laborum iusto!</p>
+		</div>
+		<div id="Films" class="card">
+			<p class="header_card">Films</p>
+			<div class="img_card" style="background-image: url(http://lorempixel.com/400/200/technics/4); background-size: cover;"></div>
+			<p class="content_card">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem culpa fugiat natus aliquid voluptatum explicabo sunt soluta perspiciatis. Aperiam aliquid ullam eligendi nemo quas fugit nulla ab necessitatibus odio qui.</p>
+		</div>
+	</div>
+	<footer>
+		<p class="text_footer">Фото взяті с http://lorempixel.com/</p>
+		<p class="text_footer">Інформація взята с https://uk.wikipedia.org/wiki</p>
+	</footer>
+</body>
+</html>
