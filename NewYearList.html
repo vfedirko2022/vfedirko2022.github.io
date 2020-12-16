@@ -257,6 +257,12 @@
 		var SNOW_Height = "35px"; // высота изображения снежинки  
 		var SNOW_no = 100; // максимальное количество снежинок на странице одновременно
 	</script>
+	<script type="text/javascript">  function garland() {   nums = document.getElementById('nums_1').innerHTML   // скрипт на смену гирлянды
+	if(nums == 1) {document.getElementById('garland').className='garland_1';document.getElementById('nums_1').innerHTML='2'}   
+	if(nums == 2) {document.getElementById('garland').className='garland_2';document.getElementById('nums_1').innerHTML='3'}   
+	if(nums == 3) {document.getElementById('garland').className='garland_3';document.getElementById('nums_1').innerHTML='4'}   
+	if(nums == 4) {document.getElementById('garland').className='garland_4';document.getElementById('nums_1').innerHTML='1'}  }  
+	setInterval(function(){garland()}, 600)  </script>
 	<script type="text/javascript" src="https://uguide.ru/js/script/skript_sneg_webanfarwol_ru.js"></script>
 </body>
 </html>
