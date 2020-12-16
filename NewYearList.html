@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			text-decoration: none;
+		}
+		a{
+			color: black;
+		}
+		body{
+			background-color: #dedede;
+		}
+		.nav{
+			width: 100%;
+			height: 70px;
+			text-align: center;
+		}
+		.to_menu{
+			font-weight: 600;
+			font-size: 50px;
+		}
+		.time_day, .time_night{
+			width: 50px;
+			margin-left: 10px;
+			margin-right: 10px;
+			height: 50px;
+		}
+		.time_day img, .time_night img{
+			width: 50px;
+			height: 50px;
+		}
+		.paper{
+			display: flex;
+			position: relative;
+			overflow: hidden;
+			margin: auto;
+			width: 1000px;
+			height: 700px;
+			box-shadow: 2px 2px 10px grey;
+			background: rgb(198,205,255);
+			background: linear-gradient(0deg, rgba(198,205,255,1) 30%, rgba(162,179,255,1) 89%);
+		}
+		#garland {
+			position:absolute;
+			top:0;
+			left:0;
+			background-image:url('https://uguide.ru/js/script/christmas-lights.png');
+			height:36px;
+			width:100%;
+			overflow:hidden;
+			z-index:99}   
+		#nums_1 {padding:100px}  
+		.garland_1 {background-position: 0 0}   
+		.garland_2 {background-position: 0 -36px} 
+		.garland_3 {background-position: 0 -72px}   
+		.garland_4 {background-position: 0 -108px}
+		.text{
+			position: absolute;
+			z-index: 2;
+			text-shadow: 2px 2px 2px black, 4px 4px 10px white;
+			color: white;
+			font-weight: 600;
+			font-size: 80px;
+			margin-top: 20px;
+			margin-left: 90px;
+			letter-spacing: 5px;
+		}
+		.sugrob_left{
+			position: absolute;
+			background-color: white;
+			width: 700px;
+			height: 300px;
+			top: 490px;
+			left: -250px;
+			border-radius: 0 75%;
+			z-index: 3;
+		}
+		.sugrob_right{
+			position: absolute;
+			background-color: white;
+			width: 700px;
+			height: 300px;
+			top: 490px;
+			left: 550px;
+			border-radius: 75% 0;
+			z-index: 3;
+		}
+		.sugrob_center{
+			position: absolute;
+			background-color: #e6e6e6;
+			width: 700px;
+			height: 300px;
+			top: 500px;
+			left: 135px;
+			border-radius: 50%;
+			z-index: 2;
+		}
+		.first{
+			position: absolute;
+			border-top: 40px solid transparent;
+			border-right: 20px solid transparent;
+			border-left: 20px solid transparent;
+			border-bottom: 40px solid green;
+			width: 0px;
+			height: 0px;
+			border-radius: 40%;
+			left: 455px;
+			top: 104px;
+		}
+		.second{
+			position: absolute;
+			border-top: 70px solid transparent;
+			border-right: 40px solid transparent;
+			border-left: 40px solid transparent;
+			border-bottom: 70px solid green;
+			width: 0px;
+			height: 0px;
+			border-radius: 40%;
+			top: 104px;
+			left: 435px;
+		}
+		.third{
+			position: absolute;
+			border-top: 110px solid transparent;
+			border-right: 60px solid transparent;
+			border-left: 60px solid transparent;
+			border-bottom: 110px solid green;
+			width: 0px;
+			height: 0px;
+			border-radius: 40%;
+			top: 104px;
+			left: 415px;
+		}
+		.forth{
+			position: absolute;
+			border-top: 150px solid transparent;
+			border-right: 80px solid transparent;
+			border-left: 80px solid transparent;
+			border-bottom: 150px solid green;
+			width: 0px;
+			height: 0px;
+			border-radius: 35%;
+			top: 104px;
+			left: 395px;
+		}
+		.fifth{
+			position: absolute;
+			border-top: 200px solid transparent;
+			border-right: 110px solid transparent;
+			border-left: 110px solid transparent;
+			border-bottom: 200px solid green;
+			width: 0px;
+			height: 0px;
+			border-radius: 30%;
+			top: 104px;
+			left: 366px;
+		}
+		.toy_1:hover{
+			box-shadow: 1px 1px 5px #006A00, 1px 1px 5px #006A00, 1px 1px 5px #006A00;
+		}
+		.toy_2:hover{
+			box-shadow: 1px 1px 5px #006A00, 1px 1px 5px #006A00, 1px 1px 5px #006A00;
+		}
+		.toy_3:hover{
+			box-shadow: 1px 1px 5px #006A00, 1px 1px 5px #006A00, 1px 1px 5px #006A00;
+		}
+		.toy_4:hover{
+			box-shadow: 1px 1px 5px #006A00, 1px 1px 5px #006A00, 1px 1px 5px #006A00;
+		}
+		.toy_5:hover{
+			box-shadow: 1px 1px 5px #006A00, 1px 1px 5px #006A00, 1px 1px 5px #006A00;
+		}
+		.toy_1:hover{
+			box-shadow: 1px 1px 5px #006A00, 1px 1px 5px #006A00, 1px 1px 5px #006A00;
+		}
+		.toy_1{
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-image: radial-gradient(circle at 76.78% 62.49%, #af2cff 0, #7327ff 25%, #1020f8 50%, #001ad6 75%, #0015b6 100%);
+			left: 465px;
+			top: 200px;
+		}
+		.toy_2{
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-image: radial-gradient(circle at 67.16% 58%, #ffc700 0, #ffb200 16.67%, #ff9b00 33.33%, #f88310 50%, #e86c1c 66.67%, #da5724 83.33%, #cd452a 100%);
+			left: 475px;
+			top: 255px;
+		}
+		.toy_3{
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;	
+			background-image: radial-gradient(circle at 67.16% 58%, #ff6a2f 0, #ff583a 12.5%, #ff4541 25%, #ff2f47 37.5%, #f8104a 50%, #e5004c 62.5%, #d3004e 75%, #c20050 87.5%, #b20052 100%);
+			left: 435px;
+			top: 330px;
+		}
+		.toy_4{
+			position: absolute;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			background-image: radial-gradient(circle at 67.16% 58%, #9fc000 0, #83bb00 12.5%, #65b300 25%, #41a900 37.5%, #009c0f 50%, #008f1e 62.5%, #008429 75%, #007a31 87.5%, #007139 100%);
+			left: 490px;
+			top: 355px;
+		}
+		.toy_5{
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-image: radial-gradient(circle at 59.69% 76.62%, #ffa200 0, #ff8e00 10%, #ff7800 20%, #ff5e00 30%, #ff3f00 40%, #f81010 50%, #e5001e 60%, #d40028 70%, #c3002f 80%, #b50036 90%, #a8003e 100%);
+			left: 440px;
+			top: 425px;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<a href="NewYearList.html" class="time_day"><img src="img/sun.png" alt=""></a>
+		<a href="index.html" class="to_menu">Калейдоскоп відкриттів</a>
+		<a href="NewYearList2.html" class="time_night"><img src="img/moon.png" alt=""></a>
+	</div>
+	<div class="paper">
+		<div id="garland" class="garland_4">  
+			<div id="nums_1">1</div>
+		</div>
+		<p class="text">З НОВИМ РОКОМ!</p>
+		<div class="sugrob_left"></div>
+		<div class="sugrob_right"></div>
+		<div class="sugrob_center"></div>
+		<div class="first"></div>
+		<div class="second"></div>
+		<div class="third"></div>
+		<div class="forth"></div>
+		<div class="fifth"></div>
+		<div class="toy_1"></div>
+		<div class="toy_2"></div>
+		<div class="toy_3"></div>
+		<div class="toy_4"></div>
+		<div class="toy_5"></div>
+	</div>
+
+	<script type="text/javascript">  	
+		var SNOW_Picture = "https://uguide.ru/js/script/img_sneg.png"; // ссылка на изображение снежинки  
+		var SNOW_Width = "35px"; // ширина изображения снежинки  
+		var SNOW_Height = "35px"; // высота изображения снежинки  
+		var SNOW_no = 100; // максимальное количество снежинок на странице одновременно
+	</script>
+	<script type="text/javascript" src="https://uguide.ru/js/script/skript_sneg_webanfarwol_ru.js"></script>
+</body>
+</html>
