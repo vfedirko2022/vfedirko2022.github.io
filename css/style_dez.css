@@ -101,3 +101,18 @@ a{
     border: 1px solid red;
     transition: .5s;
 }
+
+
+
+.carousel-item div h5, .carousel-item div p{
+    text-shadow: 1px 1px 4px #24292e, 0px 0px 4px #24292e, 0px 1px 2px #24292e;
+}
+
+.container_of_the_form {
+    padding-top: 30px;
+}
+.container_of_the_form h4{
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 2px black, 0px 0px 4px black, 1px 1px 3px black;
+    padding-bottom: 20px;
+}
