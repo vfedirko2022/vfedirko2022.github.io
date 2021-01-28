@@ -427,13 +427,13 @@
             <h4>Заполните форму и получите персональное предложение</h4>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control container_of_the_form__input" placeholder="Имя" aria-label="First name">
+                    <input type="text" class="form-control container_of_the_form__input" placeholder="Имя" aria-label="First name" required>
                 </div>
                 <div class="col-lg-3 col-md-4 m-auto mt-4">
-                    <input type="text" class="form-control container_of_the_form__input" placeholder="Номер телефона для связи" aria-label="Last name">
+                    <input type="number" class="form-control container_of_the_form__input" placeholder="Номер телефона для связи" aria-label="Last name" required>
                 </div>
                 <div class="col-lg-3 col-md-4">
-                    <input type="text" class="form-control container_of_the_form__input" placeholder="Почта" aria-label="Last name">
+                    <input type="text" class="form-control container_of_the_form__input" placeholder="Почта" aria-label="Last name" required>
                 </div>
             </div>
             <div class="row">  <!-- Рядок для кнопки, нужен ли он? Кнопка растягивается на весь экран при <1000px -->
@@ -543,14 +543,14 @@
 
     <!-- Подвал -->
     <!-- НАЧАЛО -->
-    <div class="container">
-        <div class="row footer_block">
-            <div class="col-lg-2 col-md-4 text-left footer">
+    <div class="container test">
+        <div class="row">
+            <div class="col-lg-2 text-left footer">
                 <p class="footer_title"><img src="img/logo.jpg" width="40px" height="40px" alt=""> DEZSAN</p>
                 <p class="footer_content">ООО "ДЕЗСАН"</p>
                 <p class="footer_content">ЕГРПОУ 43469157</p>
             </div>
-            <div class="col-lg-2 col-md-4 text-left footer">
+            <div class="col-lg-2 text-left footer">
                 <ul>
                     <li>
                         <p href="" class="footer_title">Услуги</p>
@@ -588,7 +588,7 @@
                     <br>
                 </ul>
             </div>
-            <div class="col-lg-2 col-md-4 text-left footer">
+            <div class="col-lg-2 text-left footer">
                 <ul>
                     <li>
                         <a href="" class="footer_content">Дезинфекция</a>
@@ -618,7 +618,7 @@
                         <a href="" class="footer_content">Контакты</a>
                 </ul>
             </div>
-            <div class="col-lg-2 col-md-4 text-left m-auto footer">
+            <div class="col-lg-3 text-left  footer">
                 <ul>
                     <li>
                         <p class="footer_title">Полезные статьи</p>
@@ -643,7 +643,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-2 col-md-4 text-left footer">
+            <div class="col-lg-3 text-left footer">
                 <ul>
                     <li>
                         <p href="" class="footer_title">Наши контакты</p>
