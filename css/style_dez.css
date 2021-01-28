@@ -161,6 +161,9 @@ a{
     .garantiya_title{
         font-size: 22px;
     }
+    .garantiya_time_fon{
+        padding: 0 2px;
+    }
 }
 .garantiya_content{
     margin-bottom: 0;
@@ -278,14 +281,18 @@ a{
 
 
 .footer_block{
-    justify-content: center;
-    margin: 0 200px;
+    margin: auto;
     width: 870px;
 }
 .footer{
+    margin-bottom: 40px;
     padding: 0;
     margin-right: 0;
     margin-left: 0;
+}
+.footer_stat{
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 .footer ul{
     padding: 0;
