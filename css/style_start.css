@@ -49,6 +49,9 @@ a{
     margin-right: 10px;
     font-size: 20px;
 }
+.top_black_block span{
+    color: white;
+}
 .top_menu_link{
     color: rgb(207, 207, 207);
     line-height: 30px;
