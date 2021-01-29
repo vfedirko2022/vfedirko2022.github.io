@@ -14,7 +14,7 @@ a{
     margin-bottom: 10px;
 }
 ::-webkit-scrollbar {
-    width: 13px;
+    width: 9px;
     background-color: white;
 }
   
@@ -34,12 +34,12 @@ a{
     padding: 7px 0;
 }
 @media screen and (max-width: 768px){
-    .top_menu_link{
+    .top_menu_link, .top_menu_link_to{
      font-size: 14px;
     }
 }
 @media screen and (max-width: 570px){
-    .top_menu_link{
+    .top_menu_link, .top_menu_link_to{
      font-size: 12px;
     }
 }
@@ -95,7 +95,7 @@ a{
     text-shadow: 1px 1px 4px #24292e, 0px 0px 4px #24292e, 0px 1px 2px #24292e;
 }
 footer{
-    background-image: url(../img/footer4.jpg);
+    background-color: rgb(27, 27, 27);
 }
 .row_top_footer{
     background-color: rgb(100, 100, 100);
