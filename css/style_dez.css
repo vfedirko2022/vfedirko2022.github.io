@@ -74,11 +74,13 @@
     line-height: 36px;
     border: 1px solid rgb(212, 173, 0);
     border-radius: 15px;
-    transition: color .5s;
+    transition: .5s;
 }
 .one_card__link:hover{
     border: 1px solid red;
     transition: .5s;
+    box-shadow: 1px 1px rgb(212, 173, 0), 2px 2px rgb(212, 173, 0), 3px 3px rgb(212, 173, 0);
+    transform: translateX(-3px);
 }
 
 .container_of_the_form {
