@@ -11,18 +11,37 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" id="ao_optimized_gfonts" href="https://fonts.googleapis.com/css?family=Roboto:500&amp;display=swap">
     <link rel="stylesheet" href="css/style_dez.css">
+    <link rel="stylesheet" href="css/style_start.css">
     <title>DEZSAN</title>
 </head>
-<body style="height: 4000px;">
+<body>
     <!-- Верхнее меню на странице с названием фирмы и навигацией -->
     <!-- НАЧАЛО -->
+    <div class="container-fluid top_black_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 col-sm-12 top_black_block">
+                    <a href="" class="top_menu_link">Наши услуги</a>
+                    <a href="" class="top_menu_link">О нас</a>
+                    <a href="" class="top_menu_link">Отзывы</a>
+                    <a href="" class="top_menu_link">Методы работы</a>
+                    <a href="" class="top_menu_link">Блог</a>
+                    <a href="" class="top_menu_link">Вопрос-ответ</a>
+                </div>
+                <div class="offset-lg-3 col-lg-1 offset-md-1 col-md-1 top_black_block text-center">
+                    <a href="tel:+380503559950" class="top_menu_link_to">&#128379;</a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNqtbnWrnmlTlNjMjcNkRXdjLBxZbMxbxWjdQsMXrLNKQHhLWLnxCcrbJSSCkCKPkHhCXB" class="top_menu_link_to">&#128393;</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
 
                 <a class="navbar-brand" href="#">
                     <img src="img/logo.jpg" width="60px" height="60px" alt="Логотип сайта">
-                    <span class="navbar-title" >ДЕЗСАН</span>
+                    <span class="navbar-title" style="color:  rgb(255, 109, 0);" >ДЕЗСАН</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,10 +60,16 @@
                             <a class="nav-link nav-link-text" href="#">Дезинфекция</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link nav-link-text" href="#">Десерпентация</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-text" href="#">Фумигация</a>
+                        </li>  
+                        <li class="nav-item">
                             <a class="nav-link nav-link-text" href="#">Для организаций</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-text" href="#">Прайс</a>
+                            <a class="nav-link nav-link-text" href="#">Акции</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-link-text" href="#">Контакты</a>
@@ -59,7 +84,7 @@
 
     <!-- Карусель с фото и названиями-->
     <!-- НАЧАЛО -->
-    <div class="container-fluid" style="height: 350px; padding: 0;">
+    <div class="container-fluid carousel_block">
         <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
@@ -68,24 +93,22 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/слайд_4.jpg" height="350px" class="d-block w-100" alt="...">
+                    <img src="img/фото 1.jpg" class="d-block carousel_img w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h5>ПОЛНОЕ ИЗБАВЛЕНИЕ ОТ ВРЕДИТЕЛЕЙ!</h5>
+                        <p>Быстро. Качественно. Надежно.</p>
                     </div>
                 </div>    
                 <div class="carousel-item">
-                    <img src="img/слайд_2.jpg" height="350px" class="d-block w-100" alt="...">
+                    <img src="img/Фото 2.jpg" class="d-block carousel_img w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5>Заботимся о Вашей безопасности</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                <img src="img/слайд_3.jpg" height="350px" class="d-block w-100" alt="...">
+                <img src="img/фото 3.jpg" class="d-block carousel_img w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h5>Гарантируем результат!</h5>
                     </div>
                 </div>
             </div>
@@ -105,7 +128,7 @@
     <!-- Само содержание главной страницы -->
     <!-- НАЧАЛО -->
     <div class="container content-on-main-page">
-        <h1>Команда <strong><span style="color: rgb(212, 173, 0);">ДЕЗ</span>САН</strong></h1>
+        <h1>Команда <strong><span style="color: rgb(255, 109, 0);">ДЕЗ</span>САН</strong></h1>
         <p class="description"><br> Мы - профессионалы с многолетним опытом работы в области дезинсекции, дератизации, десерпентации, дезинфекции и фумигации</p>
     </div>
     <div class="container">
@@ -422,7 +445,7 @@
 
     <!-- Форма отправки имя/телефона/почты -->
     <!-- НАЧАЛО -->
-    <div class="container-fluid pb-2" style="background: linear-gradient(to bottom right, #d4ad00 14%, #ff0000 250%);">
+    <div class="container-fluid pb-2" style="background: linear-gradient(to bottom right, rgb(255, 109, 0) 50%, #ff0000 150%);">
         <div class="container container_of_the_form">
             <h4>Заполните форму и получите персональное предложение</h4>
             <div class="row g-4">
@@ -436,9 +459,8 @@
                     <input type="text" class="form-control container_of_the_form__input" placeholder="Почта" aria-label="Last name" required>
                 </div>
             </div>
-            <div class="row">  <!-- Рядок для кнопки, нужен ли он? Кнопка растягивается на весь экран при <1000px -->
-            <!-- btn-outline-success or btn-danger -->
-                <button type="submit" class="d-block col-lg-2 btn btn-danger m-auto mt-4 mb-4 container_of_the_form_button">Отослать...</button>
+            <div class="row">
+                <button type="submit" class="d-block col-lg-2 btn btn-danger m-auto mt-4 mb-4 container_of_the_form_button">Отправить</button>
             </div>
         </div>
     </div>
@@ -489,7 +511,7 @@
     <div class="container document">
         <div class="row document_row">
             <div class="col-lg-8 text-center">
-                <p class="document_block__title title_shadow">ОФОРМЛЕНИЕ ЛЮБЫХ САНИТАРНЫХ ДОКУМЕНТОВ</p>
+                <p class="document_block__title title_shadow">Внедрение программы пест-контроля на предприятиях производства и реализации пищевой продукции</p>
             </div>
             <div class="col-lg-8">
                 <hr>
@@ -504,7 +526,7 @@
                 </div>
                 <p class="document_card_title">Дезинфекция транспортного средства</p>
                 <div class="hr"></div>
-                <p class="document_card_content">Обеззараживание и дезинфекция автотранспортного средства и оформление соответствующих документов.</p>   
+                <p class="document_card_content">Обеззараживание и дезинфекция автосредства и оформление соответствующих документов.</p>   
                 <button class="btn btn-outline-danger own-create-btn">Подробнее...</button>
             </div>
             <div class="col-lg-3 col-md-4 document_card_block text-center">
@@ -520,151 +542,142 @@
                 <div class="document_card__blockimg">
                     <img src="img/doki.jpg" class="document_card__img">
                 </div>
-                <p class="document_card_title">Документация по расходу дезсредств</p>
+                <p class="document_card_title">Документальное подтверждение выполнения работ</p>
                 <div class="hr"></div>
                 <p class="document_card_content">Оформление санитарных документов оперативно и официально.</p>   
-                <button class="btn btn-outline-danger own-create-btn">Подробнее...</button>
+                <button class="btn btn-outline-danger own-create-btn third_button">Подробнее...</button>
             </div>
-            <!--<div class="three_tri">
-                <div class="imgbox">
-                    <img src="https://dezstancya.ru/wp-content/uploads/2018/07/doki.jpg" class="image_left" alt="Журнал учёта и расходования дезсредств">
-                </div>
-                <h2>Журнал учёта и расходования дезсредств</h2>
-                <p>Оказываем помощь при оформление журнала учёта и расходования дезсредств.</p> 
-                <a href="https://dezstancya.ru/services/for-organizations/zhurnal-ucheta-dezsredstv/">
-                    <p class="readmorebut">
-                        <i class="fa fa-angle-double-right"></i> Подробнее
-                    </p>
-                </a>
-            </div>-->
         </div>
     </div>
     <!-- КОНЕЦ -->
 
     <!-- Подвал -->
     <!-- НАЧАЛО -->
-    <div class="container test">
-        <div class="row">
-            <div class="col-lg-2 text-left footer">
-                <p class="footer_title"><img src="img/logo.jpg" width="40px" height="40px" alt=""> DEZSAN</p>
-                <p class="footer_content">ООО "ДЕЗСАН"</p>
-                <p class="footer_content">ЕГРПОУ 43469157</p>
+    <footer class="">
+        <div class="row_top_footer mb-5"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 text-left footer">
+                        <p class="footer_title"><img src="img/logo_for_the_header.jpg" width="40px" height="40px" alt=""> DEZSAN</p>
+                        <p class="footer_content">ООО "ДЕЗСАН"</p>
+                        <p class="footer_content">ЕГРПОУ 43469157</p>
+                    </div>
+                    <div class="col-lg-2 text-left footer">
+                        <ul>
+                            <li>
+                                <p href="" class="footer_title">Услуги</p>
+                            </li>
+                            <li>
+                                <a href="" class="footer_content">Дезинсекция</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer_content">Комары</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer_content">Клещи</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer_content">Осы, шершни</a>
+                            <li>
+                                <a href="" class="footer_content">Тараканы</a>
+                            <li>
+                                <a href="" class="footer_content">Клопы</a>
+                            <li>
+                                <a href="" class="footer_content">Блохи</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="" class="footer_content">Дератизация</a>
+                            <li>
+                                <a href="" class="footer_content">Мыши, крысы</a>
+                            <li>
+                                <a href="" class="footer_content">Кроты</a>
+                            <br>
+                            <li>
+                                <a href="" class="footer_content">Десерпентация</a>
+                            <li>
+                                <a href="" class="footer_content">Змеи</a>
+                            <br>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 text-left footer">
+                        <ul>
+                            <li>
+                                <a href="" class="footer_content">Дезинфекция</a>
+                            <li>
+                                <a href="" class="footer_content">Плесень</a>
+                            <li>
+                                <a href="" class="footer_content">Вирусы</a>
+                            <li>
+                                <a href="" class="footer_content">Дезодорация</a>
+                            <li>
+                                <a href="" class="footer_content">Дезинвация</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="" class="footer_content">Фумигация</a>
+                            <li>
+                                <a href="" class="footer_content">Кароед, шашель</a>
+                            <li>
+                                <a href="" class="footer_content">Обеззараживание зерна</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="" class="footer_content">Для организаций</a>
+                            <li>
+                                <a href="" class="footer_content">Контакты</a>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 text-left footer">
+                        <ul>
+                            <li>
+                                <p class="footer_title">Полезные статьи</p>
+                            </li>
+                            <li>
+                                <a class="footer_content">Первая помощь детям при укусах насекомых</a>
+                            </li>
+                            <li>
+                                <a class="footer_content">Первая помощь при укусе гадюки</a>
+                            </li>
+                            <li>
+                                <a class="footer_content">От соседей ползут тараканы - что делать?</a>
+                            </li>
+                            <li>
+                                <a class="footer_content">В подъезде появились крысы - что предпринять?</a>
+                            </li>
+                            <li>
+                                <a class="footer_content">Договор на дератизацию и дезинсекцию ― условие успешного прохождения проверок</a>
+                            </li>
+                            <li>
+                                <a class="footer_content">Жужжат и кусают: как избавиться от ос на даче?</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 text-left footer">
+                        <ul>
+                            <li>
+                                <p href="" class="footer_title">Наши контакты</p>
+                            </li>
+                            <li>
+                            <a href="https://maps.google.com/?q=49.94967074759937,36.164730511597185" class="footer_content">Гл. офис: г.Харьков проспект Ново-Баварский 77</a>
+                            <li>
+                            <a href="" class="footer_content">Номера телефонов:</a>
+                            <li>
+                            <a href="tel:+380503559950" class="footer_content footer_content_number">+380503559950</a>
+                            <li>
+                            <a href="tel:+380677696083" class="footer_content footer_content_number">+380677696083</a>
+                            <li>
+                            <a href="tel:+380933307707" class="footer_content footer_content_number">+380933307707</a>
+                            <li>
+                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNqtbnWrnmlTlNjMjcNkRXdjLBxZbMxbxWjdQsMXrLNKQHhLWLnxCcrbJSSCkCKPkHhCXB" class="footer_content">Email: dezsan.kh@gmail.com</a>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-2 text-left footer">
-                <ul>
-                    <li>
-                        <p href="" class="footer_title">Услуги</p>
-                    </li>
-                    <li>
-                        <a href="" class="footer_content">Дезинсекция</a>
-                    </li>
-                    <li>
-                        <a href="" class="footer_content">Комары</a>
-                    </li>
-                    <li>
-                        <a href="" class="footer_content">Клещи</a>
-                    </li>
-                    <li>
-                        <a href="" class="footer_content">Осы, шершни</a>
-                    <li>
-                        <a href="" class="footer_content">Тараканы</a>
-                    <li>
-                        <a href="" class="footer_content">Клопы</a>
-                    <li>
-                        <a href="" class="footer_content">Блохи</a>
-                    </li>
-                    <br>
-                    <li>
-                        <a href="" class="footer_content">Дератизация</a>
-                    <li>
-                        <a href="" class="footer_content">Мыши, крысы</a>
-                    <li>
-                        <a href="" class="footer_content">Кроты</a>
-                    <br>
-                    <li>
-                        <a href="" class="footer_content">Десерпентация</a>
-                    <li>
-                        <a href="" class="footer_content">Змеи</a>
-                    <br>
-                </ul>
-            </div>
-            <div class="col-lg-2 text-left footer">
-                <ul>
-                    <li>
-                        <a href="" class="footer_content">Дезинфекция</a>
-                    <li>
-                        <a href="" class="footer_content">Плесень</a>
-                    <li>
-                        <a href="" class="footer_content">Вирусы</a>
-                    <li>
-                        <a href="" class="footer_content">Дезодорация</a>
-                    <li>
-                        <a href="" class="footer_content">Дезинвация</a>
-                    </li>
-                    <br>
-                    <li>
-                        <a href="" class="footer_content">Фумигация</a>
-                    <li>
-                        <a href="" class="footer_content">Кароед, шашель</a>
-                    <li>
-                        <a href="" class="footer_content">Обеззараживание зерна</a>
-                    </li>
-                    <br>
-                    <li>
-                        <a href="" class="footer_content">Для организаций</a>
-                    <li>
-                        <a href="" class="footer_content">Прайс</a>
-                    <li>
-                        <a href="" class="footer_content">Контакты</a>
-                </ul>
-            </div>
-            <div class="col-lg-3 text-left  footer">
-                <ul>
-                    <li>
-                        <p class="footer_title">Полезные статьи</p>
-                    </li>
-                    <li>
-                        <a class="footer_content">Первая помощь детям при укусах насекомых</a>
-                    </li>
-                    <li>
-                        <a class="footer_content">Первая помощь при укусе гадюки</a>
-                    </li>
-                    <li>
-                        <a class="footer_content">От соседей ползут тараканы - что делать?</a>
-                    </li>
-                    <li>
-                        <a class="footer_content">В подъезде появились крысы - что предпринять?</a>
-                    </li>
-                    <li>
-                        <a class="footer_content">Договор на дератизацию и дезинсекцию ― условие успешного прохождения проверок</a>
-                    </li>
-                    <li>
-                        <a class="footer_content">Жужжат и кусают: как избавиться от ос на даче?</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 text-left footer">
-                <ul>
-                    <li>
-                        <p href="" class="footer_title">Наши контакты</p>
-                    </li>
-                    <li>
-                    <a href="" class="footer_content">Гл. офис: г.Харьков проспект Ново-Баварский 77</a>
-                    <li>
-                    <a href="" class="footer_content">Номера телефонов:</a>
-                    <li>
-                    <a href="" class="footer_content footer_content_number">+380503559950</a>
-                    <li>
-                    <a href="" class="footer_content footer_content_number">+380677696083</a>
-                    <li>
-                    <a href="" class="footer_content footer_content_number">+380933307707</a>
-                    <li>
-                    <a href="" class="footer_content">Email: dezsan.kh@gmail.com</a>
-                </ul>
-            </div>
+        <div class="row_bottom_footer mt-5">
+            <p class="row_bottom_footer__text">© 2021 Уничтожение насекомых и грызунов в квартирах и на загородных участках</p>
         </div>
-    </div>
-    </div>
+    </footer>
     <!-- КОНЕЦ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
