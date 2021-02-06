@@ -1,3 +1,28 @@
+.orange_container{
+    background-color: rgb(185, 99, 0);
+}
+.orange_container__content{
+    color: white;
+    align-items: center;
+}
+.orange_container__content div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.orange_container__header{
+    font-size: 20px;
+}
+.orange_container__button:hover{
+    color: white;
+    background: linear-gradient(to bottom right, rgb(255, 109, 0) 0%, #ff0000 150%);
+    text-shadow: 0px 0px 2px black, 0px 0px 4px black, 1px 1px 3px black;
+    transition: text-shadow .3s;
+}
+.orange_container__button_container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .content-on-main-page{
     padding-top: 20px;
 }
@@ -220,10 +245,10 @@
     margin: auto;
 }
 .own-create-btn{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .own-create-btn:hover{
     background: linear-gradient(to bottom right, rgb(255, 109, 0) 0%, #ff0000 150%);
     text-shadow: 0px 0px 2px black, 0px 0px 4px black, 1px 1px 3px black;
     transition: text-shadow .3s;
-}  
+}
