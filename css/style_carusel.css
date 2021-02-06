@@ -1,0 +1,25 @@
+.carousel_block{
+    height: 350px;
+    padding: 0;
+}
+.carousel_img{
+    height: 350px;
+}
+.carousel-item div h5, .carousel-item div p{
+    text-shadow: 1px 1px 4px #24292e, 0px 0px 4px #24292e, 0px 1px 2px #24292e;
+}
+@media screen and (max-width: 768px){
+    .carousel-control-next, .carousel-control-prev, .carousel_img, .carousel_block{
+        height: 250px;
+    }
+}
+@media screen and (max-width: 580px){
+    .carousel-control-next, .carousel-control-prev, .carousel_img, .carousel_block{
+        height: 220px;
+    }
+}
+@media screen and (max-width: 400px){
+    .carousel-control-next, .carousel-control-prev, .carousel_img, .carousel_block{
+        height: 180px;
+    }
+}

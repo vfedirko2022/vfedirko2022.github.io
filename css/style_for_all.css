@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+}
+a{    
+    text-decoration: none;
+}
+.hr{
+    height: 1px;
+    background-color: lightgrey;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+::-webkit-scrollbar {
+    width: 9px;
+    background-color: white;
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgb(255, 109, 0) 0%, #ff0000 350%);
+}
+  
+::-webkit-scrollbar-track {
+   border-radius: 10px;
+    background-color: white;
+}
