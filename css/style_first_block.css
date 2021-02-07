@@ -1,0 +1,80 @@
+.first_block__photo{
+    min-height: 600px;
+    background-image: url(../img/тест.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.first_block__photo::after{
+    background-color: rgba(0,0,0,0.5);
+}
+.first_block__main_text{
+    font-size: 36px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: rgb(255, 109, 0);
+    text-shadow: 0.5px 0.5px 1px black, 0 0 2px white;
+}
+.first_block__list_with_text{
+    list-style: none;
+}
+.first_block__icon{
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 35px;
+    margin-right: 15px;
+    text-shadow: 0 0 3px black;
+}
+.first_block__text{
+    line-height: 35px;
+    font-size: 18px;
+    padding-right: 30px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 0 3px black;
+}
+.first_block__link{
+    text-decoration: none;
+}
+.first_block__link a{
+    font-weight: 500;
+    text-shadow: 0 0 2px black;
+    color: rgb(255, 109, 0);
+}
+.send_form__main_text{
+    margin-top: 30px;
+    font-size: 32px;
+    color: rgb(255, 109, 0);
+    text-shadow: 0 0 2px black;
+    font-weight: 500;
+}
+.send_form__text{
+    margin-bottom: 40px;
+    display: block;
+    color: white;
+    text-shadow: 0 0 2px black;
+    font-weight: 500;
+}
+.send_form__form{
+    justify-content: center;
+}
+.send_form__input{
+    box-shadow: 0.5px 0.5px 1px black, 0 0 1px black;
+    height: 32px;
+    margin: 16px 0;
+    max-height: 100px;
+}
+.send_form__textarea{
+    box-shadow: 0.5px 0.5px 1px black, 0 0 1px black;
+    height: 100px;
+    margin: 16px 0;
+    max-height: 250px;
+
+}
+.send_form__button{
+    margin: auto;
+}
+.send_form__button:hover{
+    color: white;
+}
