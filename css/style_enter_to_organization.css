@@ -1,0 +1,17 @@
+.enter_content{
+    padding-left: 40px;
+    padding-right: 100px;
+}
+@media screen and (max-width: 990px){
+    .enter_content{
+        padding: 0;
+    }
+}
+.enter__link{
+    color: rgb(255, 109, 0);
+    text-decoration: underline;
+}
+.enter__link:hover{
+    text-decoration: none;
+    color: rgb(255, 109, 0);
+}

@@ -17,6 +17,9 @@
 .content-on-main-page h1 strong{
     line-height: 70px;
 }
+.content-on-main-page h1 span{
+    color: rgb(255, 109, 0);
+}
 .content-on-main-page .description{
     border-top: 1px solid #ccc;
     text-align: center;
