@@ -1,6 +1,5 @@
 .first_block__photo{
     min-height: 630px;
-    background-image: url(../img/тест.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -13,7 +12,7 @@
     margin-bottom: 30px;
     font-weight: 500;
     color: rgb(255, 109, 0);
-    text-shadow: 0.5px 0.5px 1px black, 0 0 2px white;
+    text-shadow: 0.5px 0.5px 1px black, 0 0 2px black;
 }
 .first_block__list_with_text{
     list-style: none;

@@ -1,0 +1,19 @@
+.about_us__container{
+    padding-left: 50px;
+    padding-right: 100px;
+}
+@media screen and (max-width:990px){
+    .about_us__container{
+        padding: 0;
+    }
+}
+.about_us__main_text{
+    color: black;
+    font-size: 24px;
+    margin: 20px 0;
+    font-weight: 500;
+}
+.about_us__text{
+    font-size: 16px;
+    color: rgb(19, 19, 19);
+}

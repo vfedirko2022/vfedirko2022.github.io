@@ -47,7 +47,7 @@
     font-size: 14px;
     transition: color .5s;
 }
-.nav-link-text:hover{
+.nav-link-text:hover, .active{
     text-shadow: 0px 0px 0.9px rgb(255, 109, 0);
     transition: .5s;
 }

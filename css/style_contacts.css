@@ -1,0 +1,23 @@
+.contacts_content{
+    padding-left: 100px;
+}
+@media screen and (max-width:990px){
+    .contacts_content{
+        padding: 0;
+    }
+}
+.contacts__main_text{
+    color: rgb(255, 109, 0);
+    font-size: 24px;
+    font-weight: 500;
+}
+.contacts__main_text:hover{
+    color: rgb(255, 109, 0);
+}
+.contacts__text{
+    color: darkslategrey;
+    font-weight: 500;
+}
+.contacts__text:hover{
+    color: black;
+}

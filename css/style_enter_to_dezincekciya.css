@@ -1,0 +1,12 @@
+.enter_to_dezincekciya__container{
+    padding-left: 50px;
+    padding-right: 100px;
+}
+@media screen and (max-width: 990px){
+    .enter_to_dezincekciya__container{
+        padding: 0;
+    }
+}
+.enter_to_dezincekciya__text{
+    color: rgb(19, 19, 19);
+}
