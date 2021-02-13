@@ -27,3 +27,18 @@ a{
    border-radius: 10px;
     background-color: white;
 }
+blockquote{
+    background-color: #afafaf;
+    padding: 10px;
+    padding-left: 40px;
+    border-radius: 10px;
+    font-style: italic;
+    color: #fff;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+@media screen and (max-width:990px){
+    blockquote{
+        margin: 0;
+    }
+}
