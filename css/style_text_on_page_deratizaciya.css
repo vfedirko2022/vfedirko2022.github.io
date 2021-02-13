@@ -1,0 +1,38 @@
+.text_on_page_deratizaciya__main_text{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.text_on_page_deratizaciya__text{
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 16px;
+}
+@media screen and (max-width: 990px){
+    .text_on_page_deratizaciya__text, .text_on_page_deratizaciya__main_text{
+        margin: 0;
+    }
+}
+.text_on_page_deratizaciya__gallary{
+    justify-content: space-evenly;
+    display: flex;
+}
+@media screen and (max-width: 800px){
+    .text_on_page_deratizaciya__gallary{
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+}
+.text_on_page_deratizaciya__img{
+    height: 160px;
+    margin: 10px;
+}
+.text_on_page_deratizaciya__li{
+    list-style: circle;
+    margin-left: 80px;
+}
+.text_on_page_deratizaciya__li_text, .text_on_page_deratizaciya__li{
+    padding: 0;
+    margin-bottom: 0;
+}
