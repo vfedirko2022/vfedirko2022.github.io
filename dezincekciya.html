@@ -430,54 +430,39 @@
     </div>
     <!-- КОНЕЦ -->
 
-    <!-- Оформление любых сан. документов -->
-    <!-- НАЧАЛО -->
-    <div class="container document">
-        <div class="row document_row">
-            <div class="col-lg-8 text-center">
-                <p class="document_block__title title_shadow">Внедрение программы пест-контроля на предприятиях производства и реализации пищевой продукции</p>
-            </div>
-            <div class="col-lg-8">
-                <hr>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row document_card">
-            <div class="col-lg-3 col-md-4 document_card_block text-center">
-                <div class="document_card__blockimg">
-                    <img src="img/transport.jpg" class="document_card__img">
-                </div>
-                <p class="document_card_title">Дезинфекция транспортного средства</p>
-                <div class="hr"></div>
-                <p class="document_card_content">Обеззараживание и дезинфекция автосредства и оформление соответствующих документов.</p>   
-                <button class="btn btn-outline-danger own-create-btn">Подробнее...</button>
-            </div>
-            <div class="col-lg-3 col-md-4 document_card_block text-center">
-                <div class="document_card__blockimg">
-                    <img src="img/proizvodstvo.jpg" class="document_card__img">
-                </div>
-                <p class="document_card_title">Экозащита сельского хозяйства</p>
-                <div class="hr"></div>
-                <p class="document_card_content">Создаем современную экологическую защиту в сельско-хозяйственном и агро бизнесе</p>   
-                <button class="btn btn-outline-danger own-create-btn">Подробнее...</button>
-            </div>
-            <div class="col-lg-3 col-md-4 document_card_block text-center">
-                <div class="document_card__blockimg">
-                    <img src="img/doki.jpg" class="document_card__img">
-                </div>
-                <p class="document_card_title">Документальное подтверждение выполнения работ</p>
-                <div class="hr"></div>
-                <p class="document_card_content">Оформление санитарных документов оперативно и официально.</p>   
-                <button class="btn btn-outline-danger own-create-btn third_button">Подробнее...</button>
-            </div>
-        </div>
-    </div>
-    <!-- КОНЕЦ -->
-
     <!-- Подвал -->
     <!-- НАЧАЛО -->
     <footer>
+        <div class="modal-own-container">
+            <p class="modal-top-text">
+                <span class="modal-top-text-small">Проблемы с вредителями?</span>
+                <span class="modal-top-text-big"> Свяжитесь с нами прямо сейчас!</span>
+                <button class="btn  btn-light ms-5 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Связаться с нами!</button>
+            </p>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Свяжитесь с нами!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Ваше имя</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Ваш номер телефона</label>
+                                    <input type="number" maxlength="15" min="0" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row_top_footer mb-5"></div>
             <div class="container">
                 <div class="row">
