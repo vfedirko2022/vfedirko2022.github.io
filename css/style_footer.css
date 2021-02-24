@@ -1,5 +1,5 @@
 footer{
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(43, 36, 36);
     margin-top: 40px;
 }
 .footer{
@@ -57,4 +57,24 @@ footer{
     .footer{
         margin-left: 20px;
     }
+}
+
+
+.modal-own-container{
+    background-color: rgb(255, 52, 52);
+    text-align: center;
+    padding: 30px;
+    justify-self: baseline;
+}
+.modal-top-text{
+    margin-bottom: 0;
+}
+.modal-top-text-small{
+    font-size: 18px;
+    color: white;
+}
+.modal-top-text-big{
+    font-size: 32px;
+    color: white;
+    text-transform: uppercase;
 }
