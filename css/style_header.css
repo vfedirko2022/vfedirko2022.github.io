@@ -62,18 +62,18 @@
        }
 }
 
-.dropbtn, .dropbtn2, .dropbtn3, .dropbtn4 {
+.dropbtn, .dropbtn2, .dropbtn3, .dropbtn4, .dropbtn5 {
     color: white;
     font-size: 15px;
     border: none;
 }
 
-.dropdown, .dropdown2, .dropdown3, .dropdown4 {
+.dropdown, .dropdown2, .dropdown3, .dropdown4, .dropdown5 {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-content, .dropdown-content2, .dropdown-content3, .dropdown-content4 {
+.dropdown-content, .dropdown-content2, .dropdown-content3, .dropdown-content4, .dropdown-content5 {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -82,13 +82,13 @@
     z-index: 1;
 }
 
-.dropdown-content a, .dropdown-content2 a, .dropdown-content3 a, .dropdown-content4 a{
+.dropdown-content a, .dropdown-content2 a, .dropdown-content3 a, .dropdown-content4 a, .dropdown-content5 a{
     color: black;
     padding: 6px 10px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover, .dropdown-content2 a:hover, .dropdown-content3 a:hover, .dropdown-content4 a:hover {background-color: #ddd;}
+.dropdown-content a:hover, .dropdown-content2 a:hover, .dropdown-content3 a:hover, .dropdown-content4 a:hover, .dropdown-content5 a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content, .dropdown2:hover .dropdown-content2, .dropdown3:hover .dropdown-content3, .dropdown4:hover .dropdown-content4 {display: block;}
+.dropdown:hover .dropdown-content, .dropdown2:hover .dropdown-content2, .dropdown3:hover .dropdown-content3, .dropdown4:hover .dropdown-content4, .dropdown5:hover .dropdown-content5 {display: block;}
