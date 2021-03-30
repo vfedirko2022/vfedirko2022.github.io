@@ -1,0 +1,52 @@
+.kill_our_services_for_office_on_dacha__main_text{
+    font-weight: 500;
+    font-size: 44px;
+}
+@media screen and (max-width: 990px){
+    .kill_our_services_for_office_on_dacha__main_text{
+        font-size: 40px;
+    } 
+}
+@media screen and (max-width: 768px){
+    .kill_our_services_for_office_on_dacha__main_text{
+        font-size: 34px;
+    } 
+}
+.text_on_page_our_services_for_office__main_text{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.text_on_page_our_services_for_office__text{
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 16px;
+}
+@media screen and (max-width: 990px){
+    .text_on_page_our_services_for_office__text, .text_on_page_our_services_for_office__main_text{
+        margin: 0;
+    }
+}
+.text_on_page_our_services_for_office__gallary{
+    justify-content: space-evenly;
+    display: flex;
+}
+@media screen and (max-width: 800px){
+    .text_on_page_our_services_for_office__gallary{
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+}
+.text_on_page_our_services_for_office__img{
+    height: 160px;
+    margin: 10px;
+}
+.text_on_page_our_services_for_office__li{
+    list-style: circle;
+    margin-left: 80px;
+}
+.text_on_page_our_services_for_office__li_text, .text_on_page_our_services_for_office__li{
+    padding: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,15 @@
+.block_one_comment{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.name_and_adress{
+    padding-left: 20px;
+    padding-right: 30px;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.text_comment{
+    padding-left: 20px;
+    padding-right: 30px;
+    font-size: 14px;
+}
