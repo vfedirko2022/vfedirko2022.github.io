@@ -8,7 +8,7 @@
     bottom: 50px;
     right: 50px;
     display: none;
-    box-shadow: -1.2px 1.2px 6px rgb(22, 22, 22);
+    box-shadow: -0.6px 0.6px 3px rgb(22, 22, 22);
     transition: background-color .7s;
 }
 .scrollup span{
