@@ -1,25 +1,61 @@
 .carousel_block{
-    height: 350px;
+    /*height: 350px;*/
+    height: 500px;
     padding: 0;
 }
 .carousel_img{
-    height: 350px;
+    height: 500px;
+    /*height: 350px;*/
+    
+}
+
+.first_photo_on_carusel{
+    width: 100%;
+    height: 500px;
+    display: block;
+    background-image: url(../img/Первое_фото_на_карусель.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 35%;
+}
+
+.second_photo_on_carusel{
+    width: 100%;
+    height: 500px;
+    display: block;
+    background-image: url(../img/Второе_фото_на_карусель.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 35%;
+} 
+
+.third_photo_on_carusel{
+    width: 100%;
+    height: 500px;
+    display: block;
+    background-image: url(../img/Третье_фото_на_карусель.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 35%;
 }
 .carousel-item div h5, .carousel-item div p{
     text-shadow: 1px 1px 4px #24292e, 0px 0px 4px #24292e, 0px 1px 2px #24292e;
 }
 @media screen and (max-width: 768px){
     .carousel-control-next, .carousel-control-prev, .carousel_img, .carousel_block{
-        height: 250px;
+        /*height: 250px;*/
+        min-height: 500px;
     }
 }
 @media screen and (max-width: 580px){
     .carousel-control-next, .carousel-control-prev, .carousel_img, .carousel_block{
-        height: 220px;
+        /*height: 220px;*/
+        min-height: 450px;
     }
 }
 @media screen and (max-width: 400px){
     .carousel-control-next, .carousel-control-prev, .carousel_img, .carousel_block{
-        height: 180px;
+        /*height: 180px;*/
+        min-height: 400px;
     }
 }
