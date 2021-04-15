@@ -38,24 +38,28 @@
     background-size: cover;
     background-position: 0 35%;
 }
-.carousel-item div h5, .carousel-item div p{
+.carousel-item div h1{
+    text-shadow: 5px 5px 10px #24292e, 5px 5px 10px #24292e, 3px 3px 6px #24292e;
+}
+.carousel-item div p{
     text-shadow: 1px 1px 4px #24292e, 0px 0px 4px #24292e, 0px 1px 2px #24292e;
 }
 @media screen and (max-width: 768px){
     .carousel-control-next, .carousel-control-prev, .carousel_img, .carousel_block{
         /*height: 250px;*/
-        min-height: 500px;
+        min-height: 450px;
+        
     }
 }
 @media screen and (max-width: 580px){
     .carousel-control-next, .carousel-control-prev, .carousel_img, .carousel_block{
         /*height: 220px;*/
-        min-height: 450px;
+        min-height: 400px;
     }
 }
 @media screen and (max-width: 400px){
     .carousel-control-next, .carousel-control-prev, .carousel_img, .carousel_block{
         /*height: 180px;*/
-        min-height: 400px;
+        min-height: 350px;
     }
 }
