@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSpeech</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(35, 37, 37);
+        }
+        .wrapper{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            width: 600px;
+            margin: auto;
+            flex-direction: column;
+            color: rgb(230, 230, 230);
+        }
+        .wrapper h1 {
+            text-align: center;
+            font-size: 36px;
+            width: 100%;
+            display: block;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .wrapper p{
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        .container{
+            max-width: 600px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .texts p{
+            text-align: left;
+            padding: 15px 7px;
+            color: #000;
+            background-color: #fff;
+            display: block;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 100%;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: .7px;
+        }
+        .rules{
+            max-width: 500px;
+            margin: 30px auto;
+        }
+        .rules_item{
+            border: 1px solid #b91125
+        }
+        .rules_title{
+            display: block;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: all 0.2s ease;
+        }
+        .rules_title:hover{
+            background-color: #b91125;
+        }
+        .rules_input{
+            appearance: none;
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+        .rules_text{
+            display: none;
+            color: #fff
+        }
+        .rules_input:checked + .rules_text{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Голосовий математичний калькулятор</h1>
+        <p>Переконайтеся, що у вас дозволено використання мікрофону</p>
+        <p>Оберіть мову: <select name="" id="">
+            <option value="ru-RU">Русский</option>
+            <option value="uk-UA">Українська</option>
+            <option value="en-US">English</option>
+        </select></p>
+        <div class="container">
+            <div class="texts">
+                <input id="test"></input>
+                <button onclick="test()">Підрахувати</button>
+                <p id="result"></p>
+            </div>
+        </div>
+        <div class="rules">
+            <div class="rules_item">
+                <lable class="rules_title" for="rules_1">Правила, які необхідно знати для роботи з цим калькулятором</lable>
+                <input class="rules_input" type="radio" name="rules" id="rules_1">
+                <div class="rules_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem reiciendis voluptatem sed labore eveniet dolore modi, quasi suscipit molestias animi fugiat rem quia magnam assumenda accusamus hic ut quae ex. Veritatis suscipit odit deleniti recusandae, distinctio officia? Veritatis, nostrum, ipsam ullam quos quis assumenda, quam dolores tempora et blanditiis culpa. Ipsum, libero! Corrupti recusandae blanditiis eveniet earum numquam molestias aliquid suscipit magnam, impedit repellat iusto ipsum incidunt eos voluptatum voluptates, est dolore quidem nesciunt mollitia autem nihil consequatur! Illo, voluptatibus ullam ab nobis itaque distinctio rerum facilis totam! Laborum debitis eaque libero sequi tempore ex magnam perferendis enim sapiente?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
