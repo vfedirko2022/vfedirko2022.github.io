@@ -41,15 +41,37 @@
             padding-bottom: 50px;
         }
 
+        .content{
+            display: flex;
+        }
+
         .wrapper {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-self: center;
-            width: 600px;
+            width: 40%;
+
             margin: auto;
             flex-direction: column;
             color: rgb(230, 230, 230);
+        }
+
+        .rules{
+            padding-left: 70px;
+            width: 40%;
+            color: white;
+            font-size: 26px;
+            margin-top: 30px;
+        }
+
+        .rules ul{
+            margin-top: 20px;
+        }
+
+        .rules ul li{
+            margin-bottom: 20px;
+            font-size: 18px;
         }
 
         .wrapper h1 {
@@ -102,45 +124,6 @@
             font-size: 24px;
             font-weight: 600;
             letter-spacing: .7px;
-        }
-
-        .rules {
-            max-width: 500px;
-            margin: 30px auto;
-            padding-bottom: 50px;
-        }
-
-        .rules_item {
-            border: 1px solid #b91125;
-            position: relative;
-        }
-
-        .rules_title {
-            display: block;
-            color: #fff;
-            cursor: pointer;
-            padding: 10px 15px;
-            transition: all 0.2s ease;
-        }
-
-        .rules_title:hover {
-            background-color: #b91125;
-        }
-
-        .rules_input {
-            appearance: none;
-            position: absolute;
-            width: 0;
-            height: 0;
-        }
-
-        .rules_text {
-            display: none;
-            color: #fff
-        }
-
-        .rules_input:checked+.rules_text {
-            display: block;
         }
 
         #test,
@@ -222,44 +205,50 @@
         <img src="Logo WVC.png" alt="">
         <span>WebVoiceCalc</span> 
     </header>
-    <div class="wrapper">
-        <h1>Голосовий математичний калькулятор</h1>
-        <p>Переконайтеся, що у вас дозволено використання мікрофону</p>
-        <p>Оберіть мову: 
-            <select name="" id="">
-                <option value="uk-UA">Українська</option>
-                <option value="ru-RU">Русский</option>
-                <option value="en-US">English</option>
-            </select>
-        </p>
-        <div class="turn_buttons">
-            <button id="turn_on" onclick="turn_on()" accesskey="c" class="turn_on_button">Включити мікрофон</button>
-            <button onclick="turn_off()" style="display: none;" class="turn_off_button">Виключити мікрофон</button>
+    <div class="content">
+        <div class="rules">
+            Правила голосового вводу прикладів: 
+            <ul>
+                <li>Перед тим, як обчислити приклад, користувачеві необхідно вибрати мову, якою цей приклад буде записан. Якщо мова буде вибрана неправильно, то приклад може бути обчислен з помилками.</li>
+                <li>Числа, як і інші вирази, можна вводити на трьох мовах, але є деякі обмеження: числа можна вводити в проміжку від нуля до ста. Також є можливість вводити дійсні числа округленні до сотих у цьому ж проміжку. Приклад того, як це повинно виглядати: “двадцять три крапка сімдесят чотири”. Як це розуміє комп’ютер: 23.74.</li>
+                <li>Якщо необхідно, наприклад, взяти корінь з суми, добутку чи іншого будь-якого виразу - необхідно взяти підкореневий вираз у дужки. Приклад того, як це повинно виглядати: “корінь з відкрити скобку девять плюс п’ять закрити скобку”. Як це розуміє комп’ютер: √(9 + 5). Це треба пам’ятати при роботі з усіма подібними функціями.</li>
+                <li>Обов’язково повинен бути хоча б один пробіл між виразами та числами. Не повинно бути такого: “23плюс чотири”. Приклад не буде обчисленим.</li>
+            </ul>
         </div>
 
-        <div class="container">
-            <div class="texts">
-                <div>
-                    <input id="test" placeholder="Скажіть або уведіть приклад"></input>
-                <button onclick="test()">Підрахувати</button>
-                </div>
-                <p class="res">Значення виразу: </p>
-                <p id="result"></p>
+        <div class="wrapper">
+            <h1>Голосовий математичний калькулятор</h1>
+            <p>Переконайтеся, що у вас дозволено використання мікрофону</p>
+            <p>Оберіть мову: 
+                <select name="" id="">
+                    <option value="uk-UA">Українська</option>
+                    <option value="ru-RU">Русский</option>
+                    <option value="en-US">English</option>
+                </select>
+            </p>
+            <div class="turn_buttons">
+                <button id="turn_on" onclick="turn_on()" accesskey="c" class="turn_on_button">Включити мікрофон</button>
+                <button onclick="turn_off()" style="display: none;" class="turn_off_button">Виключити мікрофон</button>
             </div>
+    
+            <div class="container">
+                <div class="texts">
+                    <div>
+                        <input id="test" placeholder="Скажіть або уведіть приклад"></input>
+                    <button onclick="test()">Підрахувати</button>
+                    </div>
+                    <p class="res">Значення виразу: </p>
+                    <p id="result"></p>
+                </div>
+            </div>
+    
+            <button class="accordion">Історія обчислення прикладів</button>
+            <div class="panel" id="storage">
+                <p id="history">Історія порожня...</p>
+            </div>
+    
         </div>
-
-        <button class="accordion">Історія обчислення прикладів</button>
-        <div class="panel" id="storage">
-            <p id="history">Історія порожня...</p>
-        </div>
-
-        <button class="accordion">Правила, дотримання яких - обов'язкове</button>
-        <div class="panel">
-            <p>Lorem ipsum...</p>
-        </div>
-
     </div>
-
 
     <div id="wrapper" style="display: none;">
         <h1>Speech Synthesis - Player</h1>
