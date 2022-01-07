@@ -39,13 +39,13 @@
             width: 100%;
             display: block;
             align-items: center;
-            margin-top: 70px;
+            margin-top: 30px;
         }
 
         .wrapper p {
-            margin-top: 20px;
+            margin-top: 10px;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-size: 18px;
         }
 
@@ -126,7 +126,7 @@
 
         #test,
         #result {
-            width: 500px;
+            /*width: 500px;*/
             border-radius: 10px;
             border-color: transparent;
             outline: transparent;
@@ -143,15 +143,26 @@
             color: white;
         }
 
-        .texts button {
+        .texts div{
+            display: flex;
+            flex-wrap: nowrap;
+
+        }
+
+        .texts div input{
+            width: 100%;
+            margin-right: 20px;
+        }
+
+        .texts div button {
             display: block;
             margin: auto;
             border-radius: 10px;
             border-color: transparent;
-            margin-top: 15px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
-            padding: 15px;
+            height: 50px;
+            padding: 0px 10px;
         }
 
         .accordion {
@@ -200,13 +211,15 @@
         </p>
         <div class="turn_buttons">
             <button onclick="turn_on()" class="turn_on_button">Включити мікрофон</button>
-            <button onclick="turn_off()" class="turn_off_button">Виключити мікрофон</button>
+            <button onclick="turn_off()" style="display: none;" class="turn_off_button">Виключити мікрофон</button>
         </div>
 
         <div class="container">
             <div class="texts">
-                <input id="test" placeholder="Скажіть або уведіть приклад"></input>
+                <div>
+                    <input id="test" placeholder="Скажіть або уведіть приклад"></input>
                 <button onclick="test()">Підрахувати</button>
+                </div>
                 <p class="res">Значення виразу: </p>
                 <p id="result"></p>
             </div>
@@ -224,27 +237,41 @@
 
     </div>
 
+
+    <div id="wrapper" style="display: none;">
+        <h1>Speech Synthesis - Player</h1>
+        <label
+          >Text:
+          <textarea id="textarea">Привет! Как дела?</textarea>
+        </label>
+        <label
+          >Voice:
+          <select id="select"></select>
+        </label>
+        <label
+          >Volume:
+          <input id="volume" type="range" min="0" max="1" step="0.1" value="1" />
+          <span>1</span>
+        </label>
+        <label
+          >Rate:
+          <input id="rate" type="range" min="0" max="3" step="0.5" value="1" />
+          <span>1</span>
+        </label>
+        <label
+          >Pitch:
+          <input id="pitch" type="range" min="0" max="2" step="0.5" value="1" />
+          <span>1</span>
+        </label>
+        <div id="buttons">
+          <button class="speak">Speak</button>
+          <button class="cancel">Cancel</button>
+          <button class="pause">Pause</button>
+          <button class="resume">Resume</button>
+        </div>
+      </div>
+
     <script src="script.js"></script>
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                /* Toggle between adding and removing the "active" class,
-                to highlight the button that controls the panel */
-                this.classList.toggle("active");
-
-                /* Toggle between hiding and showing the active panel */
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>

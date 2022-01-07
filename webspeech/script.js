@@ -1,54 +1,54 @@
 numbers = [
-    ["один","один", "one"],
-    ["два","два", "two"],
-    ["три","три", "three"],
-    ["четыре","чотири", "four"],
-    ["пять","п'ять", "five"],
-    ["шесть","шість", "six"],
-    ["сем","сім", "seven"],
-    ["восем","вісім", "eight"],
-    ["девять","дев'ять", "nine"],
-    ["десять","десять", "ten"],
-    ["одиннадцать","одинадцять", "eleven"],
-    ["двенадцать","дванадцять", "twelve"],
-    ["тринадцать","тринадцять", "thirteen"],
-    ["четырнадцать","чотирнадцять", "fourteen"],
-    ["пятьнадцать","п'ятнадцять", "fifteen"],
-    ["шестнадцать","шістнадцять", "sixteen"],
-    ["семнадцать","сімнадцять", "seventeen"],
-    ["восемнадцать","вісмнадцять", "eighteen"],
-    ["девятнадцать","дев'ятнадцять", "nineteen"],
-    ["двадцать","двадцять", "twenty"],
-    ["двадцать один","двадцять один", "twenty one"],
-    ["двадцать два","двадцять два", "twenty two"],
-    ["двадцать три","двадцять три", "twenty three"],
-    ["двадцать четыре","двадцять чотири", "twenty four"],
-    ["двадцать пять","двадцять п'ять", "twenty five"],
-    ["двадцать шесть","двадцять шість", "twenty six"],
-    ["двадцать сем","двадцять сім", "twenty seven"],
-    ["двадцать восем","двадцять вісім", "twenty eight"],
-    ["двадцать девять","двадцять дев'ять", "twenty nine"],
-    ["тридцать","тридцять", "thirty"],
-    ["тридцать один","тридцять один", "thirty one"],
-    ["тридцать два","тридцять два", "thirty two"],
-    ["тридцать три","тридцять три", "thirty three"],
-    ["тридцать четыре","тридцять чотири", "thirty four"],
-    ["тридцать пять","тридцять п'ять", "thirty five"],
-    ["тридцать шесть","тридцять шість", "thirty six"],
-    ["тридцать сем","тридцять сім", "thirty seven"],
-    ["тридцать восем","тридцять вісім", "thirty eight"],
-    ["тридцать девять","тридцять дев'ять", "thirty nine"],
-    ["сорок","сорок", "fourty"],
-    ["сорок один","сорок один", "fourty one"],
-    ["сорок два","сорок два", "fourty two"],
-    ["сорок три","сорок три", "fourty three"],
-    ["сорок четыре","сорок чотири", "fourty four"],
-    ["сорок пять","сорок п'ять", "fourty five"],
-    ["сорок шесть","сорок шість", "fourty six"],
-    ["сорок сем","сорок сім", "fourty seven"],
-    ["сорок восем","сорок вісім", "fourty eight"],
-    ["сорок девять","сорок дев'ять", "fourty nine"],
-    ["пятьдесят","п'ятдесят", "fifty"]
+    ["один", "один", "one"],
+    ["два", "два", "two"],
+    ["три", "три", "three"],
+    ["четыре", "чотири", "four"],
+    ["пять", "п'ять", "five"],
+    ["шесть", "шість", "six"],
+    ["сем", "сім", "seven"],
+    ["восем", "вісім", "eight"],
+    ["девять", "дев'ять", "nine"],
+    ["десять", "десять", "ten"],
+    ["одиннадцать", "одинадцять", "eleven"],
+    ["двенадцать", "дванадцять", "twelve"],
+    ["тринадцать", "тринадцять", "thirteen"],
+    ["четырнадцать", "чотирнадцять", "fourteen"],
+    ["пятьнадцать", "п'ятнадцять", "fifteen"],
+    ["шестнадцать", "шістнадцять", "sixteen"],
+    ["семнадцать", "сімнадцять", "seventeen"],
+    ["восемнадцать", "вісмнадцять", "eighteen"],
+    ["девятнадцать", "дев'ятнадцять", "nineteen"],
+    ["двадцать", "двадцять", "twenty"],
+    ["двадцать один", "двадцять один", "twenty one"],
+    ["двадцать два", "двадцять два", "twenty two"],
+    ["двадцать три", "двадцять три", "twenty three"],
+    ["двадцать четыре", "двадцять чотири", "twenty four"],
+    ["двадцать пять", "двадцять п'ять", "twenty five"],
+    ["двадцать шесть", "двадцять шість", "twenty six"],
+    ["двадцать сем", "двадцять сім", "twenty seven"],
+    ["двадцать восем", "двадцять вісім", "twenty eight"],
+    ["двадцать девять", "двадцять дев'ять", "twenty nine"],
+    ["тридцать", "тридцять", "thirty"],
+    ["тридцать один", "тридцять один", "thirty one"],
+    ["тридцать два", "тридцять два", "thirty two"],
+    ["тридцать три", "тридцять три", "thirty three"],
+    ["тридцать четыре", "тридцять чотири", "thirty four"],
+    ["тридцать пять", "тридцять п'ять", "thirty five"],
+    ["тридцать шесть", "тридцять шість", "thirty six"],
+    ["тридцать сем", "тридцять сім", "thirty seven"],
+    ["тридцать восем", "тридцять вісім", "thirty eight"],
+    ["тридцать девять", "тридцять дев'ять", "thirty nine"],
+    ["сорок", "сорок", "fourty"],
+    ["сорок один", "сорок один", "fourty one"],
+    ["сорок два", "сорок два", "fourty two"],
+    ["сорок три", "сорок три", "fourty three"],
+    ["сорок четыре", "сорок чотири", "fourty four"],
+    ["сорок пять", "сорок п'ять", "fourty five"],
+    ["сорок шесть", "сорок шість", "fourty six"],
+    ["сорок сем", "сорок сім", "fourty seven"],
+    ["сорок восем", "сорок вісім", "fourty eight"],
+    ["сорок девять", "сорок дев'ять", "fourty nine"],
+    ["пятьдесят", "п'ятдесят", "fifty"]
 ]
 
 
@@ -60,7 +60,7 @@ function wordToNumber(word, numbers) {
     p = parseFloat(word);
     console.log("numbers" + " " + numbers)
     for (k = 0; k < numbers.length; k++) {
-        for(y = 0; y < numbers[k].length; y++){
+        for (y = 0; y < numbers[k].length; y++) {
             if (word == numbers[k][y]) {
                 word = parseInt(k) + 1;
                 new_temp += word;
@@ -143,7 +143,7 @@ function checkArr(arr) {
         tempText = arr[i] + " " + arr[i + 1];
         console.log(i + " tempText " + tempText)
         for (j = 0; j < numbers.length; j++) {
-            for(r = 0; r < numbers[j].length; r++){ 
+            for (r = 0; r < numbers[j].length; r++) {
                 if (tempText == numbers[j][r]) {
                     t = arr[i + 1];
                     arr[i] += " " + t;
@@ -151,7 +151,7 @@ function checkArr(arr) {
                     arr[i] = j + 1
                     console.log("check arr " + arr[i])
                 }
-            }   
+            }
         }
     }
     return arr;
@@ -204,17 +204,18 @@ function test() {
     second_temp = '';
     temp = document.getElementById("test").value.replace(/ +/g, ' ').trim().split(" ");
     temp = checkArr(temp);
-    temp.forEach(e => {                                 
+    temp.forEach(e => {
         second_temp += wordToNumber(e, numbers);
     });
     result = eval(second_temp);
     document.getElementById("test").value = second_temp;
     document.getElementById("result").innerHTML = result;
+    convertTextToSpeech(result);
     new_storage = document.getElementById("storage")
     new_p = document.createElement("p");
     new_span_1 = document.createElement("span");
     new_span_1.setAttribute("class", "example")
-    new_span_1.innerHTML = second_temp; 
+    new_span_1.innerHTML = second_temp;
     new_span_2 = document.createElement("span");
     new_span_2.setAttribute("class", "result");
     new_span_2.innerHTML = result;
@@ -228,6 +229,124 @@ function test() {
 
 
 
-var utterance = new SpeechSynthesisUtterance('Привет Мир');
-utterance.lang = 'ru'; //Sprache auf Deutsch festlegen
-speechSynthesis.speak(utterance);
+
+
+const U = new SpeechSynthesisUtterance()
+let voices = speechSynthesis.getVoices()
+speechSynthesis.onvoiceschanged = () => {
+    voices = speechSynthesis.getVoices()
+    populateVoices(voices)
+}
+
+function populateVoices(voices) {
+    // Перебираем голоса и создаем элемент `option` для каждого
+    // Текстовым содержимым `option` является название голоса, а значением - индекс голоса в массиве голосов
+    voices.forEach((voice, index) => {
+        select.options[index] = new Option(voice.name, index)
+    })
+
+    // Делаем голосом по умолчанию `Google русский`
+    const defaultVoiceIndex = voices.findIndex(
+        (voice) => voice.name === 'Google русский'
+    )
+    select.selectedIndex = defaultVoiceIndex
+    // После этого инициализируем обработчики событий
+    initializeHandlers()
+}
+
+
+function initializeHandlers() {
+    // Ниже перечислены почти все события, которые возникают при работе с рассматриваемым интерфейсом
+    U.onstart = () => console.log('Started')
+    U.onend = () => console.log('Finished')
+    U.onerror = (err) => console.error(err)
+    // Мне не удалось добиться возникновения этих событий
+    U.onpause = () => console.log('Paused')
+    U.onresume = () => console.log('Resumed')
+
+    // Обработка изменения настроек
+    wrapper.onchange = ({ target }) => {
+        if (target.type !== 'range') return
+        handleChange(target)
+    }
+
+    // Обработка нажатия кнопок
+    buttons.addEventListener('click', ({ target: { className } }) => {
+        // SpeechSynthesis предоставляет таким методы как `speak()`, `cancel()`, `pause()` и `resume()`
+        // Вызов метода `speak()` требует предварительной подготовки
+        // Кроме того, мы проверяем наличие текста в очереди на озвучивание с помощью атрибута `speaking`
+        // Есть еще два атрибута: `pending` и `paused`, но они не всегда возвращают корректные значения
+        switch (className) {
+            case 'speak':
+                if (!speechSynthesis.speaking) {
+                    convertTextToSpeech()
+                }
+                break
+            case 'cancel':
+                return speechSynthesis.cancel()
+            case 'pause':
+                return speechSynthesis.pause()
+            case 'resume':
+                return speechSynthesis.resume()
+            default:
+                return
+        }
+    })
+}
+
+function handleChange(el) {
+    el.nextElementSibling.textContent = el.value
+}
+
+function convertTextToSpeech(res) {
+    // Получаем текст
+    const trimmed = "Результат: " + res;
+    if (!trimmed) return
+    // Передаем его экземпляру `SpeechSynthesisUtterance`
+    U.text = trimmed
+    // Получаем выбранный голос
+    const voice = voices[select.value]
+    // Передаем голос и другие настройки экземпляру
+    U.voice = voice
+    // язык
+    U.lang = voice.lang
+    // громкость
+    U.volume = volume.value
+    // скорость
+    U.rate = rate.value
+    // высота голоса
+    U.pitch = pitch.value
+    // Запускаем озвучивание!
+    speechSynthesis.speak(U)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
