@@ -13,6 +13,25 @@
             box-sizing: border-box;
         }
 
+        header{
+            padding: 10px;
+            border-bottom: 1px solid rgb(107, 107, 250);
+            display: flex;
+            justify-content: center;
+        }
+
+        header img{
+            display: block;
+            height: 75px;
+        }
+
+        header span{
+            font-size: 24px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
         button {
             cursor: pointer;
         }
@@ -199,6 +218,10 @@
 </head>
 
 <body>
+    <header>
+        <img src="Logo WVC.png" alt="">
+        <span>WebVoiceCalc</span> 
+    </header>
     <div class="wrapper">
         <h1>Голосовий математичний калькулятор</h1>
         <p>Переконайтеся, що у вас дозволено використання мікрофону</p>
@@ -210,7 +233,7 @@
             </select>
         </p>
         <div class="turn_buttons">
-            <button onclick="turn_on()" class="turn_on_button">Включити мікрофон</button>
+            <button id="turn_on" onclick="turn_on()" accesskey="c" class="turn_on_button">Включити мікрофон</button>
             <button onclick="turn_off()" style="display: none;" class="turn_off_button">Виключити мікрофон</button>
         </div>
 

@@ -51,6 +51,9 @@ numbers = [
     ["пятьдесят", "п'ятдесят", "fifty"]
 ]
 
+function check() {
+    chck = document.getElementById("test").value.replace(/ +/g, ' ').trim().split(" ");
+}
 
 console.log(numbers)
 
@@ -186,10 +189,11 @@ recognition.addEventListener('result', (e) => {
     document.getElementById("test").value = text
 })
 
-/*recognition.addEventListener('end', () => {
+recognition.addEventListener('end', () => {
     console.log(10)
-    recognition.start();
-})*/
+    //recognition.start();
+    test();
+})
 
 function turn_on() {
     recognition.start();
@@ -327,7 +331,15 @@ function convertTextToSpeech(res) {
 
 
 
-
+document.addEventListener("keyup", function(event) {
+    // Число 13 в "Enter" и клавиши на клавиатуре
+    if (event.keyCode === 13) {
+      // При необходимости отмените действие по умолчанию
+      // event.preventDefault();
+      // Вызов элемента button одним щелчком мыши
+      document.getElementById("turn_on").click();
+    }
+  });
 
 
 
