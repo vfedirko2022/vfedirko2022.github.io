@@ -164,11 +164,11 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
 
 const recognition = new window.SpeechRecognition();
 recognition.interimResults = true;
-recognition.lang = "ru-RU";
-//recognition.lang = "uk-UA";
+recognition.lang = "uk-UA";
+//recognition.lang = "ru-RU";
 //recognition.lang = "en-US";
 
-let p = document.createElement('input');
+let pn = document.createElement('input');
 
 recognition.addEventListener('result', (e) => {
 
@@ -177,17 +177,27 @@ recognition.addEventListener('result', (e) => {
         .map(result => result[0])
         .map(result => result.transcript)
         .join(' ');
-    if (e.result[0].isFinal) {
-        p = document.createElement('input');
-    }
+    /*if (e.result[0].isFinal) {
+        pn = document.createElement('input');
+    }*/
     console.log("22222wadawdawdwd")
     console.log(e);
+    console.log(text);
+    document.getElementById("test").value = text
 })
 
-recognition.addEventListener('end', () => {
-
+/*recognition.addEventListener('end', () => {
+    console.log(10)
     recognition.start();
-})
+})*/
+
+function turn_on() {
+    recognition.start();
+}
+
+function turn_off() {
+    recognition.stop();
+}
 
 function test() {
     console.log("START TEST ==============================")
@@ -200,12 +210,24 @@ function test() {
     result = eval(second_temp);
     document.getElementById("test").value = second_temp;
     document.getElementById("result").innerHTML = result;
+    new_storage = document.getElementById("storage")
+    new_p = document.createElement("p");
+    new_span_1 = document.createElement("span");
+    new_span_1.setAttribute("class", "example")
+    new_span_1.innerHTML = second_temp; 
+    new_span_2 = document.createElement("span");
+    new_span_2.setAttribute("class", "result");
+    new_span_2.innerHTML = result;
+    document.getElementById("history").setAttribute("style", "display:none")
+    new_p.appendChild(new_span_1);
+    new_p.innerHTML += " = ";
+    new_p.appendChild(new_span_2);
+    new_storage.appendChild(new_p);
 }
 
-recognition.start();
 
 
 
-
-let utterance = new SpeechSynthesisUtterance("Hello world!");
+var utterance = new SpeechSynthesisUtterance('Привет Мир');
+utterance.lang = 'ru'; //Sprache auf Deutsch festlegen
 speechSynthesis.speak(utterance);
