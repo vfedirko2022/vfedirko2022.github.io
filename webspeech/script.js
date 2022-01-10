@@ -48,20 +48,74 @@ numbers = [
     ["сорок сем", "сорок сім", "fourty seven"],
     ["сорок восем", "сорок вісім", "fourty eight"],
     ["сорок девять", "сорок дев'ять", "fourty nine"],
-    ["пятьдесят", "п'ятдесят", "fifty"]
+    ["пятьдесят", "п'ятдесят", "fifty"],
+    ["пятьдесят один", "п'ятдесят один", "fifty one"],
+    ["пятьдесят два", "п'ятдесят два", "fifty two"],
+    ["пятьдесят три", "п'ятдесят три", "fifty three"],
+    ["пятьдесят четыре", "п'ятдесят чотири", "fifty four"],
+    ["пятьдесят пять", "п'ятдесят п'ять", "fifty five"],
+    ["пятьдесят шесть", "п'ятдесят шість", "fifty six"],
+    ["пятьдесят сем", "п'ятдесят сім", "fifty seven"],
+    ["пятьдесят восем", "п'ятдесят вісім", "fifty eight"],
+    ["пятьдесят девять", "п'ятдесят дев'ять", "fifty nine"],
+    ["шестьдесят", "шістьдесят", "sixty"],
+    ["шестьдесят один", "шістьдесят один", "sixty one"],
+    ["шестьдесят два", "шістьдесят два", "sixty two"],
+    ["шестьдесят три", "шістьдесят три", "sixty three"],
+    ["шестьдесят четыре", "шістьдесят чотири", "sixty four"],
+    ["шестьдесят пять", "шістьдесят п'ять", "sixty five"],
+    ["шестьдесят шесть", "шістьдесят шість", "sixty six"],
+    ["шестьдесят сем", "шістьдесят сім", "sixty seven"],
+    ["шестьдесят восем", "шістьдесят вісім", "sixty eight"],
+    ["шестьдесят девять", "шістьдесят дев'ять", "sixty nine"],
+    ["семдесят", "сімдесят", "seventy"],
+    ["семдесят один", "сімдесят один", "seventy one"],
+    ["семдесят два", "сімдесят два", "seventy two"],
+    ["семдесят три", "сімдесят три", "seventy three"],
+    ["семдесят четыре", "сімдесят чотири", "seventy four"],
+    ["семдесят пять", "сімдесят п'ять", "seventy five"],
+    ["семдесят шесть", "сімдесят шість", "seventy six"],
+    ["семдесят сем", "сімдесят сім", "seventy seven"],
+    ["семдесят восем", "сімдесят вісім", "seventy eight"],
+    ["семдесят девять", "сімдесят дев'ять", "seventy nine"],
+    ["восемдесят", "вісімдесят", "eighty"],
+    ["восемдесят один", "вісімдесят один", "eighty one"],
+    ["восемдесят два", "вісімдесят два", "eighty two"],
+    ["восемдесят три", "вісімдесят три", "eighty three"],
+    ["восемдесят четыре", "вісімдесят чотири", "eighty four"],
+    ["восемдесят пять", "вісімдесят п'ять", "eighty five"],
+    ["восемдесят шесть", "вісімдесят шість", "eighty six"],
+    ["восемдесят сем", "вісімдесят сім", "eighty seven"],
+    ["восемдесят восем", "вісімдесят вісім", "eighty eight"],
+    ["восемдесят девять", "вісімдесят дев'ять", "eighty nine"],
+    ["девяносто", "дев'яносто", "ninety"],
+    ["девяносто один", "дев'яносто один", "ninety one"],
+    ["девяносто два", "дев'яносто два", "ninety two"],
+    ["девяносто три", "дев'яносто три", "ninety three"],
+    ["девяносто четыре", "дев'яносто чотири", "ninety four"],
+    ["девяносто пять", "дев'яносто п'ять", "ninety five"],
+    ["девяносто шесть", "дев'яносто шість", "ninety six"],
+    ["девяносто сем", "дев'яносто сім", "ninety seven"],
+    ["девяносто восем", "дев'яносто вісім", "ninety eight"],
+    ["девяносто девять", "дев'яносто дев'ять", "ninety nine"],
+    ["сто", "сто", "one hundred"]
 ]
 
 function check() {
     chck = document.getElementById("test").value.replace(/ +/g, ' ').trim().split(" ");
+    console.log(chck);
+    len_chck = chck.length;
+    last_chck = chck[len_chck-1];
+    if (last_chck == "=" || last_chck == "дорівнює" || last_chck == "равно" || last_chck == "equals"){
+        test();
+    }
 }
-
-console.log(numbers)
 
 
 function wordToNumber(word, numbers) {
     new_temp = ""
     p = parseFloat(word);
-    console.log("numbers" + " " + numbers)
+    //console.log("numbers" + " " + numbers)
     for (k = 0; k < numbers.length; k++) {
         for (y = 0; y < numbers[k].length; y++) {
             if (word == numbers[k][y]) {
@@ -112,6 +166,24 @@ function wordToNumber(word, numbers) {
             case "закрити":
                 new_temp += " ) ";
                 break;
+            case "степень":
+                new_temp += "**";
+                break;
+            case "точка":
+                new_temp += ".";
+                break;
+            case "крапка":
+                new_temp += ".";
+                break;
+            case ".":
+                new_temp += ".";
+                break;
+            case "степінь":
+                new_temp += "**";
+                break;
+            case "**":
+                new_temp += "**";
+                break;
             case ")":
                 new_temp += " ) ";
                 break;
@@ -142,7 +214,12 @@ function wordToNumber(word, numbers) {
 // проверка на большие числа (2 слова)
 function checkArr(arr) {
     console.log("arr in function " + arr)
-    for (i = 0; i < arr.length; i++) {
+
+    if (arr.forEach(e => { console.log("forEach " + e); if(e == "степінь" || e == "степень" || e == "degree"){return true;}})){
+        console.log("степень есть")
+    }
+
+    for (i = 0; i < arr.length; i++) { // соединение чисел состоящих из двух цифр
         tempText = arr[i] + " " + arr[i + 1];
         console.log(i + " tempText " + tempText)
         for (j = 0; j < numbers.length; j++) {
