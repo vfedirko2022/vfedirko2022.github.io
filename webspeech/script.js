@@ -1,3 +1,42 @@
+window.wantReload = {
+    bool: true
+}
+
+function changeTheme() {
+    temp_body = document.getElementById("body")
+    if (temp_body.className == "darktheme") {
+        console.log("1111>>>>>>>>>")
+        temp_body.setAttribute("class", "whitetheme")
+        document.getElementById("choiseTheme").setAttribute("style", "color: black;")
+        document.getElementById("theme_color").innerText = "темну"
+        document.getElementsByTagName("header")[0].children[1].setAttribute("style", "color: black;")
+        document.getElementById("result_block").children[1].setAttribute("style", "color: black;")
+        document.getElementById("rules").setAttribute("style", "color: black;")
+        document.getElementById("result").setAttribute("style", "background-color: #eee;")
+        document.getElementById("test").setAttribute("style", "background-color: #eee;")
+    }
+    else {
+        temp_body.setAttribute("class", "darktheme")
+        document.getElementById("choiseTheme").setAttribute("style", "color: rgb(230, 230, 230);")
+        document.getElementById("theme_color").innerText = "світлу"
+        document.getElementsByTagName("header")[0].children[1].setAttribute("style", "color: rgb(230, 230, 230);")
+        document.getElementById("result_block").children[1].setAttribute("style", "color: rgb(230, 230, 230);")
+        document.getElementById("result").setAttribute("style", "background-color: white;")
+        document.getElementById("test").setAttribute("style", "background-color: white;")
+        document.getElementById("rules").setAttribute("style", "color: white")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 numbers = [
     ["один", "один", "one"],
     ["два", "два", "two"],
@@ -105,8 +144,8 @@ function check() {
     chck = document.getElementById("test").value.replace(/ +/g, ' ').trim().split(" ");
     console.log(chck);
     len_chck = chck.length;
-    last_chck = chck[len_chck-1];
-    if (last_chck == "=" || last_chck == "дорівнює" || last_chck == "равно" || last_chck == "equals"){
+    last_chck = chck[len_chck - 1];
+    if (last_chck == "=" || last_chck == "дорівнює" || last_chck == "равно" || last_chck == "equals") {
         test();
     }
 }
@@ -157,16 +196,31 @@ function wordToNumber(word, numbers) {
             case "открыть":
                 new_temp += " ( ";
                 break;
+            case "open":
+                new_temp += " ( ";
+                break;
             case "відкрити":
                 new_temp += " ( ";
                 break;
             case "закрыть":
                 new_temp += " ) ";
                 break;
+            case "close":
+                new_temp += " ) ";
+                break;
             case "закрити":
                 new_temp += " ) ";
                 break;
             case "степень":
+                new_temp += "**";
+                break;
+            case "степені":
+                new_temp += "**";
+                break;
+            case "степінь":
+                new_temp += "**";
+                break;
+            case "degree":
                 new_temp += "**";
                 break;
             case "точка":
@@ -179,7 +233,7 @@ function wordToNumber(word, numbers) {
                 new_temp += ".";
                 break;
             case "степінь":
-                new_temp += "**";
+                new_temp += " ";
                 break;
             case "**":
                 new_temp += "**";
@@ -215,7 +269,7 @@ function wordToNumber(word, numbers) {
 function checkArr(arr) {
     console.log("arr in function " + arr)
 
-    if (arr.forEach(e => { console.log("forEach " + e); if(e == "степінь" || e == "степень" || e == "degree"){return true;}})){
+    if (arr.forEach(e => { console.log("forEach " + e); if (e == "степінь" || e == "степень" || e == "degree") { return true; } })) {
         console.log("степень есть")
     }
 
@@ -244,15 +298,11 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
 
 const recognition = new window.SpeechRecognition();
 recognition.interimResults = true;
-recognition.lang = "uk-UA";
-//recognition.lang = "ru-RU";
-//recognition.lang = "en-US";
+
 
 let pn = document.createElement('input');
 
 recognition.addEventListener('result', (e) => {
-
-    console.log("1111111wadawdawdwd")
     const text = Array.from(e.results)
         .map(result => result[0])
         .map(result => result.transcript)
@@ -260,23 +310,27 @@ recognition.addEventListener('result', (e) => {
     /*if (e.result[0].isFinal) {
         pn = document.createElement('input');
     }*/
-    console.log("22222wadawdawdwd")
-    console.log(e);
-    console.log(text);
     document.getElementById("test").value = text
 })
 
+
+
+wantReload = true
 recognition.addEventListener('end', () => {
     console.log(10)
-    //recognition.start();
+    if (window.wantReload) {
+        recognition.start();
+    }
     test();
 })
 
 function turn_on() {
+    console.log(window.wantReload)
     recognition.start();
 }
 
 function turn_off() {
+    console.log(window.wantReload)
     recognition.stop();
 }
 
@@ -288,26 +342,19 @@ function test() {
     temp.forEach(e => {
         second_temp += wordToNumber(e, numbers);
     });
-    result = eval(second_temp);
+    console.log(parseFloat(eval(second_temp)))
+    if (parseFloat(eval(second_temp))) {
+        result = Math.round(eval(second_temp) * 100) / 100;
+    }
+    else {
+        result = "Произошла ошибка."
+    }
     document.getElementById("test").value = second_temp;
     document.getElementById("result").innerHTML = result;
     convertTextToSpeech(result);
-    new_storage = document.getElementById("storage")
-    new_p = document.createElement("p");
-    new_span_1 = document.createElement("span");
-    new_span_1.setAttribute("class", "example")
-    new_span_1.innerHTML = second_temp;
-    new_span_2 = document.createElement("span");
-    new_span_2.setAttribute("class", "result");
-    new_span_2.innerHTML = result;
-    document.getElementById("history").setAttribute("style", "display:none")
-    new_p.appendChild(new_span_1);
-    new_p.innerHTML += " = ";
-    new_p.appendChild(new_span_2);
-    new_storage.appendChild(new_p);
+    createHistory(second_temp, result)
+
 }
-
-
 
 
 
@@ -332,56 +379,94 @@ function populateVoices(voices) {
     )
     select.selectedIndex = defaultVoiceIndex
     // После этого инициализируем обработчики событий
-    initializeHandlers()
+    //initializeHandlers()
 }
 
+var acc = document.getElementsByClassName("accordion");
 
-function initializeHandlers() {
-    // Ниже перечислены почти все события, которые возникают при работе с рассматриваемым интерфейсом
-    U.onstart = () => console.log('Started')
-    U.onend = () => console.log('Finished')
-    U.onerror = (err) => console.error(err)
-    // Мне не удалось добиться возникновения этих событий
-    U.onpause = () => console.log('Paused')
-    U.onresume = () => console.log('Resumed')
-
-    // Обработка изменения настроек
-    wrapper.onchange = ({ target }) => {
-        if (target.type !== 'range') return
-        handleChange(target)
-    }
-
-    // Обработка нажатия кнопок
-    buttons.addEventListener('click', ({ target: { className } }) => {
-        // SpeechSynthesis предоставляет таким методы как `speak()`, `cancel()`, `pause()` и `resume()`
-        // Вызов метода `speak()` требует предварительной подготовки
-        // Кроме того, мы проверяем наличие текста в очереди на озвучивание с помощью атрибута `speaking`
-        // Есть еще два атрибута: `pending` и `paused`, но они не всегда возвращают корректные значения
-        switch (className) {
-            case 'speak':
-                if (!speechSynthesis.speaking) {
-                    convertTextToSpeech()
-                }
-                break
-            case 'cancel':
-                return speechSynthesis.cancel()
-            case 'pause':
-                return speechSynthesis.pause()
-            case 'resume':
-                return speechSynthesis.resume()
-            default:
-                return
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
         }
-    })
+    });
 }
 
-function handleChange(el) {
-    el.nextElementSibling.textContent = el.value
+
+/* Выбор языка ввода примера */
+recognition.lang = "uk-UA";
+function choiseLanguage() {
+    recognition.lang = choise_language.value;
+    console.log(choise_language.value)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+    $('#body').keypress(function (e) {
+        if (e.keyCode == 13) {
+            $('#turn_on').click();
+            wantReload = true;
+        };
+        if (e.key == "s") {
+            wantReload = false;
+            turn_off();
+        };
+    });
+});
+
+
+
+// function handleChange(el) {
+//     el.nextElementSibling.textContent = el.value
+// }
+
+function createHistory(first, second) {
+    new_storage = document.getElementById("storage")
+    new_p = document.createElement("p");
+    new_span_1 = document.createElement("span");
+    new_span_1.setAttribute("class", "example")
+    new_span_1.innerHTML = first;
+    new_span_2 = document.createElement("span");
+    new_span_2.setAttribute("class", "result");
+    new_span_2.innerHTML = second;
+    document.getElementById("history").setAttribute("style", "display:none")
+    new_p.appendChild(new_span_1);
+    new_p.innerHTML += " = ";
+    new_p.appendChild(new_span_2);
+    new_storage.appendChild(new_p);
 }
 
 function convertTextToSpeech(res) {
     // Получаем текст
-    const trimmed = "Результат: " + res;
+    if (parseFloat(res)) {
+        trimmed = "Результат: " + res;
+    }
+    else {
+        trimmed = res;
+    }
     if (!trimmed) return
     // Передаем его экземпляру `SpeechSynthesisUtterance`
     U.text = trimmed
@@ -401,41 +486,36 @@ function convertTextToSpeech(res) {
     speechSynthesis.speak(U)
 }
 
+function initializeHandlers() {
+    // U.onstart = () => console.log('Started')
+    // U.onend = () => console.log('Finished')
+    // U.onerror = (err) => console.error(err)
+    // U.onpause = () => console.log('Paused')
+    // U.onresume = () => console.log('Resumed')
+    // // wrapper.onchange = ({ target }) => {
+    // //     if (target.type !== 'range') return
+    // //     handleChange(target)
+    // // }
 
-
-
-
-
-
-
-document.addEventListener("keyup", function(event) {
-    // Число 13 в "Enter" и клавиши на клавиатуре
-    if (event.keyCode === 13) {
-      // При необходимости отмените действие по умолчанию
-      // event.preventDefault();
-      // Вызов элемента button одним щелчком мыши
-      document.getElementById("turn_on").click();
-    }
-  });
-
-
-
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        /* Toggle between adding and removing the "active" class,
-        to highlight the button that controls the panel */
-        this.classList.toggle("active");
-
-        /* Toggle between hiding and showing the active panel */
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
+    // buttons.addEventListener('click', ({ target: { className } }) => {
+    //     // SpeechSynthesis предоставляет таким методы как `speak()`, `cancel()`, `pause()` и `resume()`
+    //     // Вызов метода `speak()` требует предварительной подготовки
+    //     // Кроме того, мы проверяем наличие текста в очереди на озвучивание с помощью атрибута `speaking`
+    //     // Есть еще два атрибута: `pending` и `paused`, но они не всегда возвращают корректные значения
+    //     switch (className) {
+    //         case 'speak':
+    //             if (!speechSynthesis.speaking) {
+    //                 convertTextToSpeech()
+    //             }
+    //             break
+    //         case 'cancel':
+    //             return speechSynthesis.cancel()
+    //         case 'pause':
+    //             return speechSynthesis.pause()
+    //         case 'resume':
+    //             return speechSynthesis.resume()
+    //         default:
+    //             return
+    //     }
+    // })
 }

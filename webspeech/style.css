@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 10px;
+    border-bottom: 1px solid rgb(107, 107, 250);
+    display: flex;
+    justify-content: center;
+}
+
+header img{
+    display: block;
+    height: 75px;
+}
+
+header span{
+    font-size: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.choise_theme{
+    text-shadow: 1px 1px 1px rgb(143, 143, 143);
+    display: block;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: transparent;
+    text-decoration: 1px solid black;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    padding-bottom: 50px;
+}
+
+body.darktheme{
+    background-color: rgb(35, 37, 37);
+    color: rgb(230, 230, 230);
+}
+
+.content{
+    display: flex;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 40%;
+
+    margin: auto;
+    flex-direction: column;
+}
+
+.rules{
+    padding-left: 70px;
+    width: 40%;
+    color: white;
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+.rules ul{
+    margin-top: 20px;
+}
+
+.rules ul li{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.wrapper h1 {
+    text-align: center;
+    font-size: 36px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.wrapper p {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.turn_buttons {
+    display: flex;
+    padding: 0px 50px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.turn_buttons button {
+    display: block;
+    border-radius: 15px;
+    border-color: transparent;
+    padding: 10px 20px;
+    margin: 10px;
+
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.texts p {
+    text-align: left;
+    padding: 15px 7px;
+    color: #000;
+    background-color: #fff;
+    display: block;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: .7px;
+}
+
+#test,
+#result {
+    /*width: 500px;*/
+    border-radius: 10px;
+    border-color: transparent;
+    outline: transparent;
+    height: 50px;
+    padding: 10px;
+}
+
+.texts .res {
+    display: inline-block;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    color: white;
+}
+
+.texts div{
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.texts div input{
+    width: 100%;
+    margin-right: 20px;
+}
+
+.texts div button {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    border-color: transparent;
+    font-size: 18px;
+    font-weight: 500;
+    height: 50px;
+    padding: 0px 10px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-top: 20px;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    width: 100%;
+    color: black;
+    display: none;
+    /*overflow: hidden; */
+}
+
+.panel p {
+    margin: 10px auto;
+}

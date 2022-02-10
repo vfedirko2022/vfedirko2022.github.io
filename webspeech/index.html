@@ -6,212 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebSpeech</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        header{
-            padding: 10px;
-            border-bottom: 1px solid rgb(107, 107, 250);
-            display: flex;
-            justify-content: center;
-        }
-
-        header img{
-            display: block;
-            height: 75px;
-        }
-
-        header span{
-            font-size: 24px;
-            color: white;
-            display: flex;
-            align-items: center;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-        body {
-            background-color: rgb(35, 37, 37);
-            padding-bottom: 50px;
-        }
-
-        .content{
-            display: flex;
-        }
-
-        .wrapper {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-self: center;
-            width: 40%;
-
-            margin: auto;
-            flex-direction: column;
-            color: rgb(230, 230, 230);
-        }
-
-        .rules{
-            padding-left: 70px;
-            width: 40%;
-            color: white;
-            font-size: 26px;
-            margin-top: 30px;
-        }
-
-        .rules ul{
-            margin-top: 20px;
-        }
-
-        .rules ul li{
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .wrapper h1 {
-            text-align: center;
-            font-size: 36px;
-            width: 100%;
-            display: block;
-            align-items: center;
-            margin-top: 30px;
-        }
-
-        .wrapper p {
-            margin-top: 10px;
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .turn_buttons {
-            display: flex;
-            padding: 0px 50px;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .turn_buttons button {
-            display: block;
-            border-radius: 15px;
-            border-color: transparent;
-            padding: 10px 20px;
-            margin: 10px;
-
-        }
-
-        .container {
-            max-width: 600px;
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .texts p {
-            text-align: left;
-            padding: 15px 7px;
-            color: #000;
-            background-color: #fff;
-            display: block;
-            border-radius: 15px;
-            max-width: 600px;
-            width: 100%;
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: .7px;
-        }
-
-        #test,
-        #result {
-            /*width: 500px;*/
-            border-radius: 10px;
-            border-color: transparent;
-            outline: transparent;
-            height: 50px;
-            padding: 10px;
-        }
-
-        .texts .res {
-            display: inline-block;
-            background-color: transparent;
-            padding: 0;
-            margin: 0;
-            margin-top: 20px;
-            color: white;
-        }
-
-        .texts div{
-            display: flex;
-            flex-wrap: nowrap;
-
-        }
-
-        .texts div input{
-            width: 100%;
-            margin-right: 20px;
-        }
-
-        .texts div button {
-            display: block;
-            margin: auto;
-            border-radius: 10px;
-            border-color: transparent;
-            font-size: 18px;
-            font-weight: 500;
-            height: 50px;
-            padding: 0px 10px;
-        }
-
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: 0.4s;
-            margin-top: 20px;
-        }
-
-        .active,
-        .accordion:hover {
-            background-color: #ccc;
-        }
-
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            width: 100%;
-            color: black;
-            display: none;
-            /*overflow: hidden; */
-        }
-
-        .panel p {
-            margin: 10px auto;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="body" class="darktheme">
     <header>
         <img src="Logo WVC.png" alt="">
         <span>WebVoiceCalc</span> 
     </header>
+    <button onclick="changeTheme()" id="choiseTheme" class="choise_theme" style="color: rgb(230, 230, 230);">Змінити тему на <span id="theme_color">світлу</span></button>
     <div class="content">
-        <div class="rules">
+        <div class="rules" id="rules">
             Правила голосового вводу прикладів: 
             <ul>
                 <li>Перед початком роботи користувачеві необхідно вибрати мову, якою буде проговорено або введено приклад. Якщо мова буде вибрана неправильно, то значення виразу може бути обчислене з помилками. </li>
                 <li>Числа можуть бути цілими та дійсними. Роздільник цілої та дійсної частини – слово «крапка». Приклад того, як це повинно звучати: “двадцять три крапка сімдесят чотири”. Комп’ютер це розуміє як 23.74. </li>
-                <li>Якщо необхідно, наприклад, добути квадратний корінь з суми, добутку чи іншого виразу, то необхідно взяти підкореневий вираз у дужки. Приклад того, як це повинно звучати: “корінь з, відкрити дужку, дев’ять плюс п’ять, закрити дужку”. Комп’ютер це розуміє як √(9 + 5). </li>
+                <li>Якщо необхідно, наприклад, піднести до степеня суму, добуток чи інший вираз, то необхідно взяти вираз у дужки. Приклад того, як це повинно звучати: "відкрити дужку, один плюс один, закрити дужку, степінь два”. Комп’ютер це розуміє як (1 + 1)**2, тобто - чотири. </li>
                 <li>Дужки для обмеження аргументів потрібно використовувати при роботі з усіма функціями, наприклад, синус, косинус тощо.  </li>
                 <li>Під час не голосового, а письмового введення виразу, обов’язково повинен бути хоча б один пробіл між числами та іншими символами. Не повинно бути такого: “23плюс чотири”. Значення виразу не буде обчисленим. </li>
             </ul>
@@ -221,19 +31,19 @@
             <h1>Голосовий математичний калькулятор</h1>
             <p>Переконайтеся, що у вас дозволено використання мікрофону</p>
             <p>Оберіть мову: 
-                <select name="" id="">
+                <select onchange="choiseLanguage()" name="" id="choise_language">
                     <option value="uk-UA">Українська</option>
                     <option value="ru-RU">Русский</option>
                     <option value="en-US">English</option>
                 </select>
             </p>
             <div class="turn_buttons">
-                <button id="turn_on" onclick="turn_on()" accesskey="c" class="turn_on_button">Включити мікрофон</button>
+                <button id="turn_on" onclick="turn_on()" accesskey="Enter" class="turn_on_button">Включити мікрофон</button>
                 <button onclick="turn_off()" style="display: none;" class="turn_off_button">Виключити мікрофон</button>
             </div>
     
             <div class="container">
-                <div class="texts">
+                <div class="texts" id="result_block">
                     <div>
                         <input id="test" onchange="check()" placeholder="Скажіть або уведіть приклад"></input>
                     <button onclick="test()">Підрахувати</button>
@@ -284,6 +94,8 @@
         </div>
       </div>
 
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
