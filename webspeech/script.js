@@ -430,7 +430,7 @@ $(document).ready(function () {
             $('#turn_on').click();
             wantReload = true;
         };
-        if (e.key == "s") {
+        if (e.key == "s" || e.key == "ы" || e.key == "і") {
             wantReload = false;
             turn_off();
         };

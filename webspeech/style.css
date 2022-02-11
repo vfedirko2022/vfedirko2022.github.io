@@ -202,3 +202,33 @@ body.darktheme{
 .panel p {
     margin: 10px auto;
 }
+
+
+
+
+@media (max-width: 900px) {
+    .content{
+        flex-direction: column-reverse;
+    }
+    .wrapper{
+        height: auto;
+        width: 90%;
+    }
+    .wrapper h1{
+        font-size: 28px;
+    }
+    .wrapper p{
+        font-size: 18px;
+    }
+    .rules{
+        width: 90%;
+        padding-left: 10%;
+    }
+    .texts div{
+        flex-wrap: wrap;
+    }
+    #test{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
