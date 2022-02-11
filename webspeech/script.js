@@ -150,8 +150,17 @@ function check() {
     }
 }
 
-
+next_sin = false;
 function wordToNumber(word, numbers) {
+    if (next_sin) {
+        temp_degree = parseInt(word)
+        new_temp = Math.sin(temp_degree)
+        break;
+    }
+    next_sin = false;
+    if (word == "синус" || word == "сінус" || word == "синус") {
+        next_sin = true;
+    }
     new_temp = ""
     p = parseFloat(word);
     //console.log("numbers" + " " + numbers)
@@ -169,6 +178,15 @@ function wordToNumber(word, numbers) {
     }
     else {
         switch (word) {
+            case "синус":
+                new_temp += Math.sin;
+                break;
+            case "сінус":
+                new_temp += "sin";
+                break;
+            case "plus":
+                new_temp += " + ";
+                break;
             case "плюс":
                 new_temp += " + ";
                 break;
@@ -342,6 +360,7 @@ function test() {
     temp.forEach(e => {
         second_temp += wordToNumber(e, numbers);
     });
+    console.log(second_temp)
     console.log(parseFloat(eval(second_temp)))
     if (parseFloat(eval(second_temp))) {
         result = Math.round(eval(second_temp) * 100) / 100;
