@@ -369,9 +369,9 @@ recognition.addEventListener('result', (e) => {
 wantReload = true
 recognition.addEventListener('end', () => {
     console.log(10)
-    if (window.wantReload) {
+    /*if (window.wantReload) {
         recognition.start();
-    }
+    }*/
     test();
 })
 
