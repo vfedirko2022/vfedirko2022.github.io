@@ -159,28 +159,28 @@ function wordToNumber(word, numbers) {
     if (next_sin) {
         console.log("22222 >>>>>>>>")
         temp_degree = parseInt(word)
-        new_temp = Math.round(Math.sin(temp_degree * (Math.PI / 180)) * 100) / 100
+        new_temp = Math.round(Math.sin(temp_degree * (Math.PI / 180)) * 10000) / 10000
         console.log(new_temp)
         next_sin = false;
         return new_temp;
     }
     if (next_cos) {
         temp_degree = parseInt(word)
-        new_temp = Math.round(Math.cos(temp_degree * (Math.PI / 180)) * 100) / 100
+        new_temp = Math.round(Math.cos(temp_degree * (Math.PI / 180)) * 10000) / 10000
         console.log(new_temp)
         next_cos = false;
         return new_temp;
     }
     if (next_tg) {
         temp_degree = parseInt(word)
-        new_temp = Math.round(Math.tan(temp_degree * (Math.PI / 180)) * 100) / 100
+        new_temp = Math.round(Math.tan(temp_degree * (Math.PI / 180)) * 10000) / 10000
         console.log(new_temp)
         next_tg = false;
         return new_temp;
     }
     if (next_ctg) {
         temp_degree = parseInt(word)
-        new_temp = Math.round((1 / Math.tan(temp_degree * (Math.PI / 180))) * 100) / 100
+        new_temp = Math.round((1 / Math.tan(temp_degree * (Math.PI / 180))) * 10000) / 10000
         console.log(new_temp)
         next_ctg = false;
         return new_temp;
