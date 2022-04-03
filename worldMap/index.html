@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="stylesheet.css" />
     <title>WorldMap</title>
   </head>
-  <body>
+  <body id="body">
     <header></header>
 
     <div class="wrapper">
@@ -528,7 +528,26 @@
     </div>
 
     <div class="tooltip"></div>
+
+    <div class="popup-main" id="popup-main-p1">
+      <div class="popup-container" id="popup-container1">
+        <div class="popup__top_line">
+          <h2 class="popup__title" id="popup__title"></h2>
+          <div class="popup__close-icon"></div>
+        </div>
+        <div class="popup__content">
+          <div class="popup__left_column"></div>
+          <div class="popup__right_column"></div>
+        </div>
+        <div class="popup__footer"></div>
+      </div>
+    </div>
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
   <script type="module">
     // ------------------------------------------------ START CONNECT FIREBASE DATABASE ----------------------------------
 
@@ -583,6 +602,41 @@
       });
 
     // ------------------------------------------------ END DOWNLOAD COUNTRY NAMES FOR TOOLTIP ----------------------------------
+
+    // ------------------------------------------------ START FADE IN POPUP -------------------------------------------------
+
+    function fadeInPopUp(country) {
+      var nameCountry = country.dataset.title;
+      popup__title.innerText = nameCountry;
+
+      document
+        .getElementById("popup-main-p1")
+        .setAttribute("style", "display:block");
+      document.getElementById("body").classList = "popup_active";
+    }
+
+    // ------------------------------------------------ END FADE IN POPUP -------------------------------------------------
+
+    // ------------------------------------------------ START FADE OUT POPUP -------------------------------------------------
+
+    document.addEventListener("mouseup", function (e) {
+      console.log(e.target.classList);
+      var popup = $(".popup-container");
+      var popupclose = $(".popup__close-icon");
+      if (
+        (e.target != popup[0] && popup.has(e.target).length === 0,
+        e.target.classList == "popup__close-icon")
+      ) {
+        document.getElementById("popup-main-p1").removeAttribute("style");
+        document.getElementById("body").classList = "";
+      }
+      if (e.target.classList == "popup__close-icon") {
+        document.getElementById("popup-main-p1").removeAttribute("style");
+        document.getElementById("body").classList = "";
+      }
+    });
+
+    // ------------------------------------------------ END FADE OUT POPUP -------------------------------------------------
 
     // ------------------------------------------------ START DOWNLOAD COUNTRY INFORMATION ----------------------------------
 
@@ -647,12 +701,13 @@
     countries.forEach((country) => {
       country.addEventListener("click", function () {
         idOfTheCntr = this.dataset.idofthecountry;
-        console.log(idOfTheCntr);
+        // console.log(idOfTheCntr);
         informationAboutTheCountry(idOfTheCntr);
+        fadeInPopUp(this);
+        console.log("adawdwa");
       });
       country.addEventListener("mouseenter", function () {
-        console.log(this.dataset.idofthecountry);
-        var id = 13;
+        // console.log(this.dataset.idofthecountry);
         document.getElementsByName(this.dataset.title).forEach((e) => {
           e.setAttribute("class", "country hover");
         });
