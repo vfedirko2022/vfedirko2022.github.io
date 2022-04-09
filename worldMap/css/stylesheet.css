@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Montserrat";
 }
 
 body.popup_active {
@@ -16,12 +17,164 @@ img {
   height: auto;
 }
 
-header {
-  height: 200px;
-  border-bottom: 1px solid black;
+.header__nav {
+  position: relative;
+  font-style: Montserrat;
+  background: -o-linear-gradient(272.51deg, rgba(3, 83, 157, 0.96) 2.28%, rgba(6, 132, 201, 0.94) 105.79%);
+  background: linear-gradient(177.49deg, rgba(3, 83, 157, 0.96) 2.28%, rgba(6, 132, 201, 0.94) 105.79%);
+}
+
+.header__nav .header__top_line__background {
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(28%, rgba(0, 0, 0, 0.25)), to(rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 28%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 28%, rgba(255, 255, 255, 0) 100%);
+}
+
+.header__nav .header__top_line__background .header__top_line {
+  max-width: 1300px;
+  margin: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__logo {
+  display: block;
+  height: 100px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container {
+  height: 100px;
+  display: block;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  text-align: center;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points {
+  padding: 0 50px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .list__link {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #cacaca;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .list__link.active,
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .list__link:hover {
+  color: #fff;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .list__link.active {
+  text-decoration: underline;
+}
+
+.header__nav .header__content {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+  color: #ffffff;
+}
+
+.header__nav .header__content .header__main_text {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.header__nav .header__content .header__main_text p {
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.header__nav .header__content .header__main_text p img {
+  height: 40px;
+}
+
+.header__nav .header__content .header__text {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.header__nav .header__content .header__button {
+  margin: auto;
+  width: 350px;
+  border-radius: 18px;
+  display: block;
+  -webkit-box-shadow: 5px 15px 16px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 15px 16px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  padding: 15px;
+  background-color: #fff;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 2.5px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header__nav .header__content .header__button:hover {
+  -webkit-box-shadow: inset 0px 0px 1px 0.2px #000000, 5px 15px 16px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0px 0px 1px 0.2px #000000, 5px 15px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header__nav .header__pictures {
+  margin-top: 50px;
+  position: relative;
+}
+
+.header__nav .header__pictures .header__person {
+  position: absolute;
+  top: -19px;
+  left: calc(50% - 320px);
+  width: 120px;
+}
+
+.header__nav .header__pictures .header__earth {
+  display: block;
+  margin: auto;
+  height: 100%;
 }
 
 .wrapper {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 30px;
+  margin: auto;
+}
+
+.map {
   width: 100%;
   height: auto;
 }
@@ -50,7 +203,6 @@ header {
       -ms-transform: scaleY(1);
           transform: scaleY(1);
   position: relative;
-  margin-top: 100px;
   width: 100%;
   height: 100%;
   background: #00858a;
@@ -189,9 +341,9 @@ header {
 
 .popup-main .popup-container .popup__content .popup__left_column .popup__svg .popup__svg__mountain {
   fill: rgba(122, 66, 13, 0.7);
-  -webkit-transition: all 0.2 ease;
-  -o-transition: all 0.2 ease;
-  transition: all 0.2 ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .popup-main .popup-container .popup__content .popup__left_column .popup__svg .popup__svg__mountain:hover {
