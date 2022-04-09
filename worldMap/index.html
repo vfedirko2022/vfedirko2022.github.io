@@ -5,12 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/stylesheet.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>WorldMap</title>
   </head>
   <body id="body">
-    <header></header>
+    <header class="header__nav">
+      <div class="header__top_line__background">
+        <div class="header__top_line">
+          <div class="header__logo">
+            <img src="" alt="Логотип" />
+          </div>
+          <div class="header__list_container">
+            <ul class="list">
+              <li class="list__points">
+                <a class="list__link active" href="#">Географія</a>
+              </li>
+              <li class="list__points">
+                <a class="list__link" href="#">Історія</a>
+              </li>
+              <li class="list__points">
+                <a class="list__link" href="#">Навчання</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header__content">
+        <div class="wrapper">
+          <span class="header__main_text">
+            Вивчай
+            <p>Географ<img src="img/geometka.svg" alt="" />ю</p>
+            разом з нами
+          </span>
+          <p class="header__text">
+            натискай на країну та вивчай її політичну, фізичну, топографічну та
+            кліматичну карти
+          </p>
+          <a class="header__button" href="#"> Перейти до вивчення </a>
+        </div>
+      </div>
+      <div class="header__pictures">
+        <div class="wrapper">
+          <img
+            class="header__earth"
+            src="img/one_fourth_earth.png"
+            alt="Земля"
+          />
+          <img src="img/человек.svg" alt="Человек" class="header__person" />
+        </div>
+      </div>
+    </header>
 
-    <div class="wrapper">
+    <div class="map">
       <div class="world_map"><div class="cells">
   <div class="cell"></div>
   <div class="cell"></div>
@@ -706,10 +757,20 @@
     const points = document.querySelectorAll(".popup__point");
     const informations = document.querySelectorAll(".popup__information");
     const mountains = document.querySelectorAll(".popup__svg__mountain");
+    const listLinks = document.querySelectorAll(".list__link");
     const tooltip = document.querySelector(".tooltip");
     const tooltip2 = document.querySelector(".tooltip2");
 
     // ------------------------------------------------ END GENERAL INFORMATION ----------------------------------
+
+    listLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        listLinks.forEach((e) => {
+          e.className = "list__link";
+        });
+        link.className = "list__link active";
+      });
+    });
 
     // ------------------------------------------------ START DOWNLOAD COUNTRY NAMES FOR TOOLTIP ---------------------------
 
@@ -787,16 +848,17 @@
           console.log(infoAboutTheCountry);
           mapInPopup.setAttribute("viewBox", infoAboutTheCountry.Map.viewBox);
           pathInPopup.setAttribute("d", infoAboutTheCountry.Map.d);
-          var tempPath = document.createElement("path");
-          tempPath.setAttribute("class", "popup__svg__mountain");
+
           console.log(infoAboutTheCountry.Mountains);
           infoAboutTheCountry.Mountains.forEach((mountain) => {
+            var tempPath = document.createElement("path");
+            tempPath.setAttribute("class", "popup__svg__mountain");
             tempPath.dataset.idofthemountain = mountain.id;
             var tempD = mountain.position;
             tempPath.setAttribute("d", tempD);
             // console.log(mountain.position);
-            mapInPopup.appendChild(tempPath);
           });
+          mapInPopup.appendChild(tempPaths);
         })
         .then(fadeInPopUp(x)) // Появление Popup
         .catch((error) => {
