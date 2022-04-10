@@ -20,8 +20,25 @@ img {
 .header__nav {
   position: relative;
   font-style: Montserrat;
-  background: -o-linear-gradient(272.51deg, rgba(3, 83, 157, 0.96) 2.28%, rgba(6, 132, 201, 0.94) 105.79%);
-  background: linear-gradient(177.49deg, rgba(3, 83, 157, 0.96) 2.28%, rgba(6, 132, 201, 0.94) 105.79%);
+}
+
+.header__nav.geography {
+  background: -o-linear-gradient(272.51deg, #03539d 2.28%, #0680c5 100%);
+  background: linear-gradient(177.49deg, #03539d 2.28%, #0680c5 100%);
+}
+
+.header__nav.history {
+  background: #937018;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(28%, #937018), to(#cb9435));
+  background: -o-linear-gradient(top, #937018 28%, #cb9435 100%);
+  background: linear-gradient(180deg, #937018 28%, #cb9435 100%);
+}
+
+.header__nav.studies {
+  background: #8f03a1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(28%, #8f03a1), to(#c87bd5));
+  background: -o-linear-gradient(top, #8f03a1 28%, #c87bd5 100%);
+  background: linear-gradient(180deg, #8f03a1 28%, #c87bd5 100%);
 }
 
 .header__nav .header__top_line__background {
@@ -205,11 +222,28 @@ img {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #00858a;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(21%, #00858a), color-stop(48%, #1ab9a2), color-stop(74%, #2ac48e), to(#01b4b5));
-  background: -o-linear-gradient(bottom, #00858a 21%, #1ab9a2 48%, #2ac48e 74%, #01b4b5 100%);
-  background: linear-gradient(0deg, #00858a 21%, #1ab9a2 48%, #2ac48e 74%, #01b4b5 100%);
   padding: 0 70px;
+}
+
+.world_map.geography {
+  background: #0680c5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0680c5), color-stop(28%, rgba(6, 128, 197, 0.8)), color-stop(60%, rgba(8, 103, 157, 0.8)), to(rgba(84, 162, 205, 0.8)));
+  background: -o-linear-gradient(top, #0680c5 0%, rgba(6, 128, 197, 0.8) 28%, rgba(8, 103, 157, 0.8) 60%, rgba(84, 162, 205, 0.8) 100%);
+  background: linear-gradient(180deg, #0680c5 0%, rgba(6, 128, 197, 0.8) 28%, rgba(8, 103, 157, 0.8) 60%, rgba(84, 162, 205, 0.8) 100%);
+}
+
+.world_map.history {
+  background: #cb9435;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(28%, #cb9435), color-stop(57%, #c48b26), to(#c1974e));
+  background: -o-linear-gradient(top, #cb9435 28%, #c48b26 57%, #c1974e 100%);
+  background: linear-gradient(180deg, #cb9435 28%, #c48b26 57%, #c1974e 100%);
+}
+
+.world_map.studies {
+  background: #c87bd5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c87bd5), color-stop(28%, rgba(200, 123, 213, 0.8)), color-stop(55%, rgba(162, 36, 207, 0.8)), to(rgba(172, 118, 205, 0.8)));
+  background: -o-linear-gradient(top, #c87bd5 0%, rgba(200, 123, 213, 0.8) 28%, rgba(162, 36, 207, 0.8) 55%, rgba(172, 118, 205, 0.8) 100%);
+  background: linear-gradient(180deg, #c87bd5 0%, rgba(200, 123, 213, 0.8) 28%, rgba(162, 36, 207, 0.8) 55%, rgba(172, 118, 205, 0.8) 100%);
 }
 
 .world_map .cells {
