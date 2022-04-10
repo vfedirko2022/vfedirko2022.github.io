@@ -14,7 +14,7 @@
     <title>WorldMap</title>
   </head>
   <body id="body">
-    <header class="header__nav">
+    <header class="header__nav geography" id="header_nav">
       <div class="header__top_line__background">
         <div class="header__top_line">
           <div class="header__logo">
@@ -23,13 +23,15 @@
           <div class="header__list_container">
             <ul class="list">
               <li class="list__points">
-                <a class="list__link active" href="#">Географія</a>
+                <a class="list__link active" href="#" data-type="geography"
+                  >Географія</a
+                >
               </li>
               <li class="list__points">
-                <a class="list__link" href="#">Історія</a>
+                <a class="list__link" href="#" data-type="history">Історія</a>
               </li>
               <li class="list__points">
-                <a class="list__link" href="#">Навчання</a>
+                <a class="list__link" href="#" data-type="studies">Навчання</a>
               </li>
             </ul>
           </div>
@@ -62,7 +64,8 @@
     </header>
 
     <div class="map">
-      <div class="world_map"><div class="cells">
+      <div class="world_map geography" id="world_map">
+        <div class="cells">
   <div class="cell"></div>
   <div class="cell"></div>
   <div class="cell"></div>
@@ -665,7 +668,8 @@
     d="m 1198.0359,1813.3738 7.8861,-1.5335 8.7624,1.5335 -1.3144,-5.0384 -5.0383,-3.505 -6.1337,1.3144 -3.2859,1.7525 -2.4096,3.5049 z"
   ></path>
 </svg>
-</div>
+
+      </div>
     </div>
 
     <div class="tooltip"></div>
@@ -769,6 +773,8 @@
           e.className = "list__link";
         });
         link.className = "list__link active";
+        header_nav.className = "header__nav " + this.dataset.type;
+        world_map.className = "world_map " + this.dataset.type;
       });
     });
 
