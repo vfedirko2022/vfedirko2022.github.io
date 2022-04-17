@@ -1,0 +1,461 @@
+.rating__content {
+  width: 100%;
+  min-height: inherit;
+  padding: 44px 10px 15px 10px;
+  border-radius: 15px;
+}
+
+.rating__banner {
+  margin: 0 auto;
+  background-image: url("../img/banner-blue.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 489px;
+  height: 92px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 36px;
+}
+.rating__banner span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -7px;
+}
+.rating__banner h2 {
+  color: #fff;
+  font-family: "Mickies", sans-serif;
+  font-size: 37px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.rating__banner p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15.3px;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+.content__form-registration-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 474px;
+  width: 100%;
+  min-height: 152px;
+  margin: 0 auto 28px;
+  padding: 31px 25px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+}
+
+.content__form-registration-step label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.content__form-registration-step label select {
+  min-width: 250px;
+}
+
+.content__form-registration-step span {
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 15px;
+}
+
+.content__form-registration-step input {
+  min-width: 250px;
+  height: 35px;
+}
+
+.content__form-registration-step input[type=radio],
+.content__form-registration-step input[type=checkbox] {
+  min-width: 0;
+  height: auto;
+}
+
+.rating__filter-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rating__filter-search__add-info {
+  margin-right: 25px;
+  margin-left: 30px;
+}
+.rating__filter-search__add-info p:first-child {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.rating__filter-search__add-info p:last-child {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.rating__filter-search__add-info p:last-child span {
+  color: #008EBB;
+  font-weight: 300;
+}
+.rating__filter-search__add-info p:last-child .bolder-p {
+  font-weight: 500;
+}
+
+.rating__rate-table {
+  width: 500px;
+  display: grid;
+  grid-template-columns: 67px 458px repeat(3, 86px);
+  grid-template-rows: -webkit-max-content repeat(auto-fit, 72px);
+  grid-template-rows: max-content repeat(auto-fit, 72px);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.rating__rate-table__number {
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-family: "Mickies", sans-serif;
+  font-size: 32px;
+  line-height: 39.36px;
+}
+.rating__rate-table__number:nth-child(3n+1) {
+  background-color: #FEAA3AE5;
+}
+.rating__rate-table__number:nth-child(3n+2) {
+  background-color: #33C5F3E5;
+}
+.rating__rate-table__number:nth-child(3n+3) {
+  background-color: #62A82DE5;
+}
+
+.rating__rate-table__school {
+  border-radius: 15px;
+  padding: 14px 20px 14px 20px;
+  background-color: #fff;
+}
+.rating__rate-table__school:nth-child(3n+2) {
+  border: 1px dashed #FEAA3A;
+}
+.rating__rate-table__school:nth-child(3n+3) {
+  border: 1px dashed #33C5F3;
+}
+.rating__rate-table__school:nth-child(3n+1) {
+  border: 1px dashed #62A82D;
+}
+.rating__rate-table__school:nth-child(3n+2) .rating__rate-table__school__sch {
+  color: #FEAA3AE5;
+}
+.rating__rate-table__school:nth-child(3n) .rating__rate-table__school__sch {
+  color: #33C5F3E5;
+}
+.rating__rate-table__school:nth-child(3n+1) .rating__rate-table__school__sch {
+  color: #62A82DE5;
+}
+.rating__rate-table__school .rating__rate-table__school__sch {
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 22px;
+}
+.rating__rate-table__school .rating__rate-table__school__add {
+  font-size: 14px;
+  line-height: 22px;
+  color: #034561;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+}
+
+.rating__rate-table__diploma, .rating__rate-table__participents, .rating__rate-table__percentage {
+  border-radius: 15px;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 22px;
+  color: #034561;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rating__rate-table__diploma {
+  background-color: #fff;
+}
+.rating__rate-table__diploma:nth-child(3n+3) {
+  border: 1px dashed #FEAA3A;
+}
+.rating__rate-table__diploma:nth-child(3n+1) {
+  border: 1px dashed #33C5F3;
+}
+.rating__rate-table__diploma:nth-child(3n+2) {
+  border: 1px dashed #62A82D;
+}
+
+.rating__rate-table__participents {
+  background-color: #fff;
+}
+.rating__rate-table__participents:nth-child(3n+1) {
+  border: 1px dashed #FEAA3A;
+}
+.rating__rate-table__participents:nth-child(3n+2) {
+  border: 1px dashed #33C5F3;
+}
+.rating__rate-table__participents:nth-child(3n+3) {
+  border: 1px dashed #62A82D;
+}
+
+.rating__rate-table__percentage {
+  background-color: #fff;
+}
+.rating__rate-table__percentage:nth-child(3n+2) {
+  border: 1px dashed #FEAA3A;
+}
+.rating__rate-table__percentage:nth-child(3n+3) {
+  border: 1px dashed #33C5F3;
+}
+.rating__rate-table__percentage:nth-child(3n+1) {
+  border: 1px dashed #62A82D;
+}
+
+.rating__rate-table__header-p {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+.rating__rate-table__header-p:first-child {
+  font-size: 19px;
+}
+.rating__rate-table__header-p:nth-child(5) {
+  font-size: 19px;
+}
+.rating__rate-table__header-p:nth-child(2) {
+  text-align: left;
+}
+
+.bg-clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.bg-clouds__cloud-1 {
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+
+.bg-clouds__cloud-2 {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+
+.rating {
+  background: -o-linear-gradient(89.64deg, #C7FFF9 -5.11%, #82D0FD 20.67%, #59B4FF 99.68%);
+  background: linear-gradient(0.36deg, #C7FFF9 -5.11%, #82D0FD 20.67%, #59B4FF 99.68%);
+}
+.rating .content-background {
+  margin-bottom: 150px;
+}
+.rating .add-bg-pencils {
+  position: relative;
+}
+.rating .add-bg-pencils::after {
+  position: absolute;
+  content: url("../img/bg_element__pencils.svg");
+  right: -150px;
+  bottom: 300px;
+  z-index: -1;
+}
+.rating .add-bg-protractor {
+  position: relative;
+}
+.rating .add-bg-protractor::after {
+  position: absolute;
+  content: url("../img//bg_element__protactor.svg");
+  right: -100px;
+  bottom: 50px;
+}
+
+.bg-children-goblet {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+.bg-children-goblet .bg-children__boy {
+  position: absolute;
+  left: 300px;
+  bottom: 35px;
+}
+.bg-children-goblet .bg-children__girl {
+  position: absolute;
+  left: 60px;
+  bottom: 35px;
+}
+.bg-children-goblet .bg-children__goblet {
+  position: absolute;
+  right: 70px;
+  bottom: 35px;
+  z-index: 0;
+}
+.bg-children-goblet .bg-children__earth {
+  position: absolute;
+  right: 155px;
+  bottom: 15px;
+  z-index: -1;
+}
+.bg-children-goblet .bg-children__kite {
+  position: absolute;
+  left: 155px;
+  bottom: 700px;
+  z-index: -1;
+}
+
+.rating__rate-table-wrapper {
+  overflow: auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .rating .add-bg-pencils::after {
+    content: "";
+  }
+}
+@media screen and (max-width: 1270px) {
+  .rating .add-bg-protractor::after {
+    content: "";
+  }
+}
+@media screen and (max-width: 1100px) {
+  .rating__filter-search {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .rating .content__form-registration-step {
+    margin: 0 auto 15px;
+  }
+
+  .rating__filter-search__add-info {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .bg-children__earth, .bg-children__goblet {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  .aside {
+    display: none;
+  }
+
+  .bg-children__kite {
+    display: none;
+  }
+
+  .rating__banner {
+    width: auto;
+    height: 110px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .rating__banner {
+    width: auto;
+  }
+
+  .bg-children__boy, .bg-children__girl {
+    display: none;
+  }
+
+  .rating .content-background {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .content__form-registration-step label {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 25px;
+  }
+  .content__form-registration-step label span {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 330px) {
+  .content__form-registration-step label select {
+    min-width: 200px;
+  }
+}

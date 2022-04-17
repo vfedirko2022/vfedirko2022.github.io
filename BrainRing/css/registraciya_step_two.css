@@ -1,0 +1,43 @@
+.content__form-registration-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 474px;
+  width: 100%;
+  min-height: 152px;
+  margin: 0 auto;
+  padding: 31px 25px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+}
+
+.content__form-registration-step label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.content__form-registration-step span {
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 15px;
+}
+
+.content__form-registration-step select {
+  min-width: 250px;
+  height: 35px;
+}

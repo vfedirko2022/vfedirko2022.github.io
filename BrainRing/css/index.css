@@ -1,0 +1,193 @@
+body {
+  height: 100vh;
+}
+
+body::before {
+  position: fixed;
+  height: inherit;
+}
+
+.index-logo {
+  position: absolute;
+  right: 14%;
+  top: 3%;
+  width: 28%;
+}
+
+.index-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-grass img {
+  position: fixed;
+}
+
+.wrapper-lesson__math {
+  border-color: #62A82D;
+}
+
+.wrapper-lesson__computing {
+  border-color: #D79515;
+}
+
+.wrapper-lesson__history {
+  border-color: #926451;
+}
+
+.wrapper-lesson__english {
+  border-color: #B25B44;
+}
+
+.wrapper-lesson__physics {
+  border-color: #F9F9F9;
+}
+
+.wrapper-lesson__biology {
+  border-color: #E7E9F4;
+}
+
+.wrapper-lesson__geography {
+  border-color: #F59A9C;
+}
+
+.wrapper-lesson__science {
+  border-color: #B7DAF7;
+}
+
+.wrapper-lesson {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  max-width: 1370px;
+  height: 100%;
+  padding: 100px 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 999;
+}
+
+.wrapper-lesson__item {
+  position: relative;
+  min-width: 235px;
+  max-width: 235px;
+  margin: 38.5px 53px;
+  border-style: solid;
+  border-width: 24px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.23);
+}
+
+.wrapper-lesson__animal {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 125%;
+}
+
+.wrapper-lesson__title {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 322px;
+}
+
+@media (max-width: 1910px) {
+  .bg-children__girl {
+    left: 18px;
+  }
+
+  .index-logo {
+    right: 40%;
+  }
+}
+@media (max-width: 1700px) {
+  .bg-children__girl {
+    display: none;
+  }
+
+  .bg-children__boy {
+    display: none;
+  }
+
+  .bg-grass img {
+    width: initial;
+  }
+}
+@media (max-width: 1400px) {
+  body {
+    height: 100%;
+  }
+
+  .bg-wood {
+    display: none;
+  }
+
+  .index-logo {
+    top: 15px;
+    left: 75px;
+    width: 150px;
+  }
+}
+@media (max-width: 800px) {
+  #bgWoodBlcok {
+    left: -70px;
+  }
+
+  .index-logo {
+    right: 33%;
+  }
+
+  .wrapper-lesson__item {
+    min-width: 156.6666666667px;
+    max-width: 156.6666666667px;
+    margin: 20px 30px;
+    border-width: 16px;
+  }
+
+  .wrapper-lesson__title {
+    bottom: -20px;
+    width: 214.6666666667px;
+  }
+}
+@media (max-width: 450px) {
+  .wrapper-lesson {
+    padding: 70px 0;
+  }
+
+  .index-logo {
+    width: 100px;
+  }
+
+  .wrapper-lesson__item {
+    min-width: 117.5px;
+    max-width: 117.5px;
+    margin: 20px 30px;
+    border-width: 10px;
+  }
+
+  .wrapper-lesson__title {
+    bottom: -15px;
+    width: 161px;
+  }
+
+  .bg-grass img {
+    width: 300%;
+  }
+}
