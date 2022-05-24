@@ -203,7 +203,7 @@ img {
   z-index: 100;
   top: 0;
   left: 0;
-  padding: 5px;
+  padding: 10px;
   background: #fff;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -211,8 +211,21 @@ img {
 }
 
 .tooltip2 {
-  width: 50px;
-  height: 50px;
+  width: 250px;
+}
+
+.tooltip2 .tooltip2__image {
+  display: block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.tooltip2 .tooltip2__name {
+  margin: 5px 0;
+}
+
+.tooltip2 .tooltip2__list .tooltip2__point {
+  margin-left: 20px;
 }
 
 .world_map {
@@ -261,25 +274,218 @@ img {
   border: 1px solid rgba(117, 117, 117, 0.1);
 }
 
-.world_map svg {
+.world_map .settings__block {
   position: relative;
   z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 80px;
+}
+
+.world_map .settings__block .settings__circle {
+  display: none;
+  border: 2px solid #838383;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.world_map .settings__block .settings__circle.active {
+  display: block;
+}
+
+.world_map .settings__block .settings__circle .dots {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.world_map .settings__block .settings__circle .dots .dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #8d8d8d;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.world_map .settings__block .settings__circle:hover {
+  cursor: pointer;
+  background-color: #c4c3c3;
+  -webkit-box-shadow: 0 0 16px white;
+          box-shadow: 0 0 16px white;
+}
+
+.world_map .settings__block .settings__circle:hover .dots .dot {
+  border: 2px solid #636363;
+}
+
+.world_map .settings__block .settings__list {
+  position: absolute;
+  top: 20px;
+  display: none;
+  border: 2px solid #838383;
+  background-color: #e0e0e0;
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.world_map .settings__block .settings__list.active {
+  display: block;
+}
+
+.world_map .settings__block .settings__list .settings__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+.world_map .settings__block .settings__list .settings__close .close__icon {
+  width: 10px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.world_map .settings__block .settings__list .settings__close .close__icon::after {
+  content: "";
+  display: block;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  width: 16px;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  height: 1px;
+  background-color: black;
+}
+
+.world_map .settings__block .settings__list .settings__close .close__icon::before {
+  content: "";
+  display: block;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 16px;
+  height: 1px;
+  background-color: black;
+}
+
+.world_map .settings__block .settings__list .settings__point {
+  padding: 4px;
+  border-bottom: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.world_map .settings__block .settings__list .settings__point:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+.world_map .settings__block .settings__list .settings__point:hover {
+  cursor: pointer;
+}
+
+.world_map .settings__block .settings__list .settings__point span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 12px;
+  border: 1px solid #838383;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.world_map .settings__block .settings__list .settings__point span.active::before {
+  background-color: #00ac00;
+}
+
+.world_map .settings__block .settings__list .settings__point span::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ab0000;
+}
+
+.world_map svg {
+  position: relative;
+  z-index: 1;
 }
 
 .world_map svg .country {
   fill: #e0e0e0;
   stroke: #8d8d8d;
-  stroke-width: 3px;
+  stroke-width: 0.2px;
   cursor: pointer;
   pointer-events: all;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.world_map svg .country.t20 {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .world_map svg .country.hover {
   fill: #c4c3c3;
-  stroke-width: 6px;
+  stroke-width: 0.5px;
 }
 
 .popup-main {
@@ -369,8 +575,13 @@ img {
 }
 
 .popup-main .popup-container .popup__content .popup__left_column .popup__svg {
+  display: none;
   width: 100%;
   height: 100%;
+}
+
+.popup-main .popup-container .popup__content .popup__left_column .popup__svg.active {
+  display: block;
 }
 
 .popup-main .popup-container .popup__content .popup__left_column .popup__svg .popup__svg__mountain {
@@ -382,6 +593,17 @@ img {
 
 .popup-main .popup-container .popup__content .popup__left_column .popup__svg .popup__svg__mountain:hover {
   fill: #7a420d;
+}
+
+.popup-main .popup-container .popup__content .popup__left_column .popup__svg .popup__svg__river {
+  fill: rgba(0, 115, 182, 0.7);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.popup-main .popup-container .popup__content .popup__left_column .popup__svg .popup__svg__river:hover {
+  fill: #0073b6;
 }
 
 .popup-main .popup-container .popup__content .popup__left_column .popup__svg .popup__svg__path {
