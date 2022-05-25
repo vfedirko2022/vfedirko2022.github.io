@@ -146,7 +146,7 @@
       стран при наведении
     </p>
     <p class="settings__point">
-      <span class="" data-idofthesetting="1"></span> --------------
+      <span class="" data-idofthesetting="1"></span> Включить счетчик
     </p>
     <p class="settings__point">
       <span class="" data-idofthesetting="2"></span> --------------
@@ -1751,6 +1751,19 @@
       </ul>
     </div>
 
+    <div class="score" id="score" style="display: none">
+      <div class="score__container">
+        <div class="score__reset" onclick="scoreReset();"><span>0</span></div>
+        <div class="score__block">
+          <div class="score__add" onclick="scoreAdd();"><span></span></div>
+          <div class="score__number" id="score__number">0</div>
+          <div class="score__remove" onclick="scoreRemove();">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="popup-main" id="popup-main-p1">
       <div class="popup-container" id="popup-container1">
         <div class="popup__top_line">
@@ -2012,6 +2025,7 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"
   ></script>
+  <script src="js/main.js"></script>
   <script type="module">
     // ------------------------------------------------ START CONNECT FIREBASE DATABASE ----------------------------------
 
@@ -2342,16 +2356,24 @@
           if (
             this.getElementsByTagName("span")[0].dataset.idofthesetting == "0"
           ) {
-            console.log("1111");
             tooltip.dataset.stage = "1";
+          }
+          if (
+            this.getElementsByTagName("span")[0].dataset.idofthesetting == "1"
+          ) {
+            score.setAttribute("style", "display: block;");
           }
         } else if (this.getElementsByTagName("span")[0].className == "active") {
           this.getElementsByTagName("span")[0].className = "";
           if (
             this.getElementsByTagName("span")[0].dataset.idofthesetting == "0"
           ) {
-            console.log("2222");
             tooltip.dataset.stage = "0";
+          }
+          if (
+            this.getElementsByTagName("span")[0].dataset.idofthesetting == "1"
+          ) {
+            score.setAttribute("style", "display: none;");
           }
         }
       });
@@ -2360,6 +2382,4 @@
       });
     });
   </script>
-
-  <!-- <script src="js/script.js"></script> -->
 </html>
