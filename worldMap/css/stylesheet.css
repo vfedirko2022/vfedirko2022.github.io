@@ -6,6 +6,10 @@
   font-family: "Montserrat";
 }
 
+body {
+  position: relative;
+}
+
 body.popup_active {
   overflow: hidden;
   height: 100vh;
@@ -15,6 +19,161 @@ body.popup_active {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.score {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+}
+
+.score .score__container {
+  width: 160px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #e0e0e0;
+  border: 2px solid #838383;
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
+  padding: 20px 10px;
+  border-radius: 20px;
+}
+
+.score .score__container .score__reset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 26px;
+  height: 26px;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  border: 2px solid #838383;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.score .score__container .score__reset:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.score .score__container .score__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95px;
+}
+
+.score .score__container .score__block .score__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 26px;
+  height: 26px;
+  background-color: #d20000;
+  border-radius: 50%;
+  border: 2px solid #838383;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.score .score__container .score__block .score__add:hover {
+  cursor: pointer;
+  background-color: #e60000;
+}
+
+.score .score__container .score__block .score__add span {
+  position: relative;
+}
+
+.score .score__container .score__block .score__add span::after {
+  content: "";
+  display: block;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 10px;
+  position: absolute;
+  right: -5px;
+  height: 1.5px;
+  background-color: black;
+}
+
+.score .score__container .score__block .score__add span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -5px;
+  width: 10px;
+  height: 1.5px;
+  background-color: black;
+}
+
+.score .score__container .score__block .score__remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 26px;
+  height: 26px;
+  background-color: #00d200;
+  border-radius: 50%;
+  border: 2px solid #838383;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.score .score__container .score__block .score__remove:hover {
+  cursor: pointer;
+  background-color: #00e600;
+}
+
+.score .score__container .score__block .score__remove span {
+  position: relative;
+}
+
+.score .score__container .score__block .score__remove span::after {
+  content: "";
+  display: block;
+  width: 10px;
+  position: absolute;
+  right: -5px;
+  height: 1.5px;
+  background-color: black;
 }
 
 .header__nav {
@@ -455,7 +614,7 @@ img {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #ab0000;
+  background-color: #ac0000;
 }
 
 .world_map svg {
