@@ -33,6 +33,31 @@
               <li class="list__points">
                 <a class="list__link" href="#" data-type="studies">Навчання</a>
               </li>
+              <li class="list__points withoutP" id="listPointWithLanguages">
+                <!-- <div class="language__block">
+                  <a class="language__selected" id="language__selected">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/188px-Flag_of_Russia.svg.png"
+                    />
+                    <span>ru</span>
+                    <p class="language__arrow">&#709;</p>
+                  </a>
+                  <div class="language__set">
+                    <a class="language">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/188px-Flag_of_Russia.svg.png"
+                      />
+                      <span>ru</span>
+                    </a>
+                    <a class="language">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/188px-Flag_of_Ukraine.svg.png"
+                      />
+                      <span>ua</span>
+                    </a>
+                  </div>
+                </div> -->
+              </li>
             </ul>
           </div>
         </div>
@@ -146,7 +171,7 @@
       стран при наведении
     </p>
     <p class="settings__point">
-      <span class="" data-idofthesetting="1"></span> Включить счетчик
+      <span class="" data-idofthesetting="1"></span> Показывать счетчик
     </p>
     <p class="settings__point">
       <span class="" data-idofthesetting="2"></span> --------------
@@ -1756,7 +1781,8 @@
         <div class="score__reset" onclick="scoreReset();"><span>0</span></div>
         <div class="score__block">
           <div class="score__add" onclick="scoreAdd();"><span></span></div>
-          <div class="score__number" id="score__number">0</div>
+          <div class="score__numberPlus" id="score__numberPlus">0</div>
+          <div class="score__numberMinus" id="score__numberMinus">0</div>
           <div class="score__remove" onclick="scoreRemove();">
             <span></span>
           </div>
@@ -2058,29 +2084,26 @@
 
     // ------------------------------------------------ START GENERAL INFORMATION ----------------------------------
 
+    if (localStorage.getItem("languageId")) {
+      var chooseLanguageId = localStorage.getItem("languageId");
+      var chooseLanguageCode = localStorage.getItem("languageCode");
+      //console.log(chooseLanguage);
+    } else {
+      var chooseLanguageId = 0;
+      var chooseLanguageCode = "ru";
+    }
+
     const countries = document.querySelectorAll(".country");
     const points = document.querySelectorAll(".popup__point");
     const informations = document.querySelectorAll(".popup__information");
     const maps = document.querySelectorAll(".popup__svg");
     const mountains = document.querySelectorAll(".popup__svg__mountain");
     const rivers = document.querySelectorAll(".popup__svg__river");
-    const listLinks = document.querySelectorAll(".list__link");
     const tooltip = document.querySelector(".tooltip");
     const tooltip2 = document.querySelector(".tooltip2");
     const settingsPoints = document.querySelectorAll(".settings__point");
 
     // ------------------------------------------------ END GENERAL INFORMATION ----------------------------------
-
-    listLinks.forEach((link) => {
-      link.addEventListener("click", function (e) {
-        listLinks.forEach((e) => {
-          e.className = "list__link";
-        });
-        link.className = "list__link active";
-        header_nav.className = "header__nav " + this.dataset.type;
-        world_map.className = "world_map " + this.dataset.type;
-      });
-    });
 
     // ------------------------------------------------ START DOWNLOAD COUNTRY NAMES FOR TOOLTIP ---------------------------
 
@@ -2092,7 +2115,8 @@
       );
     }
 
-    get(child(databaseRef, "ru/CountryNames"))
+    var refToCountryNames = chooseLanguageCode + "/CountryNames";
+    get(child(databaseRef, refToCountryNames))
       .then((snapshot) => {
         var sum_countries = countries.length;
         console.log(sum_countries);
@@ -2311,11 +2335,6 @@
             river.setAttribute("style", "display: block");
           });
         }
-        // else {
-        //   mountains.forEach((mountain) => {
-        //     mountain.setAttribute("style", "display: none");
-        //   });
-        // }
         informations.forEach((information) => {
           information.classList = "popup__information";
           if (information.dataset.type == typeOfThePoint) {
@@ -2334,19 +2353,47 @@
 
     // ------------------------------------------------ END EVENTLISTENERS ON POINTS ----------------------------------
 
-    // ------------------------------------------------ START OPEN SETTINGS -------------------------------------------
+    // ------------------------------------------------ START DOWNLOAD LANGUAGE FROM DB -----------------------------------
 
-    settings__circle.addEventListener("click", function () {
-      settings__circle.classList = "settings__circle";
-      settings.classList = "settings__list active";
-    });
+    get(child(databaseRef, "languages"))
+      .then((snapshot) => {
+        var snapshotContent = snapshot.val();
+        console.log(snapshotContent);
+        snapshotContent.forEach((snap) => {
+          var tempId = snap.id;
+          var tempSrc = snap.flag;
+          var tempCode = snap.code;
+          var tempBlock1 = document.createElement("a");
+          tempBlock1.setAttribute("class", "language");
+          tempBlock1.setAttribute("data-idofthelanguage", tempId);
+          tempBlock1.addEventListener("click", function () {
+            language__selected.getElementsByTagName("img")[0].src =
+              this.getElementsByTagName("img")[0].src;
+            language__selected.getElementsByTagName("span")[0].innerHTML =
+              this.getElementsByTagName("span")[0].innerHTML;
+            localStorage.setItem("languageId", this.dataset.idofthelanguage);
+            localStorage.setItem("languageCode", tempCode);
+            window.location.reload();
+          });
+          var tempBlock2 = document.createElement("img");
+          tempBlock2.setAttribute("src", tempSrc);
+          var tempBlock3 = document.createElement("span");
+          tempBlock3.innerHTML = tempCode;
+          tempBlock1.appendChild(tempBlock2);
+          tempBlock1.appendChild(tempBlock3);
+          language__set.appendChild(tempBlock1);
+          if (snap.id == chooseLanguageId) {
+            language__selected.getElementsByTagName("img")[0].src = tempSrc;
+            language__selected.getElementsByTagName("span")[0].innerHTML =
+              tempCode;
+          }
+        });
+      })
+      .catch((error) => {
+        alert("Something was wrong with download languages");
+      });
 
-    close__icon.addEventListener("click", function () {
-      settings.classList = "settings__list";
-      settings__circle.classList = "settings__circle active";
-    });
-
-    // ------------------------------------------------ END OPEN SETTINGS ---------------------------------------------
+    // ------------------------------------------------ END DOWNLOAD LANGUAGE FROM DB -----------------------------------
 
     settingsPoints.forEach((point) => {
       point.addEventListener("click", function () {
