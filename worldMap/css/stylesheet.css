@@ -28,7 +28,7 @@ img {
 }
 
 .score .score__container {
-  width: 160px;
+  width: 180px;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,7 +82,11 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 95px;
+  width: 115px;
+}
+
+.score .score__container .score__block .score__numberPlus {
+  margin-right: 20px;
 }
 
 .score .score__container .score__block .score__add {
@@ -248,6 +252,10 @@ img {
   padding: 0 50px;
 }
 
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points.withoutP {
+  padding: 0;
+}
+
 .header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .list__link {
   text-decoration: none;
   font-size: 18px;
@@ -266,6 +274,118 @@ img {
 
 .header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .list__link.active {
   text-decoration: underline;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block:hover .language__set {
+  visibility: visible;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block {
+  width: 100px;
+  position: relative;
+  background-color: #e0e0e0;
+  border: 2px solid #838383;
+  border-radius: 10px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block:hover {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__selected {
+  margin: 4px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-decoration: none;
+  position: relative;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__selected img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__selected span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  height: 12px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__selected .language__arrow {
+  margin-top: -8px;
+  width: 20px;
+  height: 10px;
+  display: block;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__selected .language__arrow:active {
+  color: black;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__selected:hover {
+  cursor: pointer;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__set {
+  width: 100px;
+  left: -2px;
+  position: absolute;
+  visibility: hidden;
+  background-color: #e0e0e0;
+  border: 2px solid #838383;
+  border-radius: 10px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__set:hover {
+  visibility: visible;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__set .language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 10px;
+  padding: 5px 0;
+  text-decoration: none;
+  border-bottom: 1px solid #838383;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__set .language img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__set .language span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__set .language:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__set .language:hover {
+  cursor: pointer;
 }
 
 .header__nav .header__content {
