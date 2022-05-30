@@ -24,6 +24,11 @@ listLinks.forEach((link) => {
         link.className = "list__link active";
         header_nav.className = "header__nav " + this.dataset.type;
         world_map.className = "world_map " + this.dataset.type;
+        if (link.dataset.type != "geography") {
+            settings__block.style.display = "none"
+        } else {
+            settings__block.style.display = "flex"
+        }
     });
 });
 
