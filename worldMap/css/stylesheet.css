@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +16,50 @@ body.popup_active {
   overflow: hidden;
   height: 100vh;
   padding-right: 20px;
+}
+
+body.ru .map .world_map .settings__block .settings__list .settings__point[data-idofthesetting="0"]::after {
+  content: "Показывать название страны при наведении";
+}
+
+body.ru .map .world_map .settings__block .settings__list .settings__point[data-idofthesetting="1"]::after {
+  content: "Показывать название столицы при наведении";
+}
+
+body.ru .map .world_map .settings__block .settings__list .settings__point[data-idofthesetting="2"]::after {
+  content: "Показывать счетчик";
+}
+
+body.ru .tooltip .tooltip__country::before {
+  content: "Страна: ";
+}
+
+body.ru .tooltip .tooltip__capital {
+  font-weight: 700;
+}
+
+body.ru .tooltip .tooltip__capital::before {
+  content: "Столица: ";
+}
+
+body.ua .map .world_map .settings__block .settings__list .settings__point[data-idofthesetting="0"]::after {
+  content: "Показувати назву країни під час наведення";
+}
+
+body.ua .map .world_map .settings__block .settings__list .settings__point[data-idofthesetting="1"]::after {
+  content: "Показувати назву столиці під час наведення";
+}
+
+body.ua .map .world_map .settings__block .settings__list .settings__point[data-idofthesetting="2"]::after {
+  content: "Показувати лічильник";
+}
+
+body.ua .tooltip .tooltip__country::before {
+  content: "Країна: ";
+}
+
+body.ua .tooltip .tooltip__capital::before {
+  content: "Столиця: ";
 }
 
 img {
@@ -311,6 +357,7 @@ img {
 }
 
 .header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__selected img {
+  border: 1px solid black;
   width: 20px;
   margin-right: 10px;
 }
@@ -366,6 +413,7 @@ img {
 }
 
 .header__nav .header__top_line__background .header__top_line .header__list_container .list .list__points .language__block .language__set .language img {
+  border: 1px solid black;
   height: 20px;
   margin-right: 10px;
 }
