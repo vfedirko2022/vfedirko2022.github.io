@@ -13,24 +13,8 @@ function scoreReset() {
 
 
 const languages = document.querySelectorAll(".language");
-const listLinks = document.querySelectorAll(".list__link");
 
-
-listLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-        listLinks.forEach((e) => {
-            e.className = "list__link";
-        });
-        link.className = "list__link active";
-        header_nav.className = "header__nav " + this.dataset.type;
-        world_map.className = "world_map " + this.dataset.type;
-        if (link.dataset.type != "geography") {
-            settings__block.style.display = "none"
-        } else {
-            settings__block.style.display = "flex"
-        }
-    });
-});
+const points = document.querySelectorAll(".popup__point");
 
 
 
@@ -76,3 +60,119 @@ tempBlock2.appendChild(tempBlock5);
 tempBlock1.appendChild(tempBlock2);
 tempBlock1.appendChild(tempBlock6);
 document.getElementById("listPointWithLanguages").appendChild(tempBlock1)
+
+
+function informationAboutTheUniversities(infoAboutTheUnivs) {
+    console.log(infoAboutTheUnivs);
+    document
+        .getElementById("popup-main-p2")
+        .setAttribute("style", "display:block");
+    document.getElementById("body").classList += " popup_active";
+}
+
+function informationAboutTheCountry(infoAboutTheCntr) {
+    console.log(infoAboutTheCntr);
+    document.querySelectorAll(".popup__svg").forEach((map) => {
+        map.setAttribute("viewBox", infoAboutTheCntr.Map.viewBox);
+    });
+
+    document.querySelectorAll(".popup__svg__path").forEach((path) => {
+        path.setAttribute("d", infoAboutTheCntr.Map.d);
+    });
+    var i = 0;
+
+    infoAboutTheCntr.Mountains.forEach((mountain) => {
+        document
+            .querySelectorAll(".popup__svg__mountain")
+        [i].setAttribute("d", mountain.position);
+        i++;
+    });
+    i = 0;
+
+    infoAboutTheCntr.Rivers.forEach((river) => {
+        document
+            .querySelectorAll(".popup__svg__river")
+        [i].setAttribute("d", river.position);
+        i++;
+    });
+}
+
+
+function getBodyScrollTop() {
+    return (
+        self.pageYOffset ||
+        (document.documentElement && document.documentElement.scrollTop) ||
+        (document.body && document.body.scrollTop)
+    );
+}
+
+function fadeInPopUp(country) {
+    var nameCountry = country.dataset.title;
+    popup__title.innerText = nameCountry;
+
+    document
+        .getElementById("popup-main-p1")
+        .setAttribute("style", "display:block");
+    document.getElementById("body").classList += "popup_active";
+}
+
+
+// ------------------------------------------------ START EVENTLISTENERS ON POINTS ----------------------------------
+
+points.forEach((point) => {
+    point.addEventListener("click", function () {
+        points.forEach((point) => {
+            point.classList = "popup__point";
+        });
+        this.classList = "popup__point active";
+        var typeOfThePoint = this.dataset.type;
+        if (typeOfThePoint == "mountains") {
+            document
+                .querySelectorAll(".popup__svg__mountain")
+                .forEach((mountain) => {
+                    mountain.setAttribute("style", "display: block");
+                });
+        }
+        if (typeOfThePoint == "rivers") {
+            document.querySelectorAll(".popup__svg__river").forEach((river) => {
+                river.setAttribute("style", "display: block");
+            });
+        }
+        informations.forEach((information) => {
+            information.classList = "popup__information";
+            if (information.dataset.type == typeOfThePoint) {
+                information.classList = "popup__information active";
+            }
+        });
+        maps.forEach((map) => {
+            map.classList = "popup__svg";
+            console.log(typeOfThePoint);
+            if (map.dataset.type == typeOfThePoint) {
+                map.classList = "popup__svg active";
+            }
+        });
+    });
+});
+
+// ------------------------------------------------ END EVENTLISTENERS ON POINTS ----------------------------------
+
+
+
+
+document.addEventListener("mouseup", function (e) {
+    var popup = $(".popup-container");
+    var popupclose = $(".popup__close-icon");
+    if (
+        (e.target != popup[0] && popup.has(e.target).length === 0,
+            e.target.classList == "popup__close-icon")
+    ) {
+        document.getElementById("popup-main-p1").removeAttribute("style");
+        document.getElementById("popup-main-p2").removeAttribute("style");
+        document.getElementById("body").classList.remove("popup_active");
+    }
+    if (e.target.classList == "popup__close-icon") {
+        document.getElementById("popup-main-p1").removeAttribute("style");
+        document.getElementById("popup-main-p2").removeAttribute("style");
+        document.getElementById("body").classList.remove("popup_active");
+    }
+});
