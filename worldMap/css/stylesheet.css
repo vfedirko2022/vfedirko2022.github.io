@@ -34,12 +34,60 @@ body.ru .tooltip .tooltip__country::before {
   content: "Страна: ";
 }
 
-body.ru .tooltip .tooltip__capital {
-  font-weight: 700;
-}
-
 body.ru .tooltip .tooltip__capital::before {
   content: "Столица: ";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #worldRanking::before {
+  content: "⚑";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #countryRanking::before {
+  content: "#";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #name::before {
+  content: "Название университета";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #city::before {
+  content: "Город";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #type::before {
+  content: "Тип";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #enrollment::before {
+  content: "Необходимо для поступления";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #numberOfTeachers::before {
+  content: "Количество учителей";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #numberOfStudents::before {
+  content: "Количество студентов";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #foundationDate::before {
+  content: "Дата основания";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #costOfBachelor::before {
+  content: "Стоимость обучения на бакалавриате";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #costOfMaster::before {
+  content: "Стоимость обучения на магистратуре";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #hostel::before {
+  content: "Наличие общежития";
+}
+
+body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #exchangeProgram::before {
+  content: "Наличие программы обмена";
 }
 
 body.ua .map .world_map .settings__block .settings__list .settings__point[data-idofthesetting="0"]::after {
@@ -60,6 +108,58 @@ body.ua .tooltip .tooltip__country::before {
 
 body.ua .tooltip .tooltip__capital::before {
   content: "Столиця: ";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #worldRanking::before {
+  content: "⚑";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #countryRanking::before {
+  content: "#";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #name::before {
+  content: "Назва університету";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #city::before {
+  content: "Місто";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #type::before {
+  content: "Тип";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #enrollment::before {
+  content: "Необхідно для вступу";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #numberOfTeachers::before {
+  content: "Кількість вчителів";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #numberOfStudents::before {
+  content: "Кількість студентів";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #foundationDate::before {
+  content: "Дата основания";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #costOfBachelor::before {
+  content: "Вартість навчання на бакалавраті";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #costOfMaster::before {
+  content: "Вартість навчання на магістратурі";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #hostel::before {
+  content: "Наявність гуртожитку";
+}
+
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #exchangeProgram::before {
+  content: "Наявність програми обміну";
 }
 
 img {
@@ -826,6 +926,14 @@ img {
   display: none;
 }
 
+.popup-main .popup-container#popup-container1 {
+  max-width: 800px;
+}
+
+.popup-main .popup-container#popup-container2 {
+  max-width: 1200px;
+}
+
 .popup-main .popup-container {
   background-color: #fff;
   position: absolute;
@@ -833,7 +941,6 @@ img {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  max-width: 800px;
   margin: 50px 0;
   width: 100%;
   border-radius: 6px;
@@ -954,6 +1061,79 @@ img {
 
 .popup-main .popup-container .popup__content .popup__right_column .popup__information.active {
   display: block;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container {
+  overflow-x: auto;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #8d8d8d;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr th {
+  margin: 0 5px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #worldRanking {
+  min-width: 40px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #countryRanking {
+  min-width: 40px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #name {
+  min-width: 200px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #city {
+  min-width: 100px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #type {
+  min-width: 100px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #enrollment {
+  min-width: 140px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #numberOfTeachers {
+  min-width: 100px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #numberOfStudents {
+  min-width: 100px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #foundationDate {
+  min-width: 100px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #costOfBachelor {
+  min-width: 120px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #costOfMaster {
+  min-width: 120px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #hostel {
+  min-width: 100px;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #exchangeProgram {
+  min-width: 100px;
 }
 
 .popup-main .popup-container .popup__footer {
