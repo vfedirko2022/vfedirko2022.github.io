@@ -2273,6 +2273,56 @@
         </div>
       </div>
     </div>
+
+    <div class="popup-main" id="popup-main-p2">
+      <div class="popup-container" id="popup-container2">
+        <div class="popup__top_line">
+          <h2 class="popup__title" id="popup__title"></h2>
+          <div class="popup__close-icon"></div>
+        </div>
+        <div class="popup__content">
+          <div class="popup__table_container">
+            <table id="popup__table" class="popup__table">
+              <!-- <thead> -->
+              <tr id="first__tr">
+                <th id="worldRanking"></th>
+                <th id="countryRanking"></th>
+                <th id="name"></th>
+                <th id="city"></th>
+                <th id="type"></th>
+                <th id="enrollment"></th>
+                <th id="numberOfTeachers"></th>
+                <th id="numberOfStudents"></th>
+                <th id="foundationDate"></th>
+                <th id="costOfBachelor"></th>
+                <th id="costOfMaster"></th>
+                <th id="hostel"></th>
+                <th id="exchangeProgram"></th>
+              </tr>
+              <!-- </thead> -->
+              <!-- <tbody> -->
+              <tr>
+                <td>10</td>
+                <td>1</td>
+                <td>Киевский национальный университет имени Тараса Шевченко</td>
+                <td>Киев</td>
+                <td>Государственный</td>
+                <td>Сдача экзаменов, аттестат</td>
+                <td>2925</td>
+                <td>23708</td>
+                <td>1834 г.</td>
+                <td>2500 USD/3000 USD</td>
+                <td>2500 USD/1000 USD</td>
+                <td>Есть</td>
+                <td>Есть</td>
+              </tr>
+              <!-- </tbody> -->
+            </table>
+          </div>
+        </div>
+        <div class="popup__footer"></div>
+      </div>
+    </div>
   </body>
   <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -2324,8 +2374,10 @@
     body.dataset.language = chooseLanguageCode;
     body.className = chooseLanguageCode;
 
+    var infoAboutUniversities;
+    var infoAboutCountry;
+
     const countries = document.querySelectorAll(".country");
-    const points = document.querySelectorAll(".popup__point");
     const informations = document.querySelectorAll(".popup__information");
     const maps = document.querySelectorAll(".popup__svg");
     const mountains = document.querySelectorAll(".popup__svg__mountain");
@@ -2333,18 +2385,11 @@
     const tooltip = document.querySelector(".tooltip");
     const tooltip2 = document.querySelector(".tooltip2");
     const settingsPoints = document.querySelectorAll(".settings__point");
+    const listLinks = document.querySelectorAll(".list__link");
 
     // ------------------------------------------------ END GENERAL INFORMATION ----------------------------------
 
     // ------------------------------------------------ START DOWNLOAD COUNTRY NAMES FOR TOOLTIP ---------------------------
-
-    function getBodyScrollTop() {
-      return (
-        self.pageYOffset ||
-        (document.documentElement && document.documentElement.scrollTop) ||
-        (document.body && document.body.scrollTop)
-      );
-    }
 
     var refToCountryNames = chooseLanguageCode + "/CountryNames";
     get(child(databaseRef, refToCountryNames))
@@ -2384,81 +2429,12 @@
 
     // ------------------------------------------------ END DOWNLOAD COUNTRY NAMES FOR TOOLTIP ----------------------------------
 
-    // ------------------------------------------------ START FADE IN POPUP -------------------------------------------------
-
-    function fadeInPopUp(country) {
-      var nameCountry = country.dataset.title;
-      popup__title.innerText = nameCountry;
-
-      document
-        .getElementById("popup-main-p1")
-        .setAttribute("style", "display:block");
-      document.getElementById("body").classList = "popup_active";
-    }
-
-    // ------------------------------------------------ END FADE IN POPUP -------------------------------------------------
-
     // ------------------------------------------------ START FADE OUT POPUP -------------------------------------------------
-
-    document.addEventListener("mouseup", function (e) {
-      var popup = $(".popup-container");
-      var popupclose = $(".popup__close-icon");
-      if (
-        (e.target != popup[0] && popup.has(e.target).length === 0,
-        e.target.classList == "popup__close-icon")
-      ) {
-        document.getElementById("popup-main-p1").removeAttribute("style");
-        document.getElementById("body").classList = "";
-      }
-      if (e.target.classList == "popup__close-icon") {
-        document.getElementById("popup-main-p1").removeAttribute("style");
-        document.getElementById("body").classList = "";
-      }
-    });
 
     // ------------------------------------------------ END FADE OUT POPUP -------------------------------------------------
 
     // -------------------------------------- START DOWNLOAD AND SHOW COUNTRY INFORMATION ----------------------------------
 
-    var infoAboutTheCountry = "";
-
-    function informationAboutTheCountryAndOpenPopup(idOfTheCountry, x) {
-      // ВОЗМНОЖНО ЗАМЕНИТЬ НА АСИНХРОН(ПРОМИЗ)
-      get(
-        child(databaseRef, "ru/InformationAboutEveryCountry/" + idOfTheCountry)
-      )
-        .then((snapshot) => {
-          infoAboutTheCountry = snapshot.val();
-          document.querySelectorAll(".popup__svg").forEach((map) => {
-            map.setAttribute("viewBox", infoAboutTheCountry.Map.viewBox);
-          });
-
-          document.querySelectorAll(".popup__svg__path").forEach((path) => {
-            path.setAttribute("d", infoAboutTheCountry.Map.d);
-          });
-          console.log(infoAboutTheCountry);
-          var i = 0;
-
-          infoAboutTheCountry.Mountains.forEach((mountain) => {
-            document
-              .querySelectorAll(".popup__svg__mountain")
-              [i].setAttribute("d", mountain.position);
-            i++;
-          });
-          i = 0;
-
-          infoAboutTheCountry.Rivers.forEach((river) => {
-            document
-              .querySelectorAll(".popup__svg__river")
-              [i].setAttribute("d", river.position);
-            i++;
-          });
-        })
-        .then(fadeInPopUp(x)) // Появление Popup
-        .catch((error) => {
-          alert("Something was wrong2");
-        });
-    }
     var lastId = "";
     mountains.forEach((mountain) => {
       mountain.addEventListener("mouseenter", function () {
@@ -2530,7 +2506,32 @@
     countries.forEach((country) => {
       country.addEventListener("click", function () {
         var idOfTheCntr = this.dataset.idofthecountry;
-        //informationAboutTheCountryAndOpenPopup(idOfTheCntr, this);
+        if (header_nav.className == "header__nav geography") {
+          // get(
+          //   child(
+          //     databaseRef,
+          //     chooseLanguageCode +
+          //       "/InformationAboutEveryCountry/" +
+          //       idOfTheCntr
+          //   )
+          // )
+          //   .then((snapshot) => {
+          //     infoAboutCountry = snapshot.val();
+          //     informationAboutTheCountry(infoAboutCountry);
+          //     fadeInPopUp(this);
+          //   })
+          //   .catch((error) => {
+          //     alert(
+          //       "Something was wrong with downloading information about the country. Please, reload the page (F5)"
+          //     );
+          //   });
+        }
+        if (header_nav.className == "header__nav studies") {
+          var tempNameOfTheCntr = this.dataset.title;
+          informationAboutTheUniversities(
+            infoAboutUniversities.Countries[tempNameOfTheCntr]
+          );
+        }
       });
       country.addEventListener("mouseenter", function () {
         document.getElementsByName(this.dataset.title).forEach((e) => {
@@ -2602,45 +2603,6 @@
 
     // ------------------------------------------------ END EVENTLISTENERS ON COUNTRIES ----------------------------------
 
-    // ------------------------------------------------ START EVENTLISTENERS ON POINTS ----------------------------------
-
-    points.forEach((point) => {
-      point.addEventListener("click", function () {
-        points.forEach((point) => {
-          point.classList = "popup__point";
-        });
-        this.classList = "popup__point active";
-        var typeOfThePoint = this.dataset.type;
-        if (typeOfThePoint == "mountains") {
-          document
-            .querySelectorAll(".popup__svg__mountain")
-            .forEach((mountain) => {
-              mountain.setAttribute("style", "display: block");
-            });
-        }
-        if (typeOfThePoint == "rivers") {
-          document.querySelectorAll(".popup__svg__river").forEach((river) => {
-            river.setAttribute("style", "display: block");
-          });
-        }
-        informations.forEach((information) => {
-          information.classList = "popup__information";
-          if (information.dataset.type == typeOfThePoint) {
-            information.classList = "popup__information active";
-          }
-        });
-        maps.forEach((map) => {
-          map.classList = "popup__svg";
-          console.log(typeOfThePoint);
-          if (map.dataset.type == typeOfThePoint) {
-            map.classList = "popup__svg active";
-          }
-        });
-      });
-    });
-
-    // ------------------------------------------------ END EVENTLISTENERS ON POINTS ----------------------------------
-
     // ------------------------------------------------ START DOWNLOAD LANGUAGE FROM DB -----------------------------------
 
     get(child(databaseRef, "languages"))
@@ -2684,6 +2646,38 @@
       });
 
     // ------------------------------------------------ END DOWNLOAD LANGUAGE FROM DB -----------------------------------
+
+    // ---------------------------------------------- START EVENTLISTENERS ON LISTLINKS ----------------------------------
+
+    listLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        listLinks.forEach((e) => {
+          e.className = "list__link";
+        });
+        link.className = "list__link active";
+        header_nav.className = "header__nav " + this.dataset.type;
+        world_map.className = "world_map " + this.dataset.type;
+        if (link.dataset.type != "geography") {
+          settings__block.style.display = "none";
+        } else {
+          settings__block.style.display = "flex";
+        }
+        if (link.dataset.type == "studies") {
+          infoAboutUniversities;
+          get(child(databaseRef, chooseLanguageCode + "/Universities"))
+            .then((snapshot) => {
+              infoAboutUniversities = snapshot.val();
+            })
+            .catch((error) => {
+              alert(
+                "Something was wrong with downloading information about university. Please, reload the page (F5)"
+              );
+            });
+        }
+      });
+    });
+
+    // ---------------------------------------------- END EVENTLISTENERS ON LISTLINKS ----------------------------------
 
     settingsPoints.forEach((point) => {
       point.addEventListener("click", function () {
