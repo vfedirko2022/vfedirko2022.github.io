@@ -110,55 +110,55 @@ body.ua .tooltip .tooltip__capital::before {
   content: "Столиця: ";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #worldRanking::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #worldRanking::before {
   content: "⚑";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #countryRanking::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #countryRanking::before {
   content: "#";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #name::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #name::before {
   content: "Назва університету";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #city::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #city::before {
   content: "Місто";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #type::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #type::before {
   content: "Тип";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #enrollment::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #enrollment::before {
   content: "Необхідно для вступу";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #numberOfTeachers::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #numberOfTeachers::before {
   content: "Кількість вчителів";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #numberOfStudents::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #numberOfStudents::before {
   content: "Кількість студентів";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #foundationDate::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #foundationDate::before {
   content: "Дата основания";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #costOfBachelor::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #costOfBachelor::before {
   content: "Вартість навчання на бакалавраті";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #costOfMaster::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #costOfMaster::before {
   content: "Вартість навчання на магістратурі";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #hostel::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #hostel::before {
   content: "Наявність гуртожитку";
 }
 
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table thead tr #exchangeProgram::before {
+body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #exchangeProgram::before {
   content: "Наявність програми обміну";
 }
 
