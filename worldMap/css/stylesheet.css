@@ -1067,7 +1067,7 @@ img {
   overflow-x: auto;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1078,61 +1078,61 @@ img {
   border-bottom: 2px solid #8d8d8d;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr th {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr th {
   margin: 0 5px;
   font-weight: 400;
   font-size: 14px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #worldRanking {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #worldRanking {
   min-width: 40px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #countryRanking {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #countryRanking {
   min-width: 40px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #name {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #name {
   min-width: 200px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #city {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #city {
   min-width: 100px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #type {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #type {
   min-width: 100px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #enrollment {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #enrollment {
   min-width: 140px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #numberOfTeachers {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #numberOfTeachers {
   min-width: 100px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #numberOfStudents {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #numberOfStudents {
   min-width: 100px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #foundationDate {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #foundationDate {
   min-width: 100px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #costOfBachelor {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #costOfBachelor {
   min-width: 120px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #costOfMaster {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #costOfMaster {
   min-width: 120px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #hostel {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #hostel {
   min-width: 100px;
 }
 
-.popup-main .popup-container .popup__content .popup__table_container .popup__table #first__tr #exchangeProgram {
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #exchangeProgram {
   min-width: 100px;
 }
 
