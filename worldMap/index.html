@@ -11,15 +11,15 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <title>WorldMap</title>
+    <title>Explore the World</title>
   </head>
   <body id="body">
     <header class="header__nav geography" id="header_nav">
       <div class="header__top_line__background">
         <div class="header__top_line">
-          <div class="header__logo">
-            <img src="" alt="Логотип" />
-          </div>
+          <a href="#" class="header__logo">
+            <img src="img/LogoBlack.svg" alt="Логотип" />
+          </a>
           <div class="header__list_container">
             <ul class="list">
               <li class="list__points">
@@ -2003,6 +2003,9 @@
         <!-- <li class="tooltip2__point"></li> -->
       </ul>
     </div>
+    <div class="tooltip3">
+      <img src="" alt="" class="tooltip3__image" id="tooltip3__image" />
+    </div>
 
     <div class="score" id="score" style="display: none">
       <div class="score__container">
@@ -2254,12 +2257,113 @@
 
             </svg>
           </div>
-          <div class="popup__right_column">
-            <div class="popup__information active" data-type="general">
-              Lorem1000
+          <div class="popup__center_column">
+            <div
+              class="popup__information active"
+              data-type="general"
+              id="popupGeneralInformation"
+            >
+              <div class="information_about_the_country__title">
+                <p class="title_of_the_country"></p>
+                <img
+                  src=""
+                  alt="Флаг"
+                  class="flag_of_the_country"
+                  id="flagOfTheCountry"
+                />
+              </div>
+              <div class="information_about_the_country__main_information">
+                <p class="point_of_the_information" id="capital"></p>
+                <p class="point_of_the_information" id="president"></p>
+                <p class="point_of_the_information" id="premierMinister"></p>
+                <p class="point_of_the_information" id="polity"></p>
+                <p class="point_of_the_information" id="square"></p>
+                <p class="point_of_the_information" id="population"></p>
+                <p class="point_of_the_information" id="foundationDate"></p>
+                <p class="point_of_the_information" id="currency"></p>
+                <p class="point_of_the_information" id="language"></p>
+              </div>
+              <div class="information_about_the_country__button_container">
+                <button
+                  data-stage="0"
+                  id="moreGenetalInformationAboutTheCountryButton"
+                  class="information_about_the_country__button"
+                  onclick="moreGeneralInformationAboutTheCountry();"
+                ></button>
+              </div>
             </div>
-            <div class="popup__information" data-type="mountains"></div>
-            <div class="popup__information" data-type="rivers"></div>
+            <div
+              class="popup__information"
+              data-type="mountains"
+              id="popupInformationAboutTheMountains"
+            >
+              <div class="information_about_the_country__title">
+                <p class="title_of_the_country"></p>
+                <img
+                  src=""
+                  alt="Флаг"
+                  class="flag_of_the_country"
+                  id="flagOfTheCountry"
+                />
+              </div>
+              <div class="information_about_the_country__main_information">
+                <p class="point_of_the_information" id="capital"></p>
+                <p class="point_of_the_information" id="president"></p>
+                <p class="point_of_the_information" id="premierMinister"></p>
+                <p class="point_of_the_information" id="polity"></p>
+                <p class="point_of_the_information" id="square"></p>
+                <p class="point_of_the_information" id="population"></p>
+                <p class="point_of_the_information" id="foundationDate"></p>
+                <p class="point_of_the_information" id="currency"></p>
+                <p class="point_of_the_information" id="language"></p>
+              </div>
+              <div class="information_about_the_country__button_container">
+                <button
+                  data-stage="0"
+                  id="moreInformationAboutTheMountainsButton"
+                  class="information_about_the_country__button"
+                  onclick="moreInformationAboutTheMountains();"
+                ></button>
+              </div>
+            </div>
+            <div
+              class="popup__information"
+              data-type="rivers"
+              id="popupInformationAboutTheRivers"
+            >
+              <div class="information_about_the_country__title">
+                <p class="title_of_the_country"></p>
+                <img
+                  src=""
+                  alt="Флаг"
+                  class="flag_of_the_country"
+                  id="flagOfTheCountry"
+                />
+              </div>
+              <div class="information_about_the_country__main_information">
+                <p class="point_of_the_information" id="amountOfTheRivers"></p>
+                <p class="point_of_the_information" id="theLongestRiver"></p>
+                <p class="point_of_the_information" id="theShortestRiver"></p>
+                <p class="point_of_the_information" id="amountOfTheHPS"></p>
+                <p class="point_of_the_information" id="theMostPowerfulHPS"></p>
+              </div>
+              <div class="information_about_the_country__button_container">
+                <button
+                  data-stage="0"
+                  id="moreInformationAboutTheRiverButton"
+                  class="information_about_the_country__button"
+                  onclick="moreInformationAboutTheRiver();"
+                ></button>
+              </div>
+            </div>
+          </div>
+          <div class="popup__right_column" id="popupRightColumn">
+            Далеко-далеко за словесными горами в стране гласных и согласных
+            живут, рыбные тексты. Языкового, языком путь. Жизни большого снова
+            языком пояс свой путь себя встретил букв собрал семантика живет
+            оксмокс лучше рукописи там о ты от всех до, имени своего даже ipsum
+            первую жаренные возвращайся пор? Пунктуация страна о все алфавит
+            выйти приставка. Однажды.
           </div>
         </div>
         <div class="popup__footer">
@@ -2283,7 +2387,6 @@
         <div class="popup__content">
           <div class="popup__table_container">
             <table id="popup__table" class="popup__table">
-              <!-- <thead> -->
               <tr class="first__tr">
                 <th id="worldRanking"></th>
                 <th id="countryRanking"></th>
@@ -2291,36 +2394,12 @@
                 <th id="city"></th>
                 <th id="type"></th>
                 <th id="enrollment"></th>
-                <th id="numberOfTeachers"></th>
-                <th id="numberOfStudents"></th>
-                <th id="foundationDate"></th>
                 <th id="costOfBachelor"></th>
                 <th id="costOfMaster"></th>
                 <th id="hostel"></th>
                 <th id="exchangeProgram"></th>
+                <th id="actions"></th>
               </tr>
-              <!-- </thead> -->
-              <!-- <tbody> -->
-              <tr>
-                <td><span> 10 </span></td>
-                <td><span> 1 </span></td>
-                <td>
-                  <span>
-                    Киевский национальный университет имени Тараса Шевченко
-                  </span>
-                </td>
-                <td><span> Киев </span></td>
-                <td><span> Государственный </span></td>
-                <td><span> Сдача экзаменов, аттестат </span></td>
-                <td><span> 2925 </span></td>
-                <td><span> 23708 </span></td>
-                <td><span> 1834 г. </span></td>
-                <td><span> 2500 USD/3000 USD </span></td>
-                <td><span> 2500 USD/1000 USD </span></td>
-                <td><span> Есть </span></td>
-                <td><span> Есть </span></td>
-              </tr>
-              <!-- </tbody> -->
             </table>
           </div>
         </div>
@@ -2383,11 +2462,11 @@
 
     const countries = document.querySelectorAll(".country");
     const informations = document.querySelectorAll(".popup__information");
-    const maps = document.querySelectorAll(".popup__svg");
     const mountains = document.querySelectorAll(".popup__svg__mountain");
     const rivers = document.querySelectorAll(".popup__svg__river");
     const tooltip = document.querySelector(".tooltip");
     const tooltip2 = document.querySelector(".tooltip2");
+    const tooltip3 = document.querySelector(".tooltip3");
     const settingsPoints = document.querySelectorAll(".settings__point");
     const listLinks = document.querySelectorAll(".list__link");
 
@@ -2511,24 +2590,28 @@
       country.addEventListener("click", function () {
         var idOfTheCntr = this.dataset.idofthecountry;
         if (header_nav.className == "header__nav geography") {
-          // get(
-          //   child(
-          //     databaseRef,
-          //     chooseLanguageCode +
-          //       "/InformationAboutEveryCountry/" +
-          //       idOfTheCntr
-          //   )
-          // )
-          //   .then((snapshot) => {
-          //     infoAboutCountry = snapshot.val();
-          //     informationAboutTheCountry(infoAboutCountry);
-          //     fadeInPopUp(this);
-          //   })
-          //   .catch((error) => {
-          //     alert(
-          //       "Something was wrong with downloading information about the country. Please, reload the page (F5)"
-          //     );
-          //   });
+          console.log(
+            chooseLanguageCode + "/InformationAboutEveryCountry/" + idOfTheCntr
+          );
+          get(
+            child(
+              databaseRef,
+              chooseLanguageCode +
+                "/InformationAboutEveryCountry/" +
+                idOfTheCntr
+            )
+          )
+            .then((snapshot) => {
+              infoAboutCountry = snapshot.val();
+              console.log(infoAboutCountry);
+              informationAboutTheCountry(infoAboutCountry);
+              fadeInPopUp(this);
+            })
+            .catch((error) => {
+              alert(
+                "Something was wrong with downloading information about the country. Please, reload the page (F5)"
+              );
+            });
         }
         if (header_nav.className == "header__nav studies") {
           var tempNameOfTheCntr = this.dataset.title;
