@@ -38,6 +38,70 @@ body.ru .tooltip .tooltip__capital::before {
   content: "Столица: ";
 }
 
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #capital::before {
+  content: "Столица: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #president::before {
+  content: "Президент: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #premierMinister::before {
+  content: "Премьер-министр: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #polity::before {
+  content: "Форма правления: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #square::before {
+  content: "Площадь: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #population::before {
+  content: "Население: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #foundationDate::before {
+  content: "Дата независимости: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #currency::before {
+  content: "Валюта: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #language::before {
+  content: "Язык: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #amountOfTheRivers::before {
+  content: "Количество речек: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #theLongestRiver::before {
+  content: "Самая длинная речка: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #theShortestRiver::before {
+  content: "Самая короткая речка: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #amountOfTheHPS::before {
+  content: "Количество гидроэлектростанций: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #theMostPowerfulHPS::before {
+  content: "Самая мощная ГЭС: ";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__button[data-stage="0"]::before {
+  content: "Подробнее";
+}
+
+body.ru #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__button[data-stage="1"]::before {
+  content: "Назад";
+}
+
 body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #worldRanking::before {
   content: "⚑";
 }
@@ -60,18 +124,6 @@ body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container 
 
 body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #enrollment::before {
   content: "Необходимо для поступления";
-}
-
-body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #numberOfTeachers::before {
-  content: "Количество учителей";
-}
-
-body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #numberOfStudents::before {
-  content: "Количество студентов";
-}
-
-body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #foundationDate::before {
-  content: "Дата основания";
 }
 
 body.ru #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #costOfBachelor::before {
@@ -110,6 +162,70 @@ body.ua .tooltip .tooltip__capital::before {
   content: "Столиця: ";
 }
 
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #capital::before {
+  content: "Столиця: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #president::before {
+  content: "Президент: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #premierMinister::before {
+  content: "Прем'єр-міністр: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #polity::before {
+  content: "Форма правління: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #square::before {
+  content: "Площа: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #population::before {
+  content: "Населення: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #foundationDate::before {
+  content: "Дата незалежності: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #currency::before {
+  content: "Валюта: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #language::before {
+  content: "Мова: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #amountOfTheRivers::before {
+  content: "Кількість річок: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #theLongestRiver::before {
+  content: "Найдовша річка";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #theShortestRiver::before {
+  content: "Найкоротша річка: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #amountOfTheHPS::before {
+  content: "Кількість гідроелектростанцій: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information #theMostPowerfulHPS::before {
+  content: "Найпотужніша ГЕС: ";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__button[data-stage="0"]::before {
+  content: "Детальніше";
+}
+
+body.ua #popup-main-p1 .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__button[data-stage="1"]::before {
+  content: "Назад";
+}
+
 body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #worldRanking::before {
   content: "⚑";
 }
@@ -132,18 +248,6 @@ body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container 
 
 body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #enrollment::before {
   content: "Необхідно для вступу";
-}
-
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #numberOfTeachers::before {
-  content: "Кількість вчителів";
-}
-
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #numberOfStudents::before {
-  content: "Кількість студентів";
-}
-
-body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #foundationDate::before {
-  content: "Дата основания";
 }
 
 body.ua #popup-main-p2 .popup-container .popup__content .popup__table_container .popup__table tr #costOfBachelor::before {
@@ -370,8 +474,18 @@ img {
 }
 
 .header__nav .header__top_line__background .header__top_line .header__logo {
+  margin-top: 15px;
   display: block;
-  height: 100px;
+  height: 50px;
+  outline: none;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__logo img {
+  height: 70px;
+}
+
+.header__nav .header__top_line__background .header__top_line .header__logo:focus {
+  outline: none;
 }
 
 .header__nav .header__top_line__background .header__top_line .header__list_container {
@@ -624,7 +738,8 @@ img {
 }
 
 .tooltip,
-.tooltip2 {
+.tooltip2,
+.tooltip3 {
   display: none;
   position: absolute;
   z-index: 100;
@@ -653,6 +768,16 @@ img {
 
 .tooltip2 .tooltip2__list .tooltip2__point {
   margin-left: 20px;
+}
+
+.tooltip3 {
+  padding: 5px;
+}
+
+.tooltip3 .tooltip3__image {
+  height: 70px;
+  display: block;
+  border-radius: 5px;
 }
 
 .world_map {
@@ -999,10 +1124,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 70vh;
+  height: 70vh;
 }
 
 .popup-main .popup-container .popup__content .popup__left_column {
+  display: block;
   height: auto;
   padding: 10px;
   width: 60%;
@@ -1048,37 +1174,135 @@ img {
           box-shadow: 0 0 10px #000;
 }
 
-.popup-main .popup-container .popup__content .popup__right_column {
+.popup-main .popup-container .popup__content .popup__center_column {
   width: 40%;
-  background-color: rgba(0, 0, 255, 0.466);
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information {
+  padding: 10px;
+  display: none;
+  position: relative;
+  height: 100%;
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__title .title_of_the_country {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__title .flag_of_the_country {
+  display: block;
+  height: 20px;
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information {
+  margin-top: 20px;
   overflow: auto;
 }
 
-.popup-main .popup-container .popup__content .popup__right_column .popup__information {
-  padding: 10px;
-  display: none;
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information .point_of_the_information {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
-.popup-main .popup-container .popup__content .popup__right_column .popup__information.active {
-  display: block;
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information .point_of_the_information::before {
+  font-weight: 500;
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__main_information .point_of_the_information[id=amountOfTheHPS] {
+  margin-top: 20px;
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__button_container {
+  height: 80px;
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__button_container .information_about_the_country__button {
+  text-align: center;
+  background-color: #0680c5;
+  color: white;
+  border: 1px solid black;
+  width: 135px;
+  height: 28px;
+  position: absolute;
+  bottom: 33px;
+  right: 20px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup-main .popup-container .popup__content .popup__center_column .popup__information .information_about_the_country__button_container .information_about_the_country__button:hover {
+  cursor: pointer;
+  background-color: #03539d;
+}
+
+.popup-main .popup-container .popup__content .popup__right_column {
+  display: none;
+  width: 60%;
 }
 
 .popup-main .popup-container .popup__content .popup__table_container {
   overflow-x: auto;
 }
 
+.popup-main .popup-container .popup__content .popup__table_container .popup__table {
+  border-collapse: collapse;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table tr {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table tr:hover {
+  background-color: #f8f8f8;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table tr td {
+  font-size: 12px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
 .popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 10px;
-  border-bottom: 2px solid #8d8d8d;
+}
+
+.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr:hover {
+  background-color: transparent;
 }
 
 .popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr th {
+  border-bottom: 2px solid #8d8d8d;
   margin: 0 5px;
   font-weight: 400;
   font-size: 14px;
@@ -1093,7 +1317,7 @@ img {
 }
 
 .popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #name {
-  min-width: 200px;
+  min-width: 260px;
 }
 
 .popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #city {
@@ -1101,31 +1325,19 @@ img {
 }
 
 .popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #type {
-  min-width: 100px;
+  min-width: 160px;
 }
 
 .popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #enrollment {
-  min-width: 140px;
-}
-
-.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #numberOfTeachers {
-  min-width: 100px;
-}
-
-.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #numberOfStudents {
-  min-width: 100px;
-}
-
-.popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #foundationDate {
-  min-width: 100px;
+  min-width: 220px;
 }
 
 .popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #costOfBachelor {
-  min-width: 120px;
+  min-width: 140px;
 }
 
 .popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #costOfMaster {
-  min-width: 120px;
+  min-width: 140px;
 }
 
 .popup-main .popup-container .popup__content .popup__table_container .popup__table .first__tr #hostel {
@@ -1157,10 +1369,10 @@ img {
 }
 
 .popup-main .popup-container .popup__footer .popup__points .popup__point.active {
-  color: #63d319;
+  color: #0680c5;
   text-decoration: underline;
 }
 
 .popup-main .popup-container .popup__footer .popup__points .popup__point:hover {
-  color: #509225;
+  color: #03539d;
 }
